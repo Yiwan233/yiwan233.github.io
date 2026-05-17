@@ -5,14 +5,14 @@ description = "荣誉、奖项与专利。"
 [[items]]
 title = "全国二等奖"
 subtitle = "CUMCM — 全国大学生数学建模竞赛（B题）"
-date = "2025"
-content = "在全国大学生数学建模竞赛中获得全国二等奖，该竞赛由中国工业与应用数学学会主办。"
+date = "2024"
+content = "在全国大学生数学建模竞赛 B 题（生产过程决策优化）中获得全国二等奖。"
 
 [[items]]
 title = "优秀奖（前 7%）"
-subtitle = "MCM/ICM — 美国大学生数学建模竞赛（F题）"
+subtitle = "MCM/ICM — 美国大学生数学建模竞赛（C题）"
 date = "2025"
-content = "在 COMAP 主办的国际大学生数学建模竞赛中取得全球前 7% 的成绩。"
+content = "在 COMAP 主办的国际大学生数学建模竞赛 C 题（奥运奖牌预测模型）中取得全球前 7% 的成绩。"
 
 [[items]]
 title = "全国四强 & 东北赛区冠军"
@@ -21,22 +21,16 @@ date = "2024"
 content = "负责环境模块，设计「锂电创新与精准农业」协同方案。全国排名前四，东北赛区冠军。"
 
 [[items]]
-title = "一等奖"
-subtitle = "CISIC — 中国智能仿真大奖赛（D题）"
-date = "2024"
-content = "在中国智能仿真大奖赛中获得一等奖。"
-
-[[items]]
 title = "二等奖"
 subtitle = "MathorCup 高校数学建模挑战赛（B题）"
 date = "2024"
-content = "在全国数学建模挑战赛中获得二等奖。"
+content = "在全国数学建模挑战赛 B 题中获得二等奖。"
 
 [[items]]
 title = "铜奖"
 subtitle = "中国国际大学生创新大赛马来西亚赛区"
 date = "2024"
-content = "以 YADA 马来西亚市场拓展项目获得本科生创意组铜奖。"
+content = "以外卖取餐用智能存储架项目获得本科生创意组铜奖。"
 
 [[items]]
 title = "银奖"

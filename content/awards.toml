@@ -5,14 +5,14 @@ description = "Honors, awards, and patents."
 [[items]]
 title = "National Second Prize"
 subtitle = "CUMCM — China Undergraduate Mathematical Contest in Modeling (Problem B)"
-date = "2025"
-content = "Awarded national second prize in the national-level mathematical modeling competition organized by the China Society for Industrial and Applied Mathematics."
+date = "2024"
+content = "Won national second prize in the B problem (production process decision optimization) of the national mathematical modeling competition."
 
 [[items]]
 title = "Meritorious Winner (Top 7%)"
-subtitle = "MCM/ICM — Interdisciplinary Contest in Modeling (Problem F)"
+subtitle = "MCM/ICM — Mathematical Contest in Modeling (Problem C)"
 date = "2025"
-content = "Achieved top 7% globally in the international mathematical modeling competition organized by COMAP."
+content = "Achieved top 7% globally in the C problem (Olympic medal prediction model) of the international mathematical modeling competition organized by COMAP."
 
 [[items]]
 title = "National Top 4 & NE China Champion"
@@ -21,22 +21,16 @@ date = "2024"
 content = "Led the Environment Module to architect a 'Lithium Innovation & Precision Agriculture' synergy plan. Ranked top 4 nationally and won the Northeast China regional championship."
 
 [[items]]
-title = "First Prize"
-subtitle = "CISIC — China Intelligent Simulation Competition (Problem D)"
-date = "2024"
-content = "Won first prize in the China Intelligent Simulation Competition."
-
-[[items]]
 title = "Second Prize"
 subtitle = "MathorCup College Students Mathematical Modeling Challenge (Problem B)"
 date = "2024"
-content = "Won second prize in the national mathematical modeling challenge."
+content = "Won second prize in the B problem of the national mathematical modeling challenge."
 
 [[items]]
 title = "Bronze Award"
 subtitle = "China International College Students' Innovation Competition — Malaysia Region"
 date = "2024"
-content = "Won bronze award in the undergraduate creativity category with the YADA Malaysia market expansion project."
+content = "Won bronze award in the undergraduate creativity category with the smart storage rack project for food delivery."
 
 [[items]]
 title = "Silver Award"
