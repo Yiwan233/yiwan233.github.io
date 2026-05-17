@@ -1,5 +1,5 @@
-I am a PhD student at the School of Science, University of Example, advised by [Prof. Advisor One](https://example.com) and [Dr. Advisor Two](https://example.com).
+I am a third-year undergraduate student in the Department of Mathematics at Xiamen University Malaysia.
 
-Prior to this, I obtained a BSc degree with First Class Honours in Natural Science from the University of Example.
+My research interests lie in applied mathematics, with a focus on mathematical modeling, data analysis, and optimization methods. I am passionate about using mathematical tools to solve real-world problems.
 
-My current research focuses on investigating the mathematical principles of natural philosophy.
+Currently, I am actively exploring research opportunities in computational mathematics and statistics. I am also proficient in Python, MATLAB, and R for scientific computing.

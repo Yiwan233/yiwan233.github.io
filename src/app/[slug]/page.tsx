@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { getPageConfig, getMarkdownContent, getBibtexContent } from '@/lib/content';
+import { getPageConfig, getMarkdownContent, getBibtexContent, getBlogPosts } from '@/lib/content';
 import { getConfig } from '@/lib/config';
 import { parseBibTeX } from '@/lib/bibtexParser';
 import DynamicPageClient, { type DynamicPageLocaleData } from '@/components/pages/DynamicPageClient';
@@ -8,6 +8,8 @@ import {
   PublicationPageConfig,
   TextPageConfig,
   CardPageConfig,
+  BlogPageConfig,
+  ContactPageConfig,
 } from '@/types/page';
 
 import { Metadata } from 'next';
@@ -44,6 +46,23 @@ function loadDynamicPageData(slug: string, locale?: string): DynamicPageLocaleDa
     return {
       type: 'card',
       config: pageConfig as CardPageConfig,
+    };
+  }
+
+  if (pageConfig.type === 'blog') {
+    const blogConfig = pageConfig as BlogPageConfig;
+    const posts = getBlogPosts(blogConfig.source, locale);
+    return {
+      type: 'blog',
+      config: blogConfig,
+      posts,
+    };
+  }
+
+  if (pageConfig.type === 'contact') {
+    return {
+      type: 'contact',
+      config: pageConfig as ContactPageConfig,
     };
   }
 

@@ -1,0 +1,18 @@
+type = "card"
+title = "Projects"
+description = "Research and development projects I have been involved in."
+
+[[items]]
+title = "Personal Academic Website"
+subtitle = "Developer"
+date = "2026"
+content = "Built this personal academic website using PRISM, a Next.js-based template. Customized with bilingual support (Chinese/English), blog system, contact form, and academic blue color scheme."
+tags = ["Next.js", "TypeScript", "Tailwind CSS", "Web Development"]
+link = "https://github.com/Yiwan233"
+
+[[items]]
+title = "Your Next Project"
+subtitle = "Role"
+date = "2026"
+content = "Project description goes here. Replace this with your actual project."
+tags = ["Python", "Mathematics"]

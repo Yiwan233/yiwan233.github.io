@@ -3,9 +3,10 @@ title = "About"
 
 [profile]
 research_interests = [
-  "Computational Physics",
-  "Mathematical Principles",
-  "Proof of Theorems"
+  "Mathematical Modeling",
+  "Data Analysis",
+  "Optimization Methods",
+  "Computational Mathematics"
 ]
 
 [[sections]]
@@ -26,4 +27,3 @@ id = "news"
 type = "list"
 title = "News"
 source = "news.toml"
-

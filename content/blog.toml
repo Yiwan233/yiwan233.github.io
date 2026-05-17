@@ -1,0 +1,4 @@
+type = "blog"
+title = "Blog"
+description = "My research notes and thoughts."
+source = "blog"

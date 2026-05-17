@@ -46,6 +46,21 @@ export interface LocaleMessages {
     lastUpdated: string;
     builtWithPrism: string;
   };
+  blog: {
+    noPosts: string;
+    backToList: string;
+    readMore: string;
+  };
+  contact: {
+    name: string;
+    email: string;
+    subject: string;
+    message: string;
+    send: string;
+    sending: string;
+    success: string;
+    error: string;
+  };
 }
 
 const en: LocaleMessages = {
@@ -96,6 +111,21 @@ const en: LocaleMessages = {
     lastUpdated: 'Last updated',
     builtWithPrism: 'Built with PRISM',
   },
+  blog: {
+    noPosts: 'No blog posts yet. Stay tuned!',
+    backToList: 'Back to Blog',
+    readMore: 'Read More',
+  },
+  contact: {
+    name: 'Name',
+    email: 'Email',
+    subject: 'Subject',
+    message: 'Message',
+    send: 'Send Message',
+    sending: 'Sending...',
+    success: 'Message sent successfully!',
+    error: 'Failed to send message. Please try again.',
+  },
 };
 
 const zh: LocaleMessages = {
@@ -145,6 +175,21 @@ const zh: LocaleMessages = {
   footer: {
     lastUpdated: '最近更新',
     builtWithPrism: '由 PRISM 构建',
+  },
+  blog: {
+    noPosts: '暂无博客文章，敬请期待！',
+    backToList: '返回博客列表',
+    readMore: '阅读更多',
+  },
+  contact: {
+    name: '姓名',
+    email: '邮箱',
+    subject: '主题',
+    message: '留言内容',
+    send: '发送留言',
+    sending: '发送中...',
+    success: '留言发送成功！',
+    error: '发送失败，请重试。',
   },
 };
 

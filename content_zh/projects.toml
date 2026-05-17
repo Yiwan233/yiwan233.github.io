@@ -1,0 +1,18 @@
+type = "card"
+title = "项目"
+description = "我参与的研究与开发项目。"
+
+[[items]]
+title = "个人学术主页"
+subtitle = "开发者"
+date = "2026"
+content = "使用 PRISM 模板搭建个人学术主页，基于 Next.js 构建。定制了中英双语支持、博客系统、联系表单和学术蓝配色方案。"
+tags = ["Next.js", "TypeScript", "Tailwind CSS", "Web 开发"]
+link = "https://github.com/Yiwan233"
+
+[[items]]
+title = "你的下一个项目"
+subtitle = "角色"
+date = "2026"
+content = "项目描述请写在这里。请替换为你的实际项目。"
+tags = ["Python", "数学"]

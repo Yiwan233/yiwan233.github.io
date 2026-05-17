@@ -1,0 +1,4 @@
+type = "contact"
+title = "联系我"
+description = "欢迎通过以下表单给我留言，或直接发送邮件联系我。"
+form_endpoint = ""

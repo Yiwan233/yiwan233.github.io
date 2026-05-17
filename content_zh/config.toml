@@ -1,18 +1,19 @@
 [site]
-title = "刘嘉乐"
-description = "某某大学博士生个人主页。"
-last_updated = "2025年11月18日"
+title = "易帆"
+description = "厦门大学马来西亚分校数学系本科生。"
+last_updated = "2026年5月17日"
 
 [author]
-name = "刘嘉乐"
-title = "博士生"
-institution = "某某大学"
+name = "易帆"
+title = "本科生"
+institution = "厦门大学马来西亚分校"
 
 [social]
-location = "城市，国家"
+location = "马来西亚，雪兰莪"
 location_details = [
-  "理科楼 123 室，",
-  "大学路，城市，国家"
+  "厦门大学马来西亚分校，",
+  "Jalan Sunsuria, Bandar Sunsuria,",
+  "43900 Sepang, Selangor, Malaysia"
 ]
 
 [[navigation]]
@@ -22,31 +23,37 @@ target = "about"
 href = "/"
 
 [[navigation]]
+title = "项目"
+type = "page"
+target = "projects"
+href = "/projects"
+
+[[navigation]]
+title = "博客"
+type = "page"
+target = "blog"
+href = "/blog"
+
+[[navigation]]
 title = "论文"
 type = "page"
 target = "publications"
 href = "/publications"
 
 [[navigation]]
-title = "教学"
-type = "page"
-target = "teaching"
-href = "/teaching"
-
-[[navigation]]
-title = "奖项"
+title = "获奖"
 type = "page"
 target = "awards"
 href = "/awards"
-
-[[navigation]]
-title = "服务"
-type = "page"
-target = "services"
-href = "/services"
 
 [[navigation]]
 title = "简历"
 type = "page"
 target = "cv"
 href = "/cv"
+
+[[navigation]]
+title = "联系"
+type = "page"
+target = "contact"
+href = "/contact"
