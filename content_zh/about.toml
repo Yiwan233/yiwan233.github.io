@@ -3,10 +3,11 @@ title = "关于我"
 
 [profile]
 research_interests = [
-  "数学建模",
-  "数据分析",
-  "优化方法",
-  "计算数学"
+  "随机分析",
+  "Malliavin 微积分",
+  "数学金融",
+  "粗糙波动率模型",
+  "深度对冲"
 ]
 
 [[sections]]

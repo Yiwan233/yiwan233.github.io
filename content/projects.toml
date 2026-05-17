@@ -1,18 +1,31 @@
 type = "card"
 title = "Projects"
-description = "Research and development projects I have been involved in."
+description = "Selected research projects and competition work."
 
 [[items]]
-title = "Personal Academic Website"
-subtitle = "Developer"
-date = "2026"
-content = "Built this personal academic website using PRISM, a Next.js-based template. Customized with bilingual support (Chinese/English), blog system, contact form, and academic blue color scheme."
-tags = ["Next.js", "TypeScript", "Tailwind CSS", "Web Development"]
-link = "https://github.com/Yiwan233"
+title = "Deep Hedging under Rough Volatility"
+subtitle = "First & Corresponding Author"
+date = "2025 - Present"
+content = "Proposed a novel fractional kernel embedding architecture for deep hedging under rough volatility models. Addressed non-Markovian long-memory characteristics using Malliavin Calculus. Proved minimax optimal convergence rate. **Major Revision** at *AIMS Mathematics*."
+tags = ["Mathematical Finance", "Stochastic Analysis", "Malliavin Calculus", "Deep Learning"]
 
 [[items]]
-title = "Your Next Project"
-subtitle = "Role"
-date = "2026"
-content = "Project description goes here. Replace this with your actual project."
-tags = ["Python", "Mathematics"]
+title = "ThERA Lab: Surgical Robotics Research"
+subtitle = "Research Intern, Great Bay University"
+date = "2026 - Present"
+content = "Cross-modal sensor alignment for robotic surgery (500Hz/60Hz). Built first-order affine model for 4D physical feature extraction. Proposed Control-Evaluation dual-track Jacobian decoupling architecture with Lyapunov stability analysis. Targeting *IROS / MICCAI*."
+tags = ["Robotics", "Sensor Fusion", "Control Theory", "Computer Vision"]
+
+[[items]]
+title = "EY-Gorton ESG Challenge"
+subtitle = "Core Lead, Environment Module — National Top 4 & NE China Champion"
+date = "2024"
+content = "Architected a 'Lithium Innovation & Precision Agriculture' synergy plan. Modeled droplet drift inhibition to increase pesticide coverage from 10% to 50%. Quantified ecological value of Direct Lithium Extraction, projecting 85.5% reduction in water consumption."
+tags = ["ESG", "Sustainability", "Mathematical Modeling"]
+
+[[items]]
+title = "YADA Smart Storage & Lightseeker Solar"
+subtitle = "Algorithm & Operations Specialist"
+date = "2024"
+content = "Developed weight-locking logic for HX711 hardware sensors using C++, reducing delivery theft rates from double digits to 4.1%. Facilitated cross-border industrial collaboration for a 1000m² smart greenhouse pilot in Malaysia."
+tags = ["C++", "IoT", "Hardware", "Operations"]

@@ -3,7 +3,19 @@ title = "获奖"
 description = "我获得的荣誉与奖项。"
 
 [[items]]
-title = "即将更新"
-subtitle = ""
-date = "2026"
-content = "获奖信息将在此更新。"
+title = "全国二等奖"
+subtitle = "全国大学生数学建模竞赛（CUMCM）"
+date = "2025"
+content = "在全国级数学建模竞赛中获得全国二等奖。"
+
+[[items]]
+title = "优秀奖（前 7%）"
+subtitle = "国际大学生数学建模竞赛（MCM/ICM）"
+date = "2025"
+content = "在国际数学建模竞赛中取得全球前 7% 的成绩。"
+
+[[items]]
+title = "银奖"
+subtitle = "XMUM 科技博览会"
+date = "2024"
+content = "在 XMUM 科技博览会上获得银奖。"

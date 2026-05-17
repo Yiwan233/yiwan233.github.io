@@ -3,5 +3,9 @@ date = "2026-05"
 content = "Launched my personal academic website!"
 
 [[news]]
-date = "2026-03"
-content = "Started exploring research opportunities in applied mathematics."
+date = "2026-02"
+content = "Started research internship at Great Bay University (ThERA Lab) on surgical robotics."
+
+[[news]]
+date = "2025-11"
+content = "Deep hedging paper submitted to AIMS Mathematics — now under Major Revision."

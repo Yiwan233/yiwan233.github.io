@@ -3,7 +3,19 @@ title = "Awards"
 description = "Honors and awards I have received."
 
 [[items]]
-title = "Coming Soon"
-subtitle = ""
-date = "2026"
-content = "Awards and honors will be updated here."
+title = "National Second Prize"
+subtitle = "China Undergraduate Mathematical Contest in Modeling (CUMCM)"
+date = "2025"
+content = "Awarded national second prize in the national-level mathematical modeling competition."
+
+[[items]]
+title = "Meritorious Winner (Top 7%)"
+subtitle = "Interdisciplinary Contest in Modeling (MCM/ICM)"
+date = "2025"
+content = "Achieved top 7% globally in the international mathematical modeling competition."
+
+[[items]]
+title = "Silver Award"
+subtitle = "XMUM TechExpo Science & Technology Exhibition"
+date = "2024"
+content = "Received silver award at the XMUM science and technology exhibition."

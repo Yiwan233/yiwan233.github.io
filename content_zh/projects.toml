@@ -1,18 +1,31 @@
 type = "card"
 title = "项目"
-description = "我参与的研究与开发项目。"
+description = "精选研究项目与竞赛作品。"
 
 [[items]]
-title = "个人学术主页"
-subtitle = "开发者"
-date = "2026"
-content = "使用 PRISM 模板搭建个人学术主页，基于 Next.js 构建。定制了中英双语支持、博客系统、联系表单和学术蓝配色方案。"
-tags = ["Next.js", "TypeScript", "Tailwind CSS", "Web 开发"]
-link = "https://github.com/Yiwan233"
+title = "粗糙波动率下的深度对冲"
+subtitle = "第一作者兼通讯作者"
+date = "2025 - 至今"
+content = "提出了一种新颖的分数核嵌入架构，用于粗糙波动率模型下的深度对冲。利用 Malliavin 微积分解决非马尔可夫长记忆特性。证明了极小极大最优收敛速率。*AIMS Mathematics* 大修中。"
+tags = ["数学金融", "随机分析", "Malliavin 微积分", "深度学习"]
 
 [[items]]
-title = "你的下一个项目"
-subtitle = "角色"
-date = "2026"
-content = "项目描述请写在这里。请替换为你的实际项目。"
-tags = ["Python", "数学"]
+title = "ThERA 实验室：手术机器人研究"
+subtitle = "研究实习生，大湾区大学"
+date = "2026 - 至今"
+content = "机器人手术中的跨模态传感器对齐（500Hz/60Hz）。构建一阶仿射模型提取四维物理特征。提出控制-评估双轨雅可比解耦架构，结合 Lyapunov 稳定性分析。目标 IROS / MICCAI。"
+tags = ["机器人学", "传感器融合", "控制理论", "计算机视觉"]
+
+[[items]]
+title = "安永 Gorton ESG 挑战赛"
+subtitle = "环境模块核心负责人 — 全国四强 & 东北赛区冠军"
+date = "2024"
+content = "设计「锂电创新与精准农业」协同方案。建模液滴漂移抑制使农药覆盖率从 10% 提升至 50%。量化直接锂提取的生态价值，预计减少 85.5% 的用水量。"
+tags = ["ESG", "可持续发展", "数学建模"]
+
+[[items]]
+title = "YADA 智能存储 & Lightseeker 太阳能"
+subtitle = "算法与运营专员"
+date = "2024"
+content = "使用 C++ 为 HX711 硬件传感器开发重量锁定逻辑，将配送盗窃率从两位数降至 4.1%。促进跨境产业合作，协调马来西亚 1000m² 智能温室试点运营。"
+tags = ["C++", "IoT", "硬件", "运营"]
