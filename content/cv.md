@@ -46,4 +46,9 @@
 
 - **National Second Prize**, China Undergraduate Mathematical Contest in Modeling (CUMCM), *2025*
 - **Meritorious Winner (Top 7%)**, Interdisciplinary Contest in Modeling (MCM/ICM), *2025*
+- **National Top 4 & NE China Champion**, EY-Gorton ESG Challenge, *2024*
+- **First Prize**, China Intelligent Simulation Competition (CISIC), *2024*
+- **Second Prize**, MathorCup College Students Mathematical Modeling Challenge, *2024*
+- **Bronze Award**, China International College Students' Innovation Competition — Malaysia Region, *2024*
 - **Silver Award**, XMUM TechExpo Science & Technology Exhibition, *2024*
+- **Utility Model Patent** (Accepted): Smart Storage Rack for Food Delivery Pickup, *2024*

@@ -1,21 +1,51 @@
 type = "card"
 title = "Awards"
-description = "Honors and awards I have received."
+description = "Honors, awards, and patents."
 
 [[items]]
 title = "National Second Prize"
-subtitle = "China Undergraduate Mathematical Contest in Modeling (CUMCM)"
+subtitle = "CUMCM — China Undergraduate Mathematical Contest in Modeling (Problem B)"
 date = "2025"
-content = "Awarded national second prize in the national-level mathematical modeling competition."
+content = "Awarded national second prize in the national-level mathematical modeling competition organized by the China Society for Industrial and Applied Mathematics."
 
 [[items]]
 title = "Meritorious Winner (Top 7%)"
-subtitle = "Interdisciplinary Contest in Modeling (MCM/ICM)"
+subtitle = "MCM/ICM — Interdisciplinary Contest in Modeling (Problem F)"
 date = "2025"
-content = "Achieved top 7% globally in the international mathematical modeling competition."
+content = "Achieved top 7% globally in the international mathematical modeling competition organized by COMAP."
+
+[[items]]
+title = "National Top 4 & NE China Champion"
+subtitle = "EY-Gorton ESG Challenge"
+date = "2024"
+content = "Led the Environment Module to architect a 'Lithium Innovation & Precision Agriculture' synergy plan. Ranked top 4 nationally and won the Northeast China regional championship."
+
+[[items]]
+title = "First Prize"
+subtitle = "CISIC — China Intelligent Simulation Competition (Problem D)"
+date = "2024"
+content = "Won first prize in the China Intelligent Simulation Competition."
+
+[[items]]
+title = "Second Prize"
+subtitle = "MathorCup College Students Mathematical Modeling Challenge (Problem B)"
+date = "2024"
+content = "Won second prize in the national mathematical modeling challenge."
+
+[[items]]
+title = "Bronze Award"
+subtitle = "China International College Students' Innovation Competition — Malaysia Region"
+date = "2024"
+content = "Won bronze award in the undergraduate creativity category with the YADA Malaysia market expansion project."
 
 [[items]]
 title = "Silver Award"
 subtitle = "XMUM TechExpo Science & Technology Exhibition"
 date = "2024"
 content = "Received silver award at the XMUM science and technology exhibition."
+
+[[items]]
+title = "Utility Model Patent (Accepted)"
+subtitle = "Smart Storage Rack for Food Delivery Pickup"
+date = "2024"
+content = "Patent application accepted for a smart storage rack system for food delivery pickup (Application No. 2024225614270)."
