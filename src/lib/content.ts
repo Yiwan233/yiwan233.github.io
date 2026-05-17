@@ -177,3 +177,80 @@ export function getBlogPost(sourceDir: string, slug: string, locale?: string): B
 
   return null;
 }
+
+export interface GalleryPhotoMeta {
+  slug: string;
+  title: string;
+  date: string;
+  location: string;
+  camera: string;
+  image: string;
+  content: string;
+}
+
+export function getGalleryPhotos(sourceDir: string, locale?: string): GalleryPhotoMeta[] {
+  const candidates = getCandidateFilePaths(sourceDir, locale);
+  const defaultDir = path.join(process.cwd(), DEFAULT_CONTENT_DIR, sourceDir);
+
+  let dirToRead = defaultDir;
+  for (const candidate of candidates) {
+    try {
+      if (fs.statSync(candidate).isDirectory()) {
+        dirToRead = candidate;
+        break;
+      }
+    } catch {
+      // continue
+    }
+  }
+
+  try {
+    const files = fs.readdirSync(dirToRead).filter((f) => f.endsWith('.md'));
+    const photos: GalleryPhotoMeta[] = [];
+
+    for (const file of files) {
+      const raw = fs.readFileSync(path.join(dirToRead, file), 'utf-8');
+      const { meta, body } = parseFrontmatter(raw);
+      const slug = file.replace(/\.md$/, '');
+
+      photos.push({
+        slug,
+        title: meta.title || slug,
+        date: meta.date || '',
+        location: meta.location || '',
+        camera: meta.camera || '',
+        image: meta.image || '',
+        content: body,
+      });
+    }
+
+    photos.sort((a, b) => b.date.localeCompare(a.date));
+    return photos;
+  } catch {
+    return [];
+  }
+}
+
+export function getGalleryPhoto(sourceDir: string, slug: string, locale?: string): GalleryPhotoMeta | null {
+  const candidates = getCandidateFilePaths(path.join(sourceDir, `${slug}.md`), locale);
+
+  for (const filePath of candidates) {
+    try {
+      const raw = fs.readFileSync(filePath, 'utf-8');
+      const { meta, body } = parseFrontmatter(raw);
+      return {
+        slug,
+        title: meta.title || slug,
+        date: meta.date || '',
+        location: meta.location || '',
+        camera: meta.camera || '',
+        image: meta.image || '',
+        content: body,
+      };
+    } catch {
+      // continue
+    }
+  }
+
+  return null;
+}

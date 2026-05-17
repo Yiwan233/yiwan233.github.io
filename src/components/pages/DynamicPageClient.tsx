@@ -5,6 +5,7 @@ import TextPage from '@/components/pages/TextPage';
 import CardPage from '@/components/pages/CardPage';
 import BlogList from '@/components/pages/BlogList';
 import ContactPage from '@/components/pages/ContactPage';
+import GalleryPage from '@/components/pages/GalleryPage';
 import { Publication } from '@/types/publication';
 import {
   PublicationPageConfig,
@@ -12,6 +13,7 @@ import {
   CardPageConfig,
   BlogPageConfig,
   ContactPageConfig,
+  GalleryPageConfig,
 } from '@/types/page';
 import { useLocaleStore } from '@/lib/stores/localeStore';
 import type { BlogPostMeta } from '@/lib/content';
@@ -21,7 +23,8 @@ export type DynamicPageLocaleData =
   | { type: 'text'; config: TextPageConfig; content: string }
   | { type: 'card'; config: CardPageConfig }
   | { type: 'blog'; config: BlogPageConfig; posts: BlogPostMeta[] }
-  | { type: 'contact'; config: ContactPageConfig };
+  | { type: 'contact'; config: ContactPageConfig }
+  | { type: 'gallery'; config: GalleryPageConfig };
 
 interface DynamicPageClientProps {
   dataByLocale: Record<string, DynamicPageLocaleData>;
@@ -53,6 +56,9 @@ export default function DynamicPageClient({ dataByLocale, defaultLocale }: Dynam
       )}
       {pageData.type === 'contact' && (
         <ContactPage config={pageData.config} />
+      )}
+      {pageData.type === 'gallery' && (
+        <GalleryPage config={pageData.config} />
       )}
     </div>
   );

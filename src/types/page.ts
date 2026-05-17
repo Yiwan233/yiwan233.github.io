@@ -1,5 +1,5 @@
 export interface BasePageConfig {
-    type: 'about' | 'publication' | 'card' | 'text' | 'blog' | 'contact';
+    type: 'about' | 'publication' | 'card' | 'text' | 'blog' | 'contact' | 'gallery';
     title: string;
     description?: string;
 }
@@ -46,4 +46,29 @@ export interface BlogPageConfig extends BasePageConfig {
 export interface ContactPageConfig extends BasePageConfig {
     type: 'contact';
     form_endpoint?: string;
+}
+
+export interface GalleryItem {
+    title: string;
+    slug: string;
+    date?: string;
+    location?: string;
+    camera?: string;
+    image: string;
+    content?: string;
+}
+
+export interface GalleryPageConfig extends BasePageConfig {
+    type: 'gallery';
+    items: GalleryItem[];
+}
+
+export interface GalleryPhoto {
+    slug: string;
+    title: string;
+    date: string;
+    location: string;
+    camera: string;
+    image: string;
+    content: string;
 }

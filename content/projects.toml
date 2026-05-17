@@ -29,3 +29,10 @@ subtitle = "Algorithm & Operations Specialist"
 date = "2024"
 content = "Developed weight-locking logic for HX711 hardware sensors using C++, reducing delivery theft rates from double digits to 4.1%. Facilitated cross-border industrial collaboration for a 1000m² smart greenhouse pilot in Malaysia."
 tags = ["C++", "IoT", "Hardware", "Operations"]
+
+[[items]]
+title = "MFA Round Table (模法师圆桌)"
+subtitle = "Founder & Lead"
+date = "2024 - Present"
+content = "Founded and lead a community of 420+ active participants dedicated to mathematical modeling knowledge sharing. Organize workshops, tutorials, and collaborative problem-solving sessions for students across universities."
+tags = ["Community", "Mathematical Modeling", "Education", "Leadership"]

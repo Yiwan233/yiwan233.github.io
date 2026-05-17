@@ -10,6 +10,7 @@ import {
   CardPageConfig,
   BlogPageConfig,
   ContactPageConfig,
+  GalleryPageConfig,
 } from '@/types/page';
 
 import { Metadata } from 'next';
@@ -63,6 +64,13 @@ function loadDynamicPageData(slug: string, locale?: string): DynamicPageLocaleDa
     return {
       type: 'contact',
       config: pageConfig as ContactPageConfig,
+    };
+  }
+
+  if (pageConfig.type === 'gallery') {
+    return {
+      type: 'gallery',
+      config: pageConfig as GalleryPageConfig,
     };
   }
 

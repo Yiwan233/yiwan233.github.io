@@ -22,7 +22,7 @@ location_details = [
 google_scholar = ""
 orcid = ""
 github = "https://github.com/Yiwan233"
-linkedin = ""
+linkedin = "https://www.linkedin.com/in/fan-yi-21b9302a6"
 
 [features]
 enable_likes = true
@@ -76,6 +76,12 @@ title = "CV"
 type = "page"
 target = "cv"
 href = "/cv"
+
+[[navigation]]
+title = "Gallery"
+type = "page"
+target = "gallery"
+href = "/gallery"
 
 [[navigation]]
 title = "Contact"

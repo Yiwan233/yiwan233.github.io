@@ -3,13 +3,14 @@
 **Xiamen University Malaysia (XMUM)**, BSc in Mathematics and Applied Mathematics, *Sep 2023 - Jun 2027 (Expected)*
 - **GPA:** 3.83/4.0 (Top 5%)
 - **IELTS:** 7.5
+- **LinkedIn:** [linkedin.com/in/fan-yi-21b9302a6](https://www.linkedin.com/in/fan-yi-21b9302a6)
 - **Honors:** XMUM Excellence Scholarship (2023-2024 & 2024-2025)
 - **Core Courses:** Mathematical Analysis, Real Analysis, Calculus, ODE, Linear Algebra, Probability Theory, Stochastic Processes, Statistics, Regression Analysis, C++ Programming, Data Structures (All A/A-)
 
 ## Core Skills
 
-- **Math & Theory:** Measure Theory, Advanced Probability, Stochastic Analysis, Malliavin Calculus, Optimization
-- **Programming & Tools:** Python (PyTorch, Scikit-learn), C++, MATLAB, LaTeX, Git
+- **Math & Theory:** Measure Theory, Advanced Probability, Stochastic Analysis, Malliavin Calculus, Optimization, Medical AI
+- **Programming & Tools:** Python (PyTorch, Scikit-learn), C++, MATLAB, SQL, Tableau, LaTeX, Git
 
 ## Research Experience
 
@@ -41,6 +42,11 @@
 *Algorithm & Operations Specialist* | *Apr 2024 - Aug 2024*
 - Developed weight-locking logic for hardware sensors (HX711) using C++, reducing delivery theft rates from double digits to 4.1% in pilot tests by implementing a "Weight Lock-Monitor-Trigger" model.
 - Facilitated cross-border industrial collaboration (MOUs) and orchestrated operational scaling for a 1000m² smart greenhouse pilot in Malaysia.
+
+**MFA Round Table (模法师圆桌)**
+*Founder & Lead* | *2024 - Present*
+- Founded and lead a community of 420+ active participants dedicated to mathematical modeling knowledge sharing.
+- Organize workshops, tutorials, and collaborative problem-solving sessions for students across universities.
 
 ## Honors and Awards
 

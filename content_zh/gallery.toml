@@ -1,0 +1,30 @@
+type = "gallery"
+title = "摄影"
+description = "镜头下的瞬间 — 城市探索、风景与每张照片背后的故事。"
+
+[[items]]
+title = "城市灯火"
+slug = "city-lights"
+date = "2025-12"
+location = "马来西亚，吉隆坡"
+camera = "Fujifilm X-T30 II"
+image = "/gallery/city-lights.jpg"
+content = "茨厂街雨后霓虹灯的倒影。深夜城市探索时拍摄于吉隆坡唐人街。"
+
+[[items]]
+title = "校园晨曦"
+slug = "campus-dawn"
+date = "2025-10"
+location = "XMUM，雪兰莪"
+camera = "Fujifilm X-T30 II"
+image = "/gallery/campus-dawn.jpg"
+content = "清晨的阳光穿过校园里的棕榈树。在厦门大学马来西亚分校，新一天开始前有一种独特的宁静。"
+
+[[items]]
+title = "乔治市遗韵"
+slug = "georgetown-heritage"
+date = "2025-08"
+location = "马来西亚，槟城"
+camera = "Fujifilm X-T30 II"
+image = "/gallery/georgetown-heritage.jpg"
+content = "槟城乔治市标志性的街头艺术 — 历史与现代表达在每个街角相遇。"

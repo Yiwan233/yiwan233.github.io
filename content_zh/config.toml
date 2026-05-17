@@ -54,6 +54,12 @@ target = "cv"
 href = "/cv"
 
 [[navigation]]
+title = "摄影"
+type = "page"
+target = "gallery"
+href = "/gallery"
+
+[[navigation]]
 title = "联系"
 type = "page"
 target = "contact"
