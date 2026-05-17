@@ -5,6 +5,7 @@
 - **IELTS:** 7.5
 - **LinkedIn:** [linkedin.com/in/fan-yi-21b9302a6](https://www.linkedin.com/in/fan-yi-21b9302a6)
 - **Honors:** XMUM Excellence Scholarship (2023-2024 & 2024-2025)
+- **Target Programs (Fall 2027):** MPhil/PhD in Financial Engineering, Statistics, Robotics — targeting HKUST(GZ) and CUHK(SZ)
 - **Core Courses:** Mathematical Analysis, Real Analysis, Calculus, ODE, Linear Algebra, Probability Theory, Stochastic Processes, Statistics, Regression Analysis, C++ Programming, Data Structures (All A/A-)
 
 ## Core Skills
@@ -19,7 +20,7 @@
 - Addressed the non-Markovian long-memory characteristics of rough volatility models (H in (0, 1/2)), revealing the "structural operator mismatch" in generic deep learning architectures.
 - Decomposed the optimal strategy into smooth state functions and fractional integral regularization terms using Malliavin Calculus, resolving the numerical ill-posedness of hyper-singular kernels.
 - Proposed a novel architecture embedding fractional kernel inductive biases, transforming ill-posed singular operator learning into well-posed smooth process approximation via fixed fractional attention layers.
-- Rigorously proved the minimax optimal convergence rate of O(N^{-2H}) under N rebalancing dates, perfectly matching the theoretical lower bound of Volterra-type models. (**Major Revision** at *AIMS Mathematics*)
+- Rigorously proved the minimax optimal convergence rate of O(N^{-2H}) under N rebalancing dates, perfectly matching the theoretical lower bound of Volterra-type models. (Submitted Mar 2026; **Major Revision** received May 2026 at *AIMS Mathematics*)
 
 ## Internship Experience
 
@@ -44,7 +45,7 @@
 - Facilitated cross-border industrial collaboration (MOUs) and orchestrated operational scaling for a 1000m² smart greenhouse pilot in Malaysia.
 
 **MFA Round Table (模法师圆桌)**
-*Founder & Lead* | *2024 - Present*
+*Founder & Lead* | *Sep 2025 - Present*
 - Founded and lead a community of 420+ active participants dedicated to mathematical modeling knowledge sharing.
 - Organize workshops, tutorials, and collaborative problem-solving sessions for students across universities.
 

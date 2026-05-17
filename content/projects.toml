@@ -6,7 +6,7 @@ description = "Selected research projects and competition work."
 title = "Deep Hedging under Rough Volatility"
 subtitle = "First & Corresponding Author"
 date = "2025 - Present"
-content = "Proposed a novel fractional kernel embedding architecture for deep hedging under rough volatility models. Addressed non-Markovian long-memory characteristics using Malliavin Calculus. Proved minimax optimal convergence rate. **Major Revision** at *AIMS Mathematics*."
+content = "Proposed a novel fractional kernel embedding architecture for deep hedging under rough volatility models. Addressed non-Markovian long-memory characteristics using Malliavin Calculus. Proved minimax optimal convergence rate. Submitted Mar 2026; **Major Revision** received May 2026 at *AIMS Mathematics*."
 tags = ["Mathematical Finance", "Stochastic Analysis", "Malliavin Calculus", "Deep Learning"]
 
 [[items]]
@@ -33,6 +33,6 @@ tags = ["C++", "IoT", "Hardware", "Operations"]
 [[items]]
 title = "MFA Round Table (模法师圆桌)"
 subtitle = "Founder & Lead"
-date = "2024 - Present"
+date = "2025 - Present"
 content = "Founded and lead a community of 420+ active participants dedicated to mathematical modeling knowledge sharing. Organize workshops, tutorials, and collaborative problem-solving sessions for students across universities."
 tags = ["Community", "Mathematical Modeling", "Education", "Leadership"]

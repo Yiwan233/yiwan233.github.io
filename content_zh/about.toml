@@ -4,11 +4,9 @@ title = "关于我"
 [profile]
 research_interests = [
   "随机分析",
-  "Malliavin 微积分",
-  "数学金融",
-  "粗糙波动率模型",
-  "深度对冲",
-  "医学 AI"
+  "数学建模",
+  "机器学习与优化",
+  "跨学科应用"
 ]
 
 [[sections]]

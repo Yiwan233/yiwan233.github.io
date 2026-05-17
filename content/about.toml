@@ -4,11 +4,9 @@ title = "About"
 [profile]
 research_interests = [
   "Stochastic Analysis",
-  "Malliavin Calculus",
-  "Mathematical Finance",
-  "Rough Volatility Models",
-  "Deep Hedging",
-  "Medical AI"
+  "Mathematical Modeling",
+  "Machine Learning & Optimization",
+  "Interdisciplinary Applications"
 ]
 
 [[sections]]
