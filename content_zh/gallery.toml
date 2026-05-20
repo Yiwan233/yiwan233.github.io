@@ -8,7 +8,7 @@ slug = "campus-dawn"
 date = "2026-05"
 camera = "Unknown"
 image = "/gallery/campus-dawn.jpg"
-content = "A photo captured."
+content = "Early morning light filtering through the palm trees on campus. There's a unique stillness at XMUM before the day begins."
 
 [[items]]
 title = "City Lights"
@@ -16,7 +16,7 @@ slug = "city-lights"
 date = "2026-05"
 camera = "Unknown"
 image = "/gallery/city-lights.jpg"
-content = "A photo captured."
+content = "The vibrant neon signs of Chinatown reflected in rain-soaked streets. Shot during a late-night urban exploration walk through Petaling Street, Kuala Lumpur."
 
 [[items]]
 title = "Georgetown Heritage"
@@ -24,4 +24,4 @@ slug = "georgetown-heritage"
 date = "2026-05"
 camera = "Unknown"
 image = "/gallery/georgetown-heritage.jpg"
-content = "A photo captured."
+content = "The iconic street art of Georgetown, Penang — where history meets contemporary expression on every corner."

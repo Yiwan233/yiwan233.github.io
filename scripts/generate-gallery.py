@@ -31,10 +31,48 @@ def get_exif(path: Path) -> dict:
         if exif:
             for tag_id, value in exif.items():
                 tag = TAGS.get(tag_id, tag_id)
-                data[tag] = str(value).strip()
+                # Handle bytes values (common in ImageDescription, UserComment, etc.)
+                if isinstance(value, bytes):
+                    try:
+                        value = value.decode('utf-8', errors='replace').strip('\x00').strip()
+                    except Exception:
+                        value = str(value)
+                else:
+                    value = str(value).strip()
+                data[tag] = value
     except Exception:
         pass
     return data
+
+
+def get_description(img_path: Path, exif: dict) -> str:
+    """Get photo description from sidecar file > EXIF > auto-generated."""
+    # Priority 1: .txt sidecar file
+    sidecar = img_path.with_suffix('.txt')
+    if sidecar.exists():
+        return sidecar.read_text(encoding='utf-8').strip()
+
+    # Priority 2: EXIF ImageDescription (Lightroom Caption field)
+    desc = exif.get('ImageDescription', '')
+    if desc:
+        return desc
+
+    # Priority 3: EXIF UserComment
+    desc = exif.get('UserComment', '')
+    if desc:
+        return desc
+
+    # Fallback: auto-generated placeholder
+    cam = exif.get('Model', '')
+    date = parse_date(exif)
+    parts = []
+    if cam:
+        parts.append(cam)
+    if date:
+        parts.append(date)
+    if parts:
+        return f"Shot with {' · '.join(parts)}."
+    return ""
 
 
 def parse_date(exif: dict) -> str:
@@ -119,6 +157,8 @@ def generate_gallery(photos_dir: Path = None):
         if 'N' in gps_lat or 'S' in gps_lat:
             location = "From EXIF GPS"
 
+        description = get_description(img_path, exif)
+
         gallery_items.append({
             'title': title,
             'slug': slug,
@@ -126,7 +166,7 @@ def generate_gallery(photos_dir: Path = None):
             'location': location,
             'camera': cam or 'Unknown',
             'image': image_url,
-            'content': f"A photo captured{' with ' + cam if cam else ''}{' on ' + date if date else ''}."
+            'content': description,
         })
 
     # Sort by date descending

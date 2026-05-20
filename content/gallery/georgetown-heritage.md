@@ -6,4 +6,4 @@ camera: "Unknown"
 image: "/gallery/georgetown-heritage.jpg"
 ---
 
-A photo captured.
+The iconic street art of Georgetown, Penang — where history meets contemporary expression on every corner.

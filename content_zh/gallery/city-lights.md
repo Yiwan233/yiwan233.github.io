@@ -6,4 +6,4 @@ camera: "Unknown"
 image: "/gallery/city-lights.jpg"
 ---
 
-A photo captured.
+The vibrant neon signs of Chinatown reflected in rain-soaked streets. Shot during a late-night urban exploration walk through Petaling Street, Kuala Lumpur.

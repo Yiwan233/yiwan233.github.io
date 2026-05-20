@@ -6,4 +6,4 @@ camera: "Unknown"
 image: "/gallery/campus-dawn.jpg"
 ---
 
-A photo captured.
+Early morning light filtering through the palm trees on campus. There's a unique stillness at XMUM before the day begins.
