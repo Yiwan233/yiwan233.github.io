@@ -43,10 +43,6 @@ function TileLayerSwitcher() {
   );
 }
 
-function toGroupId(name: string): string {
-  return `gallery-group-${name.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9一-鿿-]/g, '')}`;
-}
-
 function MapBoundsUpdater({ groups, activeCountry }: { groups: GalleryLocationGroup[]; activeCountry: string | null }) {
   const map = useMap();
   const prevCountry = useRef<string | null>(undefined);
@@ -77,9 +73,11 @@ function MapBoundsUpdater({ groups, activeCountry }: { groups: GalleryLocationGr
 export default function MapSection({
   groups,
   activeCountry,
+  onScrollToGroup,
 }: {
   groups: GalleryLocationGroup[];
   activeCountry: string | null;
+  onScrollToGroup: (name: string) => void;
 }) {
   const located = groups.filter((g) => g.lat !== 0 && g.lng !== 0);
 
@@ -91,13 +89,6 @@ export default function MapSection({
 
   const centerLat = visible.reduce((s, g) => s + g.lat, 0) / visible.length;
   const centerLng = visible.reduce((s, g) => s + g.lng, 0) / visible.length;
-
-  const handleScrollToGroup = (name: string) => {
-    const el = document.getElementById(toGroupId(name));
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
 
   return (
     <div className="gallery-map-container mb-10">
@@ -135,7 +126,7 @@ export default function MapSection({
                     </h4>
                     <p className="text-xs text-neutral-500 mb-2">{group.items.length} 张照片</p>
                     <button
-                      onClick={() => handleScrollToGroup(group.locationName)}
+                      onClick={() => onScrollToGroup(group.locationName)}
                       className="text-xs font-medium px-3 py-1 rounded-full bg-accent text-white hover:bg-accent-dark transition-colors"
                     >
                       查看照片

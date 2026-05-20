@@ -1,13 +1,14 @@
 'use client';
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import type { GalleryPageConfig, GalleryItem, GalleryLocationGroup } from '@/types/page';
 import { groupPhotosByLocation, getCountriesFromGroups, getCountry } from '@/lib/gallery';
 
 const GlobeSection = dynamic(() => import('@/components/gallery/GlobeSection'), { ssr: false });
+const MapSection = dynamic(() => import('@/components/gallery/MapSection'), { ssr: false });
 
 function toGroupId(name: string): string {
   return `gallery-group-${name.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9一-鿿-]/g, '')}`;
@@ -135,7 +136,44 @@ export default function GalleryPage({ config }: { config: GalleryPageConfig }) {
         </div>
       )}
 
-      <GlobeSection groups={groups} activeCountry={activeCountry} onScrollToGroup={handleScrollToGroup} />
+      <AnimatePresence mode="wait">
+        {activeCountry === null ? (
+          <motion.div
+            key="globe"
+            initial={{ opacity: 0, scale: 0.97 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.97 }}
+            transition={{ duration: 0.4, ease: 'easeInOut' }}
+          >
+            <GlobeSection
+              groups={groups}
+              onCountryClick={(country) => setActiveCountry(country)}
+            />
+          </motion.div>
+        ) : (
+          <motion.div
+            key="map"
+            initial={{ opacity: 0, scale: 0.97 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.97 }}
+            transition={{ duration: 0.4, ease: 'easeInOut' }}
+          >
+            <div className="mb-3">
+              <button
+                onClick={() => setActiveCountry(null)}
+                className="text-xs px-3 py-1.5 rounded-full bg-white/90 dark:bg-neutral-900/90 backdrop-blur-sm shadow-md border border-neutral-200 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 hover:bg-white dark:hover:bg-neutral-800 transition-colors"
+              >
+                ← 返回全球
+              </button>
+            </div>
+            <MapSection
+              groups={groups}
+              activeCountry={activeCountry}
+              onScrollToGroup={handleScrollToGroup}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <div className="space-y-12">
         {filteredGroups.map((group) => (
