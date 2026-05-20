@@ -11,6 +11,8 @@
   "dependencies": {
     "@headlessui/react": "^2.2.4",
     "@heroicons/react": "^2.2.0",
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.6.1",
     "bibtex-parse-js": "^0.0.24",
     "clsx": "^2.1.1",
     "framer-motion": "^12.18.1",
@@ -23,6 +25,7 @@
     "react-leaflet": "^5.0.0",
     "react-markdown": "^10.1.0",
     "smol-toml": "^1.5.2",
+    "three": "^0.184.0",
     "zustand": "^5.0.5"
   },
   "devDependencies": {

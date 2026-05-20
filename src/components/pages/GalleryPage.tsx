@@ -7,7 +7,7 @@ import dynamic from 'next/dynamic';
 import type { GalleryPageConfig, GalleryItem, GalleryLocationGroup } from '@/types/page';
 import { groupPhotosByLocation, getCountriesFromGroups, getCountry } from '@/lib/gallery';
 
-const MapSection = dynamic(() => import('@/components/gallery/MapSection'), { ssr: false });
+const GlobeSection = dynamic(() => import('@/components/gallery/GlobeSection'), { ssr: false });
 
 function toGroupId(name: string): string {
   return `gallery-group-${name.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9一-鿿-]/g, '')}`;
@@ -84,6 +84,13 @@ export default function GalleryPage({ config }: { config: GalleryPageConfig }) {
     ? groups.filter((g) => getCountry(g.locationName) === activeCountry || g.locationName === 'Other')
     : groups;
 
+  const handleScrollToGroup = (name: string) => {
+    const el = document.getElementById(toGroupId(name));
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -127,7 +134,7 @@ export default function GalleryPage({ config }: { config: GalleryPageConfig }) {
         </div>
       )}
 
-      <MapSection groups={groups} activeCountry={activeCountry} />
+      <GlobeSection groups={groups} activeCountry={activeCountry} onScrollToGroup={handleScrollToGroup} />
 
       <div className="space-y-12">
         {filteredGroups.map((group) => (
