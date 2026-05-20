@@ -1,8 +1,14 @@
 ---
 title: "Georgetown Heritage"
 date: "2026-05"
+slug: "georgetown-heritage"
 location: ""
 camera: "Unknown"
+lens: ""
+aperture: ""
+shutter: ""
+iso: ""
+focal_length: ""
 image: "/gallery/georgetown-heritage.jpg"
 ---
 

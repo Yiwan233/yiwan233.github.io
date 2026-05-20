@@ -184,6 +184,11 @@ export interface GalleryPhotoMeta {
   date: string;
   location: string;
   camera: string;
+  lens: string;
+  aperture: string;
+  shutter: string;
+  iso: string;
+  focal_length: string;
   image: string;
   content: string;
 }
@@ -219,6 +224,11 @@ export function getGalleryPhotos(sourceDir: string, locale?: string): GalleryPho
         date: meta.date || '',
         location: meta.location || '',
         camera: meta.camera || '',
+        lens: meta.lens || '',
+        aperture: meta.aperture || '',
+        shutter: meta.shutter || '',
+        iso: meta.iso || '',
+        focal_length: meta.focal_length || '',
         image: meta.image || '',
         content: body,
       });
@@ -244,6 +254,11 @@ export function getGalleryPhoto(sourceDir: string, slug: string, locale?: string
         date: meta.date || '',
         location: meta.location || '',
         camera: meta.camera || '',
+        lens: meta.lens || '',
+        aperture: meta.aperture || '',
+        shutter: meta.shutter || '',
+        iso: meta.iso || '',
+        focal_length: meta.focal_length || '',
         image: meta.image || '',
         content: body,
       };

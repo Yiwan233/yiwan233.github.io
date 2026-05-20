@@ -1,8 +1,14 @@
 ---
 title: "Campus Dawn"
 date: "2026-05"
+slug: "campus-dawn"
 location: ""
 camera: "Unknown"
+lens: ""
+aperture: ""
+shutter: ""
+iso: ""
+focal_length: ""
 image: "/gallery/campus-dawn.jpg"
 ---
 

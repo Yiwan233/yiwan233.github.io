@@ -54,6 +54,11 @@ export interface GalleryItem {
     date?: string;
     location?: string;
     camera?: string;
+    lens?: string;
+    aperture?: string;
+    shutter?: string;
+    iso?: string;
+    focal_length?: string;
     image: string;
     content?: string;
 }
@@ -69,6 +74,11 @@ export interface GalleryPhoto {
     date: string;
     location: string;
     camera: string;
+    lens: string;
+    aperture: string;
+    shutter: string;
+    iso: string;
+    focal_length: string;
     image: string;
     content: string;
 }
