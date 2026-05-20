@@ -42,3 +42,14 @@ next-env.d.ts
 
 # wrangler
 .wrangler
+
+# claude
+.claude/
+
+# python cache
+__pycache__/
+
+# gallery temp files
+public/.tmp-thumbs-png/
+public/.tmp-thumbs-sm/
+public/.tmp-thumbs/

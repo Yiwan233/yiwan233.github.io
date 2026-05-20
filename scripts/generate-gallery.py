@@ -82,10 +82,10 @@ def get_exif(path: Path) -> dict:
     return data
 
 
-def parse_gps(gps_info) -> str:
-    """Decode GPSInfo dict to 'lat, lon' string."""
+def parse_gps(gps_info) -> tuple:
+    """Decode GPSInfo dict to (lat, lon) floats or (None, None)."""
     if not gps_info or not isinstance(gps_info, dict):
-        return ""
+        return None, None
 
     def _to_float(val):
         """Convert GPS coordinate component to float degrees."""
@@ -105,15 +105,17 @@ def parse_gps(gps_info) -> str:
     try:
         lat = _to_float(gps_info.get(2, 0))
         lon = _to_float(gps_info.get(4, 0))
+        if lat == 0 and lon == 0:
+            return None, None
         lat_ref = str(gps_info.get(1, b"N"))
         lon_ref = str(gps_info.get(3, b"E"))
         if "S" in lat_ref:
             lat = -lat
         if "W" in lon_ref:
             lon = -lon
-        return f"{lat:.5f}, {lon:.5f}"
+        return lat, lon
     except Exception:
-        return ""
+        return None, None
 
 def format_shutter(exposure_time):
     """Format shutter speed: 0.004 -> '1/250', 1.3 -> '1.3s'."""
@@ -294,19 +296,18 @@ def generate_gallery(photos_dir: Path = None):
         focal_length = format_focal(exif.get("FocalLength", ""))
 
         # ---- GPS ----
-        gps_str = parse_gps(exif.get("GPSInfo", {}))
+        lat, lng = parse_gps(exif.get("GPSInfo", {}))
 
-        # ---- Location from GPS reverse or IPTC ----
+        # ---- Location (human-readable from IPTC, fallback to GPS string) ----
         location = ""
-        if gps_str:
-            location = gps_str
-        else:
-            iptc_city = iptc.get((2, 90), "")
-            iptc_country = iptc.get((2, 101), "")
-            if iptc_city and iptc_country:
-                location = f"{iptc_city}, {iptc_country}"
-            elif iptc_city:
-                location = iptc_city
+        iptc_city = iptc.get((2, 90), "")
+        iptc_country = iptc.get((2, 101), "")
+        if iptc_city and iptc_country:
+            location = f"{iptc_city}, {iptc_country}"
+        elif iptc_city:
+            location = iptc_city
+        elif lat is not None and lng is not None:
+            location = f"{lat:.5f}, {lng:.5f}"
 
         # ---- Date ----
         date = parse_date(exif)
@@ -335,6 +336,8 @@ def generate_gallery(photos_dir: Path = None):
             "title": title,
             "slug": slug,
             "date": date or datetime.now().strftime("%Y-%m"),
+            "lat": lat,
+            "lng": lng,
             "location": location,
             "camera": camera or "Unknown",
             "lens": lens,
@@ -365,6 +368,10 @@ def generate_gallery(photos_dir: Path = None):
             lines.append("[[items]]")
             for key in ("title", "slug", "date"):
                 lines.append(f'{key} = "{item[key]}"')
+            if item.get("lat") is not None:
+                lines.append(f'lat = {item["lat"]}')
+            if item.get("lng") is not None:
+                lines.append(f'lng = {item["lng"]}')
             if item["location"]:
                 lines.append(f'location = "{item["location"]}"')
             if item["camera"]:
@@ -394,6 +401,8 @@ def generate_gallery(photos_dir: Path = None):
 title: "{item['title']}"
 date: "{item['date']}"
 slug: "{item['slug']}"
+lat: "{item['lat'] if item.get('lat') is not None else ''}"
+lng: "{item['lng'] if item.get('lng') is not None else ''}"
 location: "{item['location']}"
 camera: "{item['camera']}"
 lens: "{item['lens']}"

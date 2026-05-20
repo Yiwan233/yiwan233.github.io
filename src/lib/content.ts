@@ -77,6 +77,12 @@ export interface BlogPostMeta {
   content: string;
 }
 
+function parseCoord(val: string): number | undefined {
+  if (!val) return undefined;
+  const n = parseFloat(val);
+  return isNaN(n) ? undefined : n;
+}
+
 function parseFrontmatter(raw: string): { meta: Record<string, string>; body: string } {
   const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
   if (!match) return { meta: {}, body: raw };
@@ -183,6 +189,8 @@ export interface GalleryPhotoMeta {
   title: string;
   date: string;
   location: string;
+  lat?: number;
+  lng?: number;
   camera: string;
   lens: string;
   aperture: string;
@@ -223,6 +231,8 @@ export function getGalleryPhotos(sourceDir: string, locale?: string): GalleryPho
         title: meta.title || slug,
         date: meta.date || '',
         location: meta.location || '',
+        lat: parseCoord(meta.lat),
+        lng: parseCoord(meta.lng),
         camera: meta.camera || '',
         lens: meta.lens || '',
         aperture: meta.aperture || '',
@@ -253,6 +263,8 @@ export function getGalleryPhoto(sourceDir: string, slug: string, locale?: string
         title: meta.title || slug,
         date: meta.date || '',
         location: meta.location || '',
+        lat: parseCoord(meta.lat),
+        lng: parseCoord(meta.lng),
         camera: meta.camera || '',
         lens: meta.lens || '',
         aperture: meta.aperture || '',

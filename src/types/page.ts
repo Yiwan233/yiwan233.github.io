@@ -53,6 +53,8 @@ export interface GalleryItem {
     slug: string;
     date?: string;
     location?: string;
+    lat?: number;
+    lng?: number;
     camera?: string;
     lens?: string;
     aperture?: string;
@@ -61,6 +63,13 @@ export interface GalleryItem {
     focal_length?: string;
     image: string;
     content?: string;
+}
+
+export interface GalleryLocationGroup {
+    lat: number;
+    lng: number;
+    locationName: string;
+    items: GalleryItem[];
 }
 
 export interface GalleryPageConfig extends BasePageConfig {
@@ -73,6 +82,8 @@ export interface GalleryPhoto {
     title: string;
     date: string;
     location: string;
+    lat?: number;
+    lng?: number;
     camera: string;
     lens: string;
     aperture: string;

@@ -253,3 +253,50 @@ body {
   /* Soften card borders in dark mode only */
   border-color: rgba(148, 163, 184, 0.24);
 }
+
+/* Gallery map marker cluster */
+.gallery-marker-cluster {
+  background: none !important;
+  border: none !important;
+}
+
+.gallery-marker-inner {
+  width: 36px;
+  height: 36px;
+  background: var(--accent);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border: 2px solid white;
+}
+
+.dark .gallery-marker-inner {
+  border-color: #1e293b;
+}
+
+/* Leaflet popup dark mode */
+.dark .leaflet-popup-content-wrapper {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+.dark .leaflet-popup-content-wrapper .leaflet-popup-content {
+  color: #e2e8f0;
+}
+
+.dark .leaflet-popup-tip {
+  background: #1e293b;
+}
+
+.dark .leaflet-popup-content-wrapper .text-neutral-900 {
+  color: #f8fafc;
+}
+
+.dark .leaflet-popup-content-wrapper .text-neutral-500 {
+  color: #94a3b8;
+}
