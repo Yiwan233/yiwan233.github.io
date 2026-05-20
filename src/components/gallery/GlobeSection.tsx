@@ -11,12 +11,15 @@ const EARTH_RADIUS = 2;
 const ATMOSPHERE_RADIUS = 2.1;
 
 function latLngToVec3(lat: number, lng: number, radius = EARTH_RADIUS): THREE.Vector3 {
-  const phi = lat * (Math.PI / 180);
-  const theta = lng * (Math.PI / 180);
+  // Three.js SphereGeometry maps:
+  //   phi   = (lng + 180) * PI/180   (horizontal: -180°→0 at phi=0, 0°→prime meridian at phi=PI)
+  //   theta = (90 - lat) * PI/180    (vertical: 90°N at theta=0, equator at theta=PI/2)
+  const phi = (lng + 180) * (Math.PI / 180);
+  const theta = (90 - lat) * (Math.PI / 180);
   return new THREE.Vector3(
-    radius * Math.cos(phi) * Math.cos(theta),
-    radius * Math.sin(phi),
-    radius * Math.cos(phi) * Math.sin(theta)
+    -radius * Math.cos(phi) * Math.sin(theta),
+    radius * Math.cos(theta),
+    radius * Math.sin(phi) * Math.sin(theta)
   );
 }
 
