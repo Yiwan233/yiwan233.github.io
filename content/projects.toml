@@ -3,6 +3,34 @@ title = "Projects"
 description = "Selected research projects and competition work."
 
 [[items]]
+title = "2025 CUMCM: NIPT Dynamic Optimal Strategy (C Problem)"
+subtitle = "Team Lead — International Track Second Prize"
+date = "2025"
+content = "Designed a refined clustering framework for NIPT testing data, constructing a dynamic optimal decision model with interpretable diagnostic outputs. Combined statistical hypothesis testing with machine learning for prenatal screening optimization."
+tags = ["Mathematical Modeling", "Statistical Learning", "Medical AI", "Optimization"]
+
+[[items]]
+title = "AI-Based University Smart Course Scheduling"
+subtitle = "16th China Service Outsourcing Innovation Contest — Regional Third Prize"
+date = "2025"
+content = "Built a multi-objective optimization model using integer programming (0-1 four-dimensional decision variables) and improved genetic algorithm (BlockXO crossover, adaptive mutation). Applied constraint pre-filtering and hierarchical solving strategies for the Chaoxing Group enterprise命题."
+tags = ["Integer Programming", "Genetic Algorithm", "Optimization", "AI"]
+
+[[items]]
+title = "Quantitative Study on Regional Discrimination"
+subtitle = "Research Project — MAT314 Regression Analysis"
+date = "2024"
+content = "Investigated the mediating role of economic factors and the moderating effect of migration selectivity on regional discrimination against Henan residents. Applied SPSS statistical analysis, mediation effect testing, and moderation effect analysis."
+tags = ["Statistics", "Regression Analysis", "Social Science", "SPSS"]
+
+[[items]]
+title = "Huashu Cup: Foreign Tourist Attractiveness in China"
+subtitle = "National Second Prize — Entropy-TOPSIS Model"
+date = "2024"
+content = "Applied entropy weight method and TOPSIS comprehensive evaluation to model foreign tourist attractiveness across 340+ Chinese cities. Integrated web-scraped data across transportation, climate, environment, and tourism resource dimensions."
+tags = ["TOPSIS", "Entropy Weight Method", "Data Analysis", "Web Scraping"]
+
+[[items]]
 title = "Deep Hedging under Rough Volatility"
 subtitle = "First & Corresponding Author"
 date = "2025 - Present"

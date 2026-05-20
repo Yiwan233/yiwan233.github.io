@@ -34,10 +34,25 @@
 
 ## Selected Projects & Competitions
 
+**2025 CUMCM: NIPT Dynamic Optimal Strategy (Problem C)**
+*Team Lead* | *Sep 2025*
+- Designed a refined clustering framework for NIPT testing data, constructing a dynamic optimal decision model with interpretable diagnostic outputs.
+- **International Track Second Prize**, China Undergraduate Mathematical Contest in Modeling.
+
+**2025 Service Outsourcing Innovation Contest: AI-Based Smart Course Scheduling**
+*Team Lead* | *May 2025*
+- Built a multi-objective optimization model using 0-1 integer programming and improved genetic algorithm (BlockXO crossover, adaptive mutation).
+- Applied constraint pre-filtering and hierarchical solving strategies. Won **Regional Third Prize**.
+
 **EY-Gorton ESG Challenge** (National Top 4 & NE China Champion)
 *Core Lead, Environment Module* | *Apr 2024 - Jun 2024*
 - Architected a "Lithium Innovation & Precision Agriculture" synergy plan, modeling droplet drift inhibition to increase pesticide coverage from 10% to 50%.
 - Quantified the ecological value of Direct Lithium Extraction via comparative modeling, projecting an 85.5% reduction in water consumption.
+
+**Huashu Cup: Foreign Tourist Attractiveness in China**
+*Team Lead* | *Aug 2024*
+- Applied Entropy-TOPSIS model to evaluate tourist attractiveness across 340+ Chinese cities using multi-dimensional web-scraped data.
+- Won **National Second Prize**.
 
 **YADA Smart Storage & Lightseeker Solar Projects**
 *Algorithm & Operations Specialist* | *Apr 2024 - Aug 2024*
@@ -51,10 +66,13 @@
 
 ## Honors and Awards
 
-- **National Second Prize**, China Undergraduate Mathematical Contest in Modeling (CUMCM, Problem B), *2024*
+- **International Track Second Prize**, China Undergraduate Mathematical Contest in Modeling (CUMCM, Problem C), *2025*
 - **Meritorious Winner (Top 7%)**, Mathematical Contest in Modeling (MCM/ICM, Problem C), *2025*
+- **National Second Prize**, China Undergraduate Mathematical Contest in Modeling (CUMCM, Problem B), *2024*
 - **National Top 4 & NE China Champion**, EY-Gorton ESG Challenge, *2024*
+- **National Second Prize**, Huashu Cup Mathematical Modeling Contest (Problem C), *2024*
 - **Second Prize**, MathorCup College Students Mathematical Modeling Challenge (Problem B), *2024*
+- **Regional Third Prize**, China College Students Service Outsourcing Innovation Contest, *2025*
 - **Bronze Award**, China International College Students' Innovation Competition — Malaysia Region, *2024*
 - **Silver Award**, XMUM TechExpo Science & Technology Exhibition, *2024*
 - **Utility Model Patent** (Accepted): Smart Storage Rack for Food Delivery Pickup, *2024*

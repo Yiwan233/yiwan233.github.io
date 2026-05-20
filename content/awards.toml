@@ -39,6 +39,24 @@ date = "2024"
 content = "Received silver award at the XMUM science and technology exhibition."
 
 [[items]]
+title = "Second Prize (International Track)"
+subtitle = "CUMCM — China Undergraduate Mathematical Contest in Modeling (Problem C)"
+date = "2025"
+content = "Won second prize in the international track of CUMCM for C problem (NIPT testing dynamic optimal strategy and interpretable diagnostic model)."
+
+[[items]]
+title = "National Second Prize"
+subtitle = "Huashu Cup National College Students Mathematical Modeling Contest (Problem C)"
+date = "2024"
+content = "Won national second prize for modeling foreign tourists' travel attractiveness across 340+ Chinese cities using Entropy-TOPSIS evaluation."
+
+[[items]]
+title = "Regional Third Prize"
+subtitle = "China College Students Service Outsourcing Innovation Contest"
+date = "2025"
+content = "Developed an AI-based university smart course scheduling system using integer programming and improved genetic algorithms, winning the regional third prize."
+
+[[items]]
 title = "Utility Model Patent (Accepted)"
 subtitle = "Smart Storage Rack for Food Delivery Pickup"
 date = "2024"
