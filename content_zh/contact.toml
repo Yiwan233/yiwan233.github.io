@@ -1,4 +1,4 @@
 type = "contact"
 title = "联系我"
-description = "欢迎通过以下表单给我留言，或直接发送邮件联系我。"
+description = "期待你的来信——无论是学术讨论、合作，还是一段有趣的对话。"
 form_endpoint = ""

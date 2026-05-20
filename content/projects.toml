@@ -1,6 +1,6 @@
 type = "card"
 title = "Projects"
-description = "Selected research projects and competition work."
+description = "Where curiosity takes shape — things I've built, problems I've chased."
 
 [[items]]
 title = "ThERA Lab: Surgical Robotics Research"
@@ -20,7 +20,7 @@ tags = ["Mathematical Finance", "Stochastic Analysis", "Malliavin Calculus", "De
 title = "MFA Round Table (模法师圆桌)"
 subtitle = "Founder & Lead"
 date = "2025 - Present"
-content = "Founded and lead a community of 420+ active participants dedicated to mathematical modeling knowledge sharing across multiple universities. Organize structured workshops covering topics from introductory modeling to advanced techniques (optimization, machine learning, statistical analysis), maintain shared resource libraries of competition papers and code templates, and facilitate cross-university team formation for major competitions including CUMCM and MCM/ICM."
+content = "Founded and lead a community with 420+ cumulative participations dedicated to mathematical modeling knowledge sharing across multiple universities. Organize structured workshops covering topics from introductory modeling to advanced techniques (optimization, machine learning, statistical analysis), maintain shared resource libraries of competition papers and code templates, and facilitate cross-university team formation for major competitions including CUMCM and MCM/ICM."
 tags = ["Community", "Mathematical Modeling", "Education", "Leadership"]
 
 [[items]]
