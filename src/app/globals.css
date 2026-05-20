@@ -254,49 +254,146 @@ body {
   border-color: rgba(148, 163, 184, 0.24);
 }
 
-/* Gallery map marker cluster */
-.gallery-marker-cluster {
+/* ── Gallery map ── */
+
+/* Map frame */
+.gallery-map-frame {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.06),
+    0 8px 32px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--neutral-200);
+}
+
+.dark .gallery-map-frame {
+  border-color: var(--neutral-800);
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.3),
+    0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.gallery-map {
+  position: relative;
+}
+
+/* Tile filter — subtle desaturation for artistic palette */
+.gallery-map .leaflet-tile-pane {
+  filter: saturate(0.65) brightness(1.06) contrast(0.95);
+}
+
+.dark .gallery-map .leaflet-tile-pane {
+  filter: saturate(0.3) brightness(0.75) contrast(1.15);
+}
+
+/* Vignette overlay */
+.gallery-map-vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1000;
+  background: radial-gradient(ellipse at center, transparent 55%, rgba(0, 0, 0, 0.18) 100%);
+  border-radius: inherit;
+}
+
+.dark .gallery-map-vignette {
+  background: radial-gradient(ellipse at center, transparent 50%, rgba(0, 0, 0, 0.45) 100%);
+}
+
+/* ── Marker — refined dot + ripple ring ── */
+.gallery-marker {
   background: none !important;
   border: none !important;
 }
 
-.gallery-marker-inner {
-  width: 36px;
-  height: 36px;
+.gallery-marker-dot {
+  width: 26px;
+  height: 26px;
   background: var(--accent);
   color: white;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  line-height: 1;
+  box-shadow: 0 2px 12px rgba(37, 99, 235, 0.45);
   border: 2px solid white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
 }
 
-.dark .gallery-marker-inner {
+.dark .gallery-marker-dot {
   border-color: #1e293b;
+  box-shadow: 0 2px 12px rgba(96, 165, 250, 0.45);
 }
 
-/* Leaflet popup dark mode */
-.dark .leaflet-popup-content-wrapper {
+.gallery-marker-ring {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  opacity: 0.3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: marker-ring-pulse 2.5s ease-out infinite;
+}
+
+@keyframes marker-ring-pulse {
+  0% {
+    width: 26px;
+    height: 26px;
+    opacity: 0.35;
+  }
+  100% {
+    width: 44px;
+    height: 44px;
+    opacity: 0;
+  }
+}
+
+/* ── Popup — refined card style ── */
+.gallery-popup .leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.dark .gallery-popup .leaflet-popup-content-wrapper {
   background: #1e293b;
+  border-color: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-popup .leaflet-popup-content {
+  margin: 12px;
+  min-width: 160px;
+}
+
+.dark .gallery-popup .leaflet-popup-content {
   color: #e2e8f0;
 }
 
-.dark .leaflet-popup-content-wrapper .leaflet-popup-content {
-  color: #e2e8f0;
-}
-
-.dark .leaflet-popup-tip {
+.dark .gallery-popup .leaflet-popup-tip {
   background: #1e293b;
 }
 
-.dark .leaflet-popup-content-wrapper .text-neutral-900 {
+.dark .gallery-popup .leaflet-popup-content-wrapper .text-neutral-900 {
   color: #f8fafc;
 }
 
-.dark .leaflet-popup-content-wrapper .text-neutral-500 {
+.dark .gallery-popup .leaflet-popup-content-wrapper .text-neutral-500 {
   color: #94a3b8;
+}
+
+/* Hide default zoom control (we rely on scroll) */
+.gallery-map .leaflet-control-zoom {
+  display: none;
 }

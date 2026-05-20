@@ -7,13 +7,13 @@ import 'leaflet/dist/leaflet.css';
 import type { GalleryLocationGroup } from '@/types/page';
 import { getCountry } from '@/lib/gallery';
 
-function createClusterIcon(count: number): L.DivIcon {
+function createMarkerIcon(count: number): L.DivIcon {
   return L.divIcon({
-    className: 'gallery-marker-cluster',
-    html: `<div class="gallery-marker-inner">${count}</div>`,
-    iconSize: L.point(36, 36),
-    iconAnchor: [18, 18],
-    popupAnchor: [0, -20],
+    className: 'gallery-marker',
+    html: `<div class="gallery-marker-ring"></div><div class="gallery-marker-dot"><span>${count}</span></div>`,
+    iconSize: L.point(44, 44),
+    iconAnchor: [22, 22],
+    popupAnchor: [0, -26],
   });
 }
 
@@ -52,7 +52,6 @@ function MapBoundsUpdater({ groups, activeCountry }: { groups: GalleryLocationGr
   const prevCountry = useRef<string | null>(undefined);
 
   useEffect(() => {
-    // Only fly when the country actually changes (skip initial render)
     if (prevCountry.current === activeCountry) return;
     prevCountry.current = activeCountry;
 
@@ -101,48 +100,55 @@ export default function MapSection({
   };
 
   return (
-    <div
-      className="w-full rounded-xl overflow-hidden shadow-md border border-neutral-200 dark:border-neutral-800 mb-10"
-      style={{ height: '55vh', minHeight: '300px' }}
-    >
-      <MapContainer
-        center={[centerLat, centerLng]}
-        zoom={4}
-        scrollWheelZoom={true}
-        className="w-full h-full"
-      >
-        <TileLayerSwitcher />
-        <MapBoundsUpdater groups={groups} activeCountry={activeCountry} />
-        {visible.map((group) => (
-          <Marker
-            key={group.locationName || `${group.lat},${group.lng}`}
-            position={[group.lat, group.lng]}
-            icon={createClusterIcon(group.items.length)}
+    <div className="gallery-map-container mb-10">
+      <div className="gallery-map-frame">
+        <div
+          className="gallery-map"
+          style={{ height: '55vh', minHeight: '300px' }}
+        >
+          <MapContainer
+            center={[centerLat, centerLng]}
+            zoom={4}
+            scrollWheelZoom={true}
+            className="w-full h-full"
+            zoomControl={false}
           >
-            <Popup>
-              <div className="text-center min-w-[160px]">
-                <h4 className="font-semibold text-sm mb-1 text-neutral-900">
-                  {group.locationName || '未知地点'}
-                </h4>
-                <p className="text-xs text-neutral-500 mb-2">{group.items.length} 张照片</p>
-                {group.items[0]?.image && (
-                  <img
-                    src={group.items[0].image}
-                    alt={group.items[0].title}
-                    className="w-full h-20 object-cover rounded mb-2"
-                  />
-                )}
-                <button
-                  onClick={() => handleScrollToGroup(group.locationName)}
-                  className="text-xs text-accent hover:text-accent-light font-medium transition-colors"
-                >
-                  查看照片
-                </button>
-              </div>
-            </Popup>
-          </Marker>
-        ))}
-      </MapContainer>
+            <TileLayerSwitcher />
+            <MapBoundsUpdater groups={groups} activeCountry={activeCountry} />
+            {visible.map((group) => (
+              <Marker
+                key={group.locationName || `${group.lat},${group.lng}`}
+                position={[group.lat, group.lng]}
+                icon={createMarkerIcon(group.items.length)}
+              >
+                <Popup className="gallery-popup">
+                  <div className="text-center">
+                    {group.items[0]?.image && (
+                      <img
+                        src={group.items[0].image}
+                        alt={group.items[0].title}
+                        className="w-full h-24 object-cover rounded-lg mb-3"
+                      />
+                    )}
+                    <h4 className="font-semibold text-sm mb-0.5 text-neutral-900">
+                      {group.locationName || '未知地点'}
+                    </h4>
+                    <p className="text-xs text-neutral-500 mb-2">{group.items.length} 张照片</p>
+                    <button
+                      onClick={() => handleScrollToGroup(group.locationName)}
+                      className="text-xs font-medium px-3 py-1 rounded-full bg-accent text-white hover:bg-accent-dark transition-colors"
+                    >
+                      查看照片
+                    </button>
+                  </div>
+                </Popup>
+              </Marker>
+            ))}
+          </MapContainer>
+          {/* Vignette overlay */}
+          <div className="gallery-map-vignette" />
+        </div>
+      </div>
     </div>
   );
 }
