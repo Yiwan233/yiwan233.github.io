@@ -1,10 +1,11 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { useEffect, useState, useRef } from 'react';
+import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import type { GalleryLocationGroup } from '@/types/page';
+import { getCountry } from '@/lib/gallery';
 
 function createClusterIcon(count: number): L.DivIcon {
   return L.divIcon({
@@ -46,13 +47,51 @@ function toGroupId(name: string): string {
   return `gallery-group-${name.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9一-鿿-]/g, '')}`;
 }
 
-export default function MapSection({ groups }: { groups: GalleryLocationGroup[] }) {
+function MapBoundsUpdater({ groups, activeCountry }: { groups: GalleryLocationGroup[]; activeCountry: string | null }) {
+  const map = useMap();
+  const prevCountry = useRef<string | null>(undefined);
+
+  useEffect(() => {
+    // Only fly when the country actually changes (skip initial render)
+    if (prevCountry.current === activeCountry) return;
+    prevCountry.current = activeCountry;
+
+    const target = activeCountry
+      ? groups.filter((g) => getCountry(g.locationName) === activeCountry && g.lat !== 0)
+      : groups.filter((g) => g.lat !== 0);
+
+    if (target.length === 0) return;
+
+    if (target.length === 1) {
+      map.flyTo([target[0].lat, target[0].lng], target[0].lat === 0 ? 4 : 10, { duration: 1 });
+    } else {
+      const bounds = L.latLngBounds(
+        target.map((g) => L.latLng(g.lat, g.lng))
+      ).pad(0.2);
+      map.flyToBounds(bounds, { duration: 1, maxZoom: 12 });
+    }
+  }, [activeCountry, groups, map]);
+
+  return null;
+}
+
+export default function MapSection({
+  groups,
+  activeCountry,
+}: {
+  groups: GalleryLocationGroup[];
+  activeCountry: string | null;
+}) {
   const located = groups.filter((g) => g.lat !== 0 && g.lng !== 0);
 
   if (located.length === 0) return null;
 
-  const centerLat = located.reduce((s, g) => s + g.lat, 0) / located.length;
-  const centerLng = located.reduce((s, g) => s + g.lng, 0) / located.length;
+  const visible = activeCountry
+    ? located.filter((g) => getCountry(g.locationName) === activeCountry)
+    : located;
+
+  const centerLat = visible.reduce((s, g) => s + g.lat, 0) / visible.length;
+  const centerLng = visible.reduce((s, g) => s + g.lng, 0) / visible.length;
 
   const handleScrollToGroup = (name: string) => {
     const el = document.getElementById(toGroupId(name));
@@ -73,7 +112,8 @@ export default function MapSection({ groups }: { groups: GalleryLocationGroup[] 
         className="w-full h-full"
       >
         <TileLayerSwitcher />
-        {located.map((group) => (
+        <MapBoundsUpdater groups={groups} activeCountry={activeCountry} />
+        {visible.map((group) => (
           <Marker
             key={group.locationName || `${group.lat},${group.lng}`}
             position={[group.lat, group.lng]}

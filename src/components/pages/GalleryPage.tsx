@@ -1,10 +1,11 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import type { GalleryPageConfig, GalleryItem, GalleryLocationGroup } from '@/types/page';
-import { groupPhotosByLocation } from '@/lib/gallery';
+import { groupPhotosByLocation, getCountriesFromGroups, getCountry } from '@/lib/gallery';
 
 const MapSection = dynamic(() => import('@/components/gallery/MapSection'), { ssr: false });
 
@@ -76,6 +77,12 @@ function LocationGroupSection({ group }: { group: GalleryLocationGroup }) {
 
 export default function GalleryPage({ config }: { config: GalleryPageConfig }) {
   const groups = groupPhotosByLocation(config.items);
+  const countries = getCountriesFromGroups(groups);
+  const [activeCountry, setActiveCountry] = useState<string | null>(null);
+
+  const filteredGroups = activeCountry
+    ? groups.filter((g) => getCountry(g.locationName) === activeCountry || g.locationName === 'Other')
+    : groups;
 
   return (
     <motion.div
@@ -92,10 +99,38 @@ export default function GalleryPage({ config }: { config: GalleryPageConfig }) {
         )}
       </div>
 
-      <MapSection groups={groups} />
+      {countries.length > 1 && (
+        <div className="flex flex-wrap gap-2 mb-6">
+          <button
+            onClick={() => setActiveCountry(null)}
+            className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+              activeCountry === null
+                ? 'bg-accent text-white shadow-sm'
+                : 'bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200 dark:hover:bg-neutral-700'
+            }`}
+          >
+            全部
+          </button>
+          {countries.map((country) => (
+            <button
+              key={country}
+              onClick={() => setActiveCountry(activeCountry === country ? null : country)}
+              className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+                activeCountry === country
+                  ? 'bg-accent text-white shadow-sm'
+                  : 'bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200 dark:hover:bg-neutral-700'
+              }`}
+            >
+              {country}
+            </button>
+          ))}
+        </div>
+      )}
+
+      <MapSection groups={groups} activeCountry={activeCountry} />
 
       <div className="space-y-12">
-        {groups.map((group) => (
+        {filteredGroups.map((group) => (
           <LocationGroupSection key={group.locationName || `${group.lat},${group.lng}`} group={group} />
         ))}
       </div>

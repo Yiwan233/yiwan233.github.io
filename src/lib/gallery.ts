@@ -51,3 +51,18 @@ export function groupPhotosByLocation(items: GalleryItem[]): GalleryLocationGrou
 
   return groups;
 }
+
+export function getCountry(locationName: string): string {
+  if (!locationName || locationName === 'Other') return '';
+  const parts = locationName.split(',').map((s) => s.trim());
+  return parts[parts.length - 1] || '';
+}
+
+export function getCountriesFromGroups(groups: GalleryLocationGroup[]): string[] {
+  const countries = new Set<string>();
+  for (const g of groups) {
+    const country = getCountry(g.locationName);
+    if (country) countries.add(country);
+  }
+  return Array.from(countries).sort();
+}
