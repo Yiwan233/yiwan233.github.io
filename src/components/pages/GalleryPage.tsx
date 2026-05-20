@@ -29,7 +29,8 @@ function PhotoCard({ item, index }: { item: GalleryItem; index: number }) {
           <img
             src={item.image}
             alt={item.title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 polaroid-develop"
+            style={{ animationDelay: `${0.08 * index}s` }}
             loading="lazy"
           />
         </div>

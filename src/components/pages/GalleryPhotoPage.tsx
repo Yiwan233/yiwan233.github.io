@@ -86,11 +86,11 @@ export default function GalleryPhotoPage({ photo }: GalleryPhotoPageProps) {
                 )}
             </div>
 
-            <div className="rounded-xl overflow-hidden mb-8 shadow-lg">
+            <div className="rounded-xl overflow-hidden mb-8 shadow-lg polaroid-frame">
                 <img
                     src={photo.image}
                     alt={photo.title}
-                    className="w-full h-auto"
+                    className="w-full h-auto polaroid-develop"
                 />
             </div>
 
