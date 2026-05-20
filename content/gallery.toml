@@ -36,9 +36,182 @@ image = "/gallery/georgetown-heritage.jpg"
 content = """The iconic street art of Georgetown, Penang — where history meets contemporary expression on every corner."""
 
 [[items]]
+title = "中环半山扶梯"
+slug = "dsc-0387"
+date = "2026-03"
+lat = 22.283465100000893
+lng = 114.1547673900119
+location = "Central, Hong Kong"
+camera = "NIKON D90"
+lens = "50.0 mm f/1.8"
+aperture = "f/5"
+shutter = "1/500s"
+iso = "800"
+focal_length = "50mm"
+image = "/gallery/dsc-0387.jpg"
+content = """上山容易下山难。"""
+
+[[items]]
+title = "新葡京"
+slug = "dsc-0013"
+date = "2026-03"
+lat = 22.189481269998897
+lng = 113.54339540003747
+location = "Macau, China"
+camera = "NIKON D90"
+lens = "50.0 mm f/1.8"
+aperture = "f/7.1"
+shutter = "1/500s"
+iso = "250"
+focal_length = "50mm"
+image = "/gallery/dsc-0013.jpg"
+content = """标准打卡点。"""
+
+[[items]]
+title = "大三巴"
+slug = "dsc-0117"
+date = "2026-03"
+lat = 22.197490529999893
+lng = 113.54079633994631
+location = "Macau, China"
+camera = "NIKON D90"
+lens = "50.0 mm f/1.8"
+aperture = "f/10"
+shutter = "1/400s"
+iso = "400"
+focal_length = "50mm"
+image = "/gallery/dsc-0117.jpg"
+
+[[items]]
+title = "街景"
+slug = "dsc-0159"
+date = "2026-03"
+lat = 22.196147
+lng = 113.54520856998612
+location = "Macau, China"
+camera = "NIKON D90"
+lens = "50.0 mm f/1.8"
+aperture = "f/10"
+shutter = "1/500s"
+iso = "400"
+focal_length = "50mm"
+image = "/gallery/dsc-0159.jpg"
+
+[[items]]
+title = "澳门一酒店旋转门"
+slug = "dsc-0225"
+date = "2026-03"
+lat = 22.146658090037107
+lng = 113.56474042001338
+location = "Macau, China"
+camera = "NIKON D90"
+lens = "50.0 mm f/1.8"
+aperture = "f/2.8"
+shutter = "1/500s"
+iso = "320"
+focal_length = "50mm"
+image = "/gallery/dsc-0225.jpg"
+content = """构图跟配色个人认为极好的一个作品。"""
+
+[[items]]
+title = "奔腾"
+slug = "dsc-0226"
+date = "2026-03"
+lat = 22.18920559002643
+lng = 113.54769229998396
+location = "Macau, China"
+camera = "NIKON D90"
+lens = "50.0 mm f/1.8"
+aperture = "f/8"
+shutter = "1/500s"
+iso = "320"
+focal_length = "50mm"
+image = "/gallery/dsc-0226.jpg"
+content = """给美高梅拍宣传照来了"""
+
+[[items]]
+title = "街景"
+slug = "dsc-0230"
+date = "2026-03"
+lat = 22.14783565997049
+lng = 113.56531440996709
+location = "Macau, China"
+camera = "NIKON D90"
+lens = "50.0 mm f/1.8"
+aperture = "f/8"
+shutter = "1/500s"
+iso = "320"
+focal_length = "50mm"
+image = "/gallery/dsc-0230.jpg"
+
+[[items]]
+title = "三人行"
+slug = "dsc-0312"
+date = "2026-03"
+lat = 22.28035027998821
+lng = 114.16064679997412
+location = "Central, Hong Kong"
+camera = "NIKON D90"
+lens = "50.0 mm f/1.8"
+aperture = "f/8"
+shutter = "1/500s"
+iso = "400"
+focal_length = "50mm"
+image = "/gallery/dsc-0312.jpg"
+content = """中环偶然拍摄的照片，构图尚可。"""
+
+[[items]]
+title = "铜锣湾街景"
+slug = "dsc-0362"
+date = "2026-03"
+lat = 22.27998543998544
+lng = 114.18288498999989
+location = "Causeway Bay, Hong Kong"
+camera = "NIKON D90"
+lens = "50.0 mm f/1.8"
+aperture = "f/8"
+shutter = "1/500s"
+iso = "400"
+focal_length = "50mm"
+image = "/gallery/dsc-0362.jpg"
+content = """如果没有右下角那两个路人成片效果应该会更好。"""
+
+[[items]]
+title = "南岛的叮叮车"
+slug = "dsc-0373"
+date = "2026-03"
+lat = 22.279541159990462
+lng = 114.18165386002886
+location = "Causeway Bay, Hong Kong"
+camera = "NIKON D90"
+lens = "50.0 mm f/1.8"
+aperture = "f/5.6"
+shutter = "1/500s"
+iso = "800"
+focal_length = "50mm"
+image = "/gallery/dsc-0373.jpg"
+content = """HK为数不多正在运行的历史文物。总感觉穿越了时空，而图片的滤镜显著加强了这一点。"""
+
+[[items]]
+title = "桥底下"
+slug = "dsc-0416"
+date = "2026-03"
+lat = 22.278640210047495
+lng = 114.18118179012346
+location = "Causeway Bay, Hong Kong"
+camera = "NIKON D90"
+lens = "50.0 mm f/1.8"
+aperture = "f/3.2"
+shutter = "1/250s"
+iso = "800"
+focal_length = "50mm"
+image = "/gallery/dsc-0416.jpg"
+content = """在HK做巴士过江时偶然拍得，构图挺好。"""
+
+[[items]]
 title = "车水马龙的HK"
 slug = "dsc-0420"
-date = "2000-01"
+date = "2026-03"
 lat = 22.320780439960767
 lng = 114.16907429998838
 location = "Mong Kok, Hong Kong"
@@ -50,3 +223,50 @@ iso = "800"
 focal_length = "50mm"
 image = "/gallery/dsc-0420.jpg"
 content = """在旺角附近的天桥拍的，只是随手一拍，修完才发现还怪有感觉的。"""
+
+[[items]]
+title = "油麻地一街景"
+slug = "dsc-0425"
+date = "2026-03"
+lat = 22.30959953994145
+lng = 114.1705012300123
+location = "Yau Ma Tei, Hong Kong"
+camera = "NIKON D90"
+lens = "50.0 mm f/1.8"
+aperture = "f/7.1"
+shutter = "1/500s"
+iso = "800"
+focal_length = "50mm"
+image = "/gallery/dsc-0425.jpg"
+
+[[items]]
+title = "维多利亚港"
+slug = "dsc-0477"
+date = "2026-03"
+lat = 22.300345960002144
+lng = 114.15925472996217
+location = "West Kowloon, Hong Kong"
+camera = "NIKON D90"
+lens = "50.0 mm f/1.8"
+aperture = "f/10"
+shutter = "1/500s"
+iso = "1250"
+focal_length = "50mm"
+image = "/gallery/dsc-0477.jpg"
+content = """2026.3.24于西九龙文化区拍摄。"""
+
+[[items]]
+title = "日暮游轮"
+slug = "dsc-0490"
+date = "2026-03"
+lat = 22.29305730994152
+lng = 114.15416121001296
+location = "West Kowloon, Hong Kong"
+camera = "NIKON D90"
+lens = "50.0 mm f/1.8"
+aperture = "f/5"
+shutter = "1/500s"
+iso = "1250"
+focal_length = "50mm"
+image = "/gallery/dsc-0490.jpg"
+content = """西九龙文化区去中环的日常游轮，一趟20HKD，相比倒也实惠，光影甚佳。"""
