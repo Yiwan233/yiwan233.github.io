@@ -6,28 +6,21 @@ description = "Selected research projects and competition work."
 title = "2025 CUMCM: NIPT Dynamic Optimal Strategy (C Problem)"
 subtitle = "Team Lead — International Track Second Prize"
 date = "2025"
-content = "Designed a refined clustering framework for NIPT testing data, constructing a dynamic optimal decision model with interpretable diagnostic outputs. Combined statistical hypothesis testing with machine learning for prenatal screening optimization."
+content = "Designed a refined patient stratification framework for NIPT (Non-Invasive Prenatal Testing) data, integrating statistical hypothesis testing with dynamic programming to construct an optimal sequential decision model. Built interpretable diagnostic outputs combining likelihood ratios and risk thresholds, enabling personalized screening strategies that balance sensitivity and specificity across heterogeneous populations."
 tags = ["Mathematical Modeling", "Statistical Learning", "Medical AI", "Optimization"]
 
 [[items]]
 title = "AI-Based University Smart Course Scheduling"
 subtitle = "16th China Service Outsourcing Innovation Contest — Regional Third Prize"
 date = "2025"
-content = "Built a multi-objective optimization model using integer programming (0-1 four-dimensional decision variables) and improved genetic algorithm (BlockXO crossover, adaptive mutation). Applied constraint pre-filtering and hierarchical solving strategies for the Chaoxing Group enterprise命题."
+content = "Built a multi-objective optimization model using 0-1 integer programming with four-dimensional decision variables (teacher, classroom, class, time slot) and an improved genetic algorithm featuring BlockXO crossover and adaptive mutation operators. Encoded hard constraints (conflict avoidance, capacity matching, forbidden scheduling rules) and soft constraints (preference satisfaction, resource concentration, workload balance). Applied constraint pre-filtering and hierarchical solving for the Chaoxing Group enterprise challenge."
 tags = ["Integer Programming", "Genetic Algorithm", "Optimization", "AI"]
-
-[[items]]
-title = "Quantitative Study on Regional Discrimination"
-subtitle = "Research Project — MAT314 Regression Analysis"
-date = "2024"
-content = "Investigated the mediating role of economic factors and the moderating effect of migration selectivity on regional discrimination against Henan residents. Applied SPSS statistical analysis, mediation effect testing, and moderation effect analysis."
-tags = ["Statistics", "Regression Analysis", "Social Science", "SPSS"]
 
 [[items]]
 title = "Huashu Cup: Foreign Tourist Attractiveness in China"
 subtitle = "National Second Prize — Entropy-TOPSIS Model"
 date = "2024"
-content = "Applied entropy weight method and TOPSIS comprehensive evaluation to model foreign tourist attractiveness across 340+ Chinese cities. Integrated web-scraped data across transportation, climate, environment, and tourism resource dimensions."
+content = "Scraped and integrated multi-dimensional data across 340+ Chinese cities covering four axes: transportation accessibility, climate comfort, environmental quality, and tourism resource density. Applied the entropy weight method to objectively determine indicator weights, then used TOPSIS to rank cities by composite tourist attractiveness. Identified regional patterns and provided data-driven recommendations for inbound tourism optimization."
 tags = ["TOPSIS", "Entropy Weight Method", "Data Analysis", "Web Scraping"]
 
 [[items]]
@@ -41,26 +34,26 @@ tags = ["Mathematical Finance", "Stochastic Analysis", "Malliavin Calculus", "De
 title = "ThERA Lab: Surgical Robotics Research"
 subtitle = "Research Intern, Great Bay University"
 date = "2026 - Present"
-content = "Cross-modal sensor alignment for robotic surgery (500Hz/60Hz). Built first-order affine model for 4D physical feature extraction. Proposed Control-Evaluation dual-track Jacobian decoupling architecture with Lyapunov stability analysis. Targeting *IROS / MICCAI*."
+content = "Achieved cross-modal sensor alignment for robotic surgery by introducing velocity adjoint transformations and hardware timestamp synchronization across heterogeneous sensor streams (500Hz force/kinematics vs. 60Hz imaging). Built a first-order affine model under continuum mechanics assumptions for 4D physical feature extraction, with Savitzky-Golay filtering and confidence masking to suppress speckle noise. Proposed a Control-Evaluation dual-track Jacobian decoupling architecture with Lyapunov stability analysis and Smith Predictor latency compensation (33ms). Targeting *IROS / MICCAI*."
 tags = ["Robotics", "Sensor Fusion", "Control Theory", "Computer Vision"]
 
 [[items]]
 title = "EY-Gorton ESG Challenge"
 subtitle = "Core Lead, Environment Module — National Top 4 & NE China Champion"
 date = "2024"
-content = "Architected a 'Lithium Innovation & Precision Agriculture' synergy plan. Modeled droplet drift inhibition to increase pesticide coverage from 10% to 50%. Quantified ecological value of Direct Lithium Extraction, projecting 85.5% reduction in water consumption."
+content = "Architected a 'Lithium Innovation & Precision Agriculture' synergy plan bridging battery technology and sustainable farming. Built a physics-based droplet drift inhibition model using computational fluid dynamics to optimize nozzle parameters, increasing pesticide coverage from 10% to 50% while reducing chemical runoff. Quantified the ecological value of Direct Lithium Extraction (DLE) versus traditional brine mining through comparative life-cycle modeling, projecting 85.5% reduction in water consumption and significant carbon footprint improvement."
 tags = ["ESG", "Sustainability", "Mathematical Modeling"]
 
 [[items]]
 title = "YADA Smart Storage & Lightseeker Solar"
 subtitle = "Algorithm & Operations Specialist"
 date = "2024"
-content = "Developed weight-locking logic for HX711 hardware sensors using C++, reducing delivery theft rates from double digits to 4.1%. Facilitated cross-border industrial collaboration for a 1000m² smart greenhouse pilot in Malaysia."
+content = "Developed a Weight Lock-Monitor-Trigger model for HX711 hardware sensors using C++, implementing real-time weight-locking logic that detects unauthorized pickup through dynamic threshold comparison. Reduced delivery theft rates from double digits to 4.1% in pilot deployment. For the Lightseeker Solar project, facilitated cross-border industrial collaboration (MOUs) and orchestrated operational scaling for a 1000m² smart greenhouse pilot in Malaysia integrating IoT environmental monitoring."
 tags = ["C++", "IoT", "Hardware", "Operations"]
 
 [[items]]
 title = "MFA Round Table (模法师圆桌)"
 subtitle = "Founder & Lead"
 date = "2025 - Present"
-content = "Founded and lead a community of 420+ active participants dedicated to mathematical modeling knowledge sharing. Organize workshops, tutorials, and collaborative problem-solving sessions for students across universities."
+content = "Founded and lead a community of 420+ active participants dedicated to mathematical modeling knowledge sharing across multiple universities. Organize structured workshops covering topics from introductory modeling to advanced techniques (optimization, machine learning, statistical analysis), maintain shared resource libraries of competition papers and code templates, and facilitate cross-university team formation for major competitions including CUMCM and MCM/ICM."
 tags = ["Community", "Mathematical Modeling", "Education", "Leadership"]
