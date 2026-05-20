@@ -119,7 +119,7 @@ function CountryMarkers({
   );
 }
 
-/* ── City-level marker (blue, smaller) ── */
+/* ── City-level marker (blue, no popup — click scrolls directly) ── */
 function CityMarkers({
   groups,
   onScrollToGroup,
@@ -127,64 +127,57 @@ function CityMarkers({
   groups: GalleryLocationGroup[];
   onScrollToGroup: (name: string) => void;
 }) {
-  const [selectedKey, setSelectedKey] = useState<string | null>(null);
+  const [hoveredKey, setHoveredKey] = useState<string | null>(null);
+
+  // Sort groups to stagger label offsets and reduce overlap
+  const sorted = useMemo(() => [...groups].sort((a, b) => a.lat - b.lat), [groups]);
 
   return (
     <>
-      {groups.map((group) => {
+      {sorted.map((group, idx) => {
         const surf = latLngToVec3(group.lat, group.lng);
         const n = surf.clone().normalize();
         const dotPos = surf.clone().add(n.clone().multiplyScalar(0.06));
-        const popupPos = surf.clone().add(n.clone().multiplyScalar(0.6));
+        const labelPos = surf.clone().add(n.clone().multiplyScalar(0.22 + idx * 0.06));
         const key = group.locationName || `${group.lat},${group.lng}`;
-        const isSelected = selectedKey === key;
+        const isHovered = hoveredKey === key;
+        const shortName = group.locationName.split(',')[0].trim();
 
         return (
           <group key={key}>
+            {/* Hover glow ring */}
+            <mesh position={dotPos} visible={isHovered}>
+              <ringGeometry args={[0.06, 0.13, 32]} />
+              <meshBasicMaterial color="#60a5fa" transparent opacity={0.45} side={THREE.DoubleSide} />
+            </mesh>
+            {/* Dot */}
             <mesh
               position={dotPos}
               onClick={(e) => {
                 e.stopPropagation();
-                setSelectedKey(isSelected ? null : key);
+                onScrollToGroup(group.locationName);
               }}
+              onPointerOver={(e) => { e.stopPropagation(); setHoveredKey(key); }}
+              onPointerOut={() => setHoveredKey(null)}
             >
               <sphereGeometry args={[0.05, 16, 16]} />
               <meshStandardMaterial
                 color="#2563eb"
                 emissive="#60a5fa"
-                emissiveIntensity={isSelected ? 3 : 1.5}
+                emissiveIntensity={isHovered ? 2.8 : 1.4}
                 roughness={0.2}
               />
             </mesh>
-
-            {isSelected && (
-              <Html position={popupPos} center distanceFactor={8} style={{ pointerEvents: 'auto' }}>
-                <div className="globe-popup bg-white/95 dark:bg-neutral-900/95 backdrop-blur-sm rounded-xl shadow-2xl p-3 text-center border border-neutral-200 dark:border-neutral-700 min-w-[170px]">
-                  {group.items[0]?.image && (
-                    <img
-                      src={group.items[0].image}
-                      alt={group.items[0].title}
-                      className="w-full h-20 object-cover rounded-lg mb-2"
-                    />
-                  )}
-                  <h4 className="font-semibold text-xs mb-1 text-neutral-900 dark:text-neutral-100">
-                    {group.locationName || '未知地点'}
-                  </h4>
-                  <p className="text-[11px] text-neutral-500 mb-2">
-                    {group.items.length} 张照片
-                  </p>
-                  <button
-                    onClick={() => {
-                      onScrollToGroup(group.locationName);
-                      setSelectedKey(null);
-                    }}
-                    className="text-[11px] font-medium px-3 py-1 rounded-full bg-accent text-white hover:bg-accent-dark transition-colors"
-                  >
-                    查看照片
-                  </button>
-                </div>
-              </Html>
-            )}
+            {/* City name label */}
+            <Html position={labelPos} center distanceFactor={12} style={{ pointerEvents: 'none' }}>
+              <span
+                className={`text-[10px] font-medium whitespace-nowrap drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)] transition-all duration-200 ${
+                  isHovered ? 'text-white scale-110' : 'text-white/75'
+                }`}
+              >
+                {shortName}
+              </span>
+            </Html>
           </group>
         );
       })}
