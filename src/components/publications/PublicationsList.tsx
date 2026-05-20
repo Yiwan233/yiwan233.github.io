@@ -16,6 +16,7 @@ import { PublicationPageConfig } from '@/types/page';
 import { cn } from '@/lib/utils';
 import { useMessages } from '@/lib/i18n/useMessages';
 import FormattedBibTeXText from './FormattedBibTeXText';
+import ConstellationVisual from './ConstellationVisual';
 
 interface PublicationsListProps {
     config: PublicationPageConfig;
@@ -73,6 +74,10 @@ export default function PublicationsList({ config, publications, embedded = fals
                     </p>
                 )}
             </div>
+
+            {!embedded && publications.length > 0 && (
+              <ConstellationVisual publications={publications} />
+            )}
 
             {/* Search and Filter Controls */}
             <div className="mb-8 space-y-4">
@@ -197,6 +202,7 @@ export default function PublicationsList({ config, publications, embedded = fals
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.4, delay: 0.1 * index }}
+                            id={`pub-${pub.id}`}
                             className="bg-white dark:bg-neutral-900 p-6 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-800 hover:shadow-md transition-all duration-200"
                         >
                             <div className="flex flex-col md:flex-row gap-6">
