@@ -3,28 +3,25 @@ title = "Gallery"
 description = "Moments captured through my lens — urban exploration, landscapes, and the stories behind each frame."
 
 [[items]]
-title = "City Lights"
-slug = "city-lights"
-date = "2025-12"
-location = "Kuala Lumpur, Malaysia"
-camera = "Fujifilm X-T30 II"
-image = "/gallery/city-lights.jpg"
-content = "The vibrant neon signs of Chinatown reflected in rain-soaked streets. Shot during a late-night urban exploration walk through Petaling Street."
-
-[[items]]
 title = "Campus Dawn"
 slug = "campus-dawn"
-date = "2025-10"
-location = "XMUM, Sepang"
-camera = "Fujifilm X-T30 II"
+date = "2026-05"
+camera = "Unknown"
 image = "/gallery/campus-dawn.jpg"
-content = "Early morning light filtering through the palm trees on campus. There's a unique stillness at XMUM before the day begins."
+content = "A photo captured."
+
+[[items]]
+title = "City Lights"
+slug = "city-lights"
+date = "2026-05"
+camera = "Unknown"
+image = "/gallery/city-lights.jpg"
+content = "A photo captured."
 
 [[items]]
 title = "Georgetown Heritage"
 slug = "georgetown-heritage"
-date = "2025-08"
-location = "Penang, Malaysia"
-camera = "Fujifilm X-T30 II"
+date = "2026-05"
+camera = "Unknown"
 image = "/gallery/georgetown-heritage.jpg"
-content = "The iconic street art of Georgetown, Penang — where history meets contemporary expression on every corner."
+content = "A photo captured."
