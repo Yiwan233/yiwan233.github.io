@@ -3,6 +3,27 @@ title = "Projects"
 description = "Selected research projects and competition work."
 
 [[items]]
+title = "ThERA Lab: Surgical Robotics Research"
+subtitle = "Research Intern, Great Bay University"
+date = "2026 - Present"
+content = "Achieved cross-modal sensor alignment for robotic surgery by introducing velocity adjoint transformations and hardware timestamp synchronization across heterogeneous sensor streams (500Hz force/kinematics vs. 60Hz imaging). Built a first-order affine model under continuum mechanics assumptions for 4D physical feature extraction, with Savitzky-Golay filtering and confidence masking to suppress speckle noise. Proposed a Control-Evaluation dual-track Jacobian decoupling architecture with Lyapunov stability analysis and Smith Predictor latency compensation (33ms). Targeting *IROS / MICCAI*."
+tags = ["Robotics", "Sensor Fusion", "Control Theory", "Computer Vision"]
+
+[[items]]
+title = "Deep Hedging under Rough Volatility"
+subtitle = "First & Corresponding Author"
+date = "2025 - Present"
+content = "Proposed a novel fractional kernel embedding architecture for deep hedging under rough volatility models. Addressed non-Markovian long-memory characteristics using Malliavin Calculus. Proved minimax optimal convergence rate. Submitted Mar 2026; **Major Revision** received May 2026 at *AIMS Mathematics*."
+tags = ["Mathematical Finance", "Stochastic Analysis", "Malliavin Calculus", "Deep Learning"]
+
+[[items]]
+title = "MFA Round Table (模法师圆桌)"
+subtitle = "Founder & Lead"
+date = "2025 - Present"
+content = "Founded and lead a community of 420+ active participants dedicated to mathematical modeling knowledge sharing across multiple universities. Organize structured workshops covering topics from introductory modeling to advanced techniques (optimization, machine learning, statistical analysis), maintain shared resource libraries of competition papers and code templates, and facilitate cross-university team formation for major competitions including CUMCM and MCM/ICM."
+tags = ["Community", "Mathematical Modeling", "Education", "Leadership"]
+
+[[items]]
 title = "2025 CUMCM: NIPT Dynamic Optimal Strategy (C Problem)"
 subtitle = "Team Lead — International Track Second Prize"
 date = "2025"
@@ -18,27 +39,6 @@ content = "Built a multi-objective optimization model using 0-1 integer programm
 tags = ["Integer Programming", "Genetic Algorithm", "Optimization", "AI"]
 
 [[items]]
-title = "Huashu Cup: Foreign Tourist Attractiveness in China"
-subtitle = "National Second Prize — Entropy-TOPSIS Model"
-date = "2024"
-content = "Scraped and integrated multi-dimensional data across 340+ Chinese cities covering four axes: transportation accessibility, climate comfort, environmental quality, and tourism resource density. Applied the entropy weight method to objectively determine indicator weights, then used TOPSIS to rank cities by composite tourist attractiveness. Identified regional patterns and provided data-driven recommendations for inbound tourism optimization."
-tags = ["TOPSIS", "Entropy Weight Method", "Data Analysis", "Web Scraping"]
-
-[[items]]
-title = "Deep Hedging under Rough Volatility"
-subtitle = "First & Corresponding Author"
-date = "2025 - Present"
-content = "Proposed a novel fractional kernel embedding architecture for deep hedging under rough volatility models. Addressed non-Markovian long-memory characteristics using Malliavin Calculus. Proved minimax optimal convergence rate. Submitted Mar 2026; **Major Revision** received May 2026 at *AIMS Mathematics*."
-tags = ["Mathematical Finance", "Stochastic Analysis", "Malliavin Calculus", "Deep Learning"]
-
-[[items]]
-title = "ThERA Lab: Surgical Robotics Research"
-subtitle = "Research Intern, Great Bay University"
-date = "2026 - Present"
-content = "Achieved cross-modal sensor alignment for robotic surgery by introducing velocity adjoint transformations and hardware timestamp synchronization across heterogeneous sensor streams (500Hz force/kinematics vs. 60Hz imaging). Built a first-order affine model under continuum mechanics assumptions for 4D physical feature extraction, with Savitzky-Golay filtering and confidence masking to suppress speckle noise. Proposed a Control-Evaluation dual-track Jacobian decoupling architecture with Lyapunov stability analysis and Smith Predictor latency compensation (33ms). Targeting *IROS / MICCAI*."
-tags = ["Robotics", "Sensor Fusion", "Control Theory", "Computer Vision"]
-
-[[items]]
 title = "EY-Gorton ESG Challenge"
 subtitle = "Core Lead, Environment Module — National Top 4 & NE China Champion"
 date = "2024"
@@ -47,15 +47,15 @@ content = "Architected a 'Lithium Innovation & Precision Agriculture' synergy pl
 tags = ["ESG", "Sustainability", "Mathematical Modeling"]
 
 [[items]]
+title = "Huashu Cup: Foreign Tourist Attractiveness in China"
+subtitle = "National Second Prize — Entropy-TOPSIS Model"
+date = "2024"
+content = "Scraped and integrated multi-dimensional data across 340+ Chinese cities covering four axes: transportation accessibility, climate comfort, environmental quality, and tourism resource density. Applied the entropy weight method to objectively determine indicator weights, then used TOPSIS to rank cities by composite tourist attractiveness. Identified regional patterns and provided data-driven recommendations for inbound tourism optimization."
+tags = ["TOPSIS", "Entropy Weight Method", "Data Analysis", "Web Scraping"]
+
+[[items]]
 title = "YADA Smart Storage & Lightseeker Solar"
 subtitle = "Algorithm & Operations Specialist"
 date = "2024"
 content = "Developed a Weight Lock-Monitor-Trigger model for HX711 hardware sensors using C++, implementing real-time weight-locking logic that detects unauthorized pickup through dynamic threshold comparison. Reduced delivery theft rates from double digits to 4.1% in pilot deployment. For the Lightseeker Solar project, facilitated cross-border industrial collaboration (MOUs) and orchestrated operational scaling for a 1000m² smart greenhouse pilot in Malaysia integrating IoT environmental monitoring."
 tags = ["C++", "IoT", "Hardware", "Operations"]
-
-[[items]]
-title = "MFA Round Table (模法师圆桌)"
-subtitle = "Founder & Lead"
-date = "2025 - Present"
-content = "Founded and lead a community of 420+ active participants dedicated to mathematical modeling knowledge sharing across multiple universities. Organize structured workshops covering topics from introductory modeling to advanced techniques (optimization, machine learning, statistical analysis), maintain shared resource libraries of competition papers and code templates, and facilitate cross-university team formation for major competitions including CUMCM and MCM/ICM."
-tags = ["Community", "Mathematical Modeling", "Education", "Leadership"]

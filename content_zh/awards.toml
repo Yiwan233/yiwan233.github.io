@@ -3,10 +3,10 @@ title = "获奖"
 description = "荣誉、奖项与专利。"
 
 [[items]]
-title = "全国二等奖"
-subtitle = "CUMCM — 全国大学生数学建模竞赛（B题）"
-date = "2024"
-content = "在全国大学生数学建模竞赛 B 题（生产过程决策优化）中获得全国二等奖。"
+title = "国际赛道二等奖"
+subtitle = "CUMCM — 全国大学生数学建模竞赛（C题）"
+date = "2025"
+content = "在2025年高教社杯全国大学生数学建模竞赛 C 题（NIPT检测的动态最优策略与可解释诊断模型）中获得国际赛道二等奖。"
 
 [[items]]
 title = "优秀奖（前 7%）"
@@ -15,10 +15,28 @@ date = "2025"
 content = "在 COMAP 主办的国际大学生数学建模竞赛 C 题（奥运奖牌预测模型）中取得全球前 7% 的成绩。"
 
 [[items]]
+title = "区级三等奖"
+subtitle = "中国大学生服务外包创新创业大赛"
+date = "2025"
+content = "采用整数规划与改进遗传算法构建基于AI的大学智慧排课系统，获区级三等奖。"
+
+[[items]]
+title = "全国二等奖"
+subtitle = "CUMCM — 全国大学生数学建模竞赛（B题）"
+date = "2024"
+content = "在全国大学生数学建模竞赛 B 题（生产过程决策优化）中获得全国二等奖。"
+
+[[items]]
 title = "全国四强 & 东北赛区冠军"
 subtitle = "安永 Gorton ESG 挑战赛"
 date = "2024"
 content = "负责环境模块，设计「锂电创新与精准农业」协同方案。全国排名前四，东北赛区冠军。"
+
+[[items]]
+title = "全国二等奖"
+subtitle = "华数杯全国大学生数学建模竞赛（C题）"
+date = "2024"
+content = "使用熵权法 + TOPSIS 综合评价模型对全国 340+ 城市的外国游客旅游魅力指数进行建模分析，荣获全国二等奖。"
 
 [[items]]
 title = "二等奖"
@@ -37,24 +55,6 @@ title = "银奖"
 subtitle = "XMUM 科技博览会"
 date = "2024"
 content = "在 XMUM 科技博览会上获得银奖。"
-
-[[items]]
-title = "国际赛道二等奖"
-subtitle = "CUMCM — 全国大学生数学建模竞赛（C题）"
-date = "2025"
-content = "在2025年高教社杯全国大学生数学建模竞赛 C 题（NIPT检测的动态最优策略与可解释诊断模型）中获得国际赛道二等奖。"
-
-[[items]]
-title = "全国二等奖"
-subtitle = "华数杯全国大学生数学建模竞赛（C题）"
-date = "2024"
-content = "使用熵权法 + TOPSIS 综合评价模型对全国 340+ 城市的外国游客旅游魅力指数进行建模分析，荣获全国二等奖。"
-
-[[items]]
-title = "区级三等奖"
-subtitle = "中国大学生服务外包创新创业大赛"
-date = "2025"
-content = "采用整数规划与改进遗传算法构建基于AI的大学智慧排课系统，获区级三等奖。"
 
 [[items]]
 title = "实用新型专利（已受理）"

@@ -3,10 +3,10 @@ title = "Awards"
 description = "Honors, awards, and patents."
 
 [[items]]
-title = "National Second Prize"
-subtitle = "CUMCM — China Undergraduate Mathematical Contest in Modeling (Problem B)"
-date = "2024"
-content = "Won national second prize in the B problem (production process decision optimization) of the national mathematical modeling competition."
+title = "Second Prize (International Track)"
+subtitle = "CUMCM — China Undergraduate Mathematical Contest in Modeling (Problem C)"
+date = "2025"
+content = "Won second prize in the international track of CUMCM for C problem (NIPT testing dynamic optimal strategy and interpretable diagnostic model)."
 
 [[items]]
 title = "Meritorious Winner (Top 7%)"
@@ -15,10 +15,28 @@ date = "2025"
 content = "Achieved top 7% globally in the C problem (Olympic medal prediction model) of the international mathematical modeling competition organized by COMAP."
 
 [[items]]
+title = "Regional Third Prize"
+subtitle = "China College Students Service Outsourcing Innovation Contest"
+date = "2025"
+content = "Developed an AI-based university smart course scheduling system using integer programming and improved genetic algorithms, winning the regional third prize."
+
+[[items]]
+title = "National Second Prize"
+subtitle = "CUMCM — China Undergraduate Mathematical Contest in Modeling (Problem B)"
+date = "2024"
+content = "Won national second prize in the B problem (production process decision optimization) of the national mathematical modeling competition."
+
+[[items]]
 title = "National Top 4 & NE China Champion"
 subtitle = "EY-Gorton ESG Challenge"
 date = "2024"
 content = "Led the Environment Module to architect a 'Lithium Innovation & Precision Agriculture' synergy plan. Ranked top 4 nationally and won the Northeast China regional championship."
+
+[[items]]
+title = "National Second Prize"
+subtitle = "Huashu Cup National College Students Mathematical Modeling Contest (Problem C)"
+date = "2024"
+content = "Won national second prize for modeling foreign tourists' travel attractiveness across 340+ Chinese cities using Entropy-TOPSIS evaluation."
 
 [[items]]
 title = "Second Prize"
@@ -37,24 +55,6 @@ title = "Silver Award"
 subtitle = "XMUM TechExpo Science & Technology Exhibition"
 date = "2024"
 content = "Received silver award at the XMUM science and technology exhibition."
-
-[[items]]
-title = "Second Prize (International Track)"
-subtitle = "CUMCM — China Undergraduate Mathematical Contest in Modeling (Problem C)"
-date = "2025"
-content = "Won second prize in the international track of CUMCM for C problem (NIPT testing dynamic optimal strategy and interpretable diagnostic model)."
-
-[[items]]
-title = "National Second Prize"
-subtitle = "Huashu Cup National College Students Mathematical Modeling Contest (Problem C)"
-date = "2024"
-content = "Won national second prize for modeling foreign tourists' travel attractiveness across 340+ Chinese cities using Entropy-TOPSIS evaluation."
-
-[[items]]
-title = "Regional Third Prize"
-subtitle = "China College Students Service Outsourcing Innovation Contest"
-date = "2025"
-content = "Developed an AI-based university smart course scheduling system using integer programming and improved genetic algorithms, winning the regional third prize."
 
 [[items]]
 title = "Utility Model Patent (Accepted)"
