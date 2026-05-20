@@ -6,6 +6,7 @@ description = "Selected research projects and competition work."
 title = "2025 CUMCM: NIPT Dynamic Optimal Strategy (C Problem)"
 subtitle = "Team Lead — International Track Second Prize"
 date = "2025"
+image = "/projects/nipt-roc.jpg"
 content = "Designed a refined patient stratification framework for NIPT (Non-Invasive Prenatal Testing) data, integrating statistical hypothesis testing with dynamic programming to construct an optimal sequential decision model. Built interpretable diagnostic outputs combining likelihood ratios and risk thresholds, enabling personalized screening strategies that balance sensitivity and specificity across heterogeneous populations."
 tags = ["Mathematical Modeling", "Statistical Learning", "Medical AI", "Optimization"]
 
@@ -41,6 +42,7 @@ tags = ["Robotics", "Sensor Fusion", "Control Theory", "Computer Vision"]
 title = "EY-Gorton ESG Challenge"
 subtitle = "Core Lead, Environment Module — National Top 4 & NE China Champion"
 date = "2024"
+image = "/awards/ey-esg-award.jpg"
 content = "Architected a 'Lithium Innovation & Precision Agriculture' synergy plan bridging battery technology and sustainable farming. Built a physics-based droplet drift inhibition model using computational fluid dynamics to optimize nozzle parameters, increasing pesticide coverage from 10% to 50% while reducing chemical runoff. Quantified the ecological value of Direct Lithium Extraction (DLE) versus traditional brine mining through comparative life-cycle modeling, projecting 85.5% reduction in water consumption and significant carbon footprint improvement."
 tags = ["ESG", "Sustainability", "Mathematical Modeling"]
 

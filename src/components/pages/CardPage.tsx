@@ -56,6 +56,16 @@ export default function CardPage({ config, embedded = false }: { config: CardPag
                         transition={{ duration: 0.4, delay: 0.1 * index }}
                         className={`bg-white dark:bg-neutral-900 ${embedded ? "p-4" : "p-6"} rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-800 hover:shadow-lg transition-all duration-200 hover:scale-[1.01]`}
                     >
+                        {item.image && (
+                            <div className="mb-4 overflow-hidden rounded-lg">
+                                <img
+                                    src={item.image}
+                                    alt={item.title}
+                                    className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
+                                    loading="lazy"
+                                />
+                            </div>
+                        )}
                         <div className="flex justify-between items-start mb-2">
                             <h3 className={`${embedded ? "text-lg" : "text-xl"} font-semibold text-primary`}>{item.title}</h3>
                             {item.date && (
