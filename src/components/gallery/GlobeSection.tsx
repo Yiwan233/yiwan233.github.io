@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, Suspense } from 'react';
+import { useMemo, useState, Suspense } from 'react';
 import { Canvas, useLoader } from '@react-three/fiber';
 import { OrbitControls, Sphere, Html } from '@react-three/drei';
 import * as THREE from 'three';
@@ -73,7 +73,7 @@ function Atmosphere() {
   );
 }
 
-/* ── Country-level marker (gold, larger) ── */
+/* ── Country-level marker (small dot, tooltip on hover) ── */
 function CountryMarkers({
   countries,
   onExpand,
@@ -81,38 +81,45 @@ function CountryMarkers({
   countries: CountryAgg[];
   onExpand: (country: string) => void;
 }) {
+  const [hovered, setHovered] = useState<string | null>(null);
+
   return (
     <>
       {countries.map((c) => {
         const surf = latLngToVec3(c.lat, c.lng);
         const n = surf.clone().normalize();
         const dotPos = surf.clone().add(n.clone().multiplyScalar(0.06));
-        const labelPos = surf.clone().add(n.clone().multiplyScalar(0.38));
+        const labelPos = surf.clone().add(n.clone().multiplyScalar(0.22));
+        const isHovered = hovered === c.name;
 
         return (
           <group key={c.name}>
             <mesh
               position={dotPos}
               onClick={(e) => { e.stopPropagation(); onExpand(c.name); }}
+              onPointerOver={(e) => { e.stopPropagation(); setHovered(c.name); }}
+              onPointerOut={() => setHovered(null)}
             >
-              <sphereGeometry args={[0.07, 16, 16]} />
+              <sphereGeometry args={[isHovered ? 0.06 : 0.045, 16, 16]} />
               <meshStandardMaterial
                 color="#f59e0b"
                 emissive="#fbbf24"
-                emissiveIntensity={1.8}
+                emissiveIntensity={isHovered ? 2.4 : 1.4}
                 roughness={0.15}
               />
             </mesh>
-            <Html position={labelPos} center distanceFactor={10} style={{ pointerEvents: 'none' }}>
-              <div className="text-center whitespace-nowrap">
-                <span className="text-[11px] font-semibold text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
-                  {c.name}
-                </span>
-                <span className="text-[10px] text-amber-200 ml-1 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
-                  ({c.totalItems})
-                </span>
-              </div>
-            </Html>
+            {isHovered && (
+              <Html position={labelPos} center distanceFactor={14} style={{ pointerEvents: 'none' }}>
+                <div className="text-center whitespace-nowrap bg-black/70 backdrop-blur-sm rounded-full px-3 py-1 border border-white/15">
+                  <span className="text-[10px] font-medium text-white">
+                    {c.name}
+                  </span>
+                  <span className="text-[10px] text-amber-300 ml-1">
+                    {c.totalItems}
+                  </span>
+                </div>
+              </Html>
+            )}
           </group>
         );
       })}
