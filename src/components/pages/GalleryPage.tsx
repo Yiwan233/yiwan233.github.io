@@ -13,30 +13,48 @@ const MapSection = dynamic(() => import('@/components/gallery/MapSection'), { ss
 export default function GalleryPage({ config }: { config: GalleryPageConfig }) {
   const items = config.items;
   const [activeCountry, setActiveCountry] = useState<string | null>(null);
+  const [expandedAccordionId, setExpandedAccordionId] = useState<string | null>(null);
 
   const locationGroups = useMemo(() => groupPhotosByLocation(items), [items]);
   const countryGroups = useMemo(() => groupPhotosByCountry(items), [items]);
   const allCountries = [...countryGroups.keys()];
+
+  // Build lookup: location group name → accordion ID
+  const locationToAccordionId = useMemo(() => {
+    const map = new Map<string, string>();
+    for (const [country, countryItems] of countryGroups.entries()) {
+      const cities = groupPhotosByCity(countryItems);
+      for (const [city, cityItems] of cities.entries()) {
+        // For each city group, find matching location groups via shared slugs
+        for (const lg of locationGroups) {
+          const hasMatch = lg.items.some(gi =>
+            cityItems.some(ci => ci.slug === gi.slug)
+          );
+          if (hasMatch) {
+            map.set(lg.locationName, toGroupId(city, country));
+          }
+        }
+      }
+    }
+    return map;
+  }, [countryGroups, locationGroups]);
 
   const filteredCountries = activeCountry
     ? new Map([...countryGroups.entries()].filter(([k]) => k === activeCountry))
     : countryGroups;
 
   const handleMapScrollToGroup = useCallback((groupName: string) => {
-    for (const [country, countryItems] of countryGroups.entries()) {
-      const cities = groupPhotosByCity(countryItems);
-      for (const [city, cityItems] of cities.entries()) {
-        const group = locationGroups.find(g => g.locationName === groupName);
-        if (group && group.items.some(gi => cityItems.some(ci => ci.slug === gi.slug))) {
-          const el = document.getElementById(toGroupId(city, country));
-          if (el) {
-            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-          return;
-        }
+    const accordionId = locationToAccordionId.get(groupName);
+    if (!accordionId) return;
+    setExpandedAccordionId(accordionId);
+    // scroll after a tick so the accordion expansion runs first
+    setTimeout(() => {
+      const el = document.getElementById(accordionId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-    }
-  }, [countryGroups, locationGroups]);
+    }, 100);
+  }, [locationToAccordionId]);
 
   return (
     <motion.div
@@ -135,6 +153,7 @@ export default function GalleryPage({ config }: { config: GalleryPageConfig }) {
                   countryName={country}
                   items={cityItems}
                   groupId={toGroupId(city, country)}
+                  forceOpen={toGroupId(city, country) === expandedAccordionId}
                 />
               ))}
             </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { ChevronDown } from 'lucide-react';
@@ -56,10 +56,17 @@ interface CityAccordionProps {
   countryName: string;
   items: GalleryItem[];
   groupId: string;
+  forceOpen?: boolean;
 }
 
-export default function CityAccordion({ cityName, countryName, items, groupId }: CityAccordionProps) {
+export default function CityAccordion({ cityName, countryName, items, groupId, forceOpen }: CityAccordionProps) {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (forceOpen) {
+      setIsOpen(true);
+    }
+  }, [forceOpen]);
 
   const coverImage = items[0]?.image || '';
   const count = items.length;
