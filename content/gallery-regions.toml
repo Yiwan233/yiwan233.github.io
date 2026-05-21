@@ -1,0 +1,18 @@
+# ISO 3166-1 alpha-2 country codes → display names
+# Add entries as you travel to new places.
+[countries]
+HK = { display = "中国香港" }
+MO = { display = "中国澳门" }
+MY = { display = "Malaysia" }
+
+# Optional: city English → display name translations
+[city_display]
+HK.Central = "中环"
+HK."Mong Kok" = "旺角"
+HK."Causeway Bay" = "铜锣湾"
+HK."West Kowloon" = "西九龙"
+HK."Yau Ma Tei" = "油麻地"
+MO.Macau = "澳门"
+MY.Sepang = "雪邦"
+MY."Kuala Lumpur" = "吉隆坡"
+MY.Georgetown = "乔治市"
