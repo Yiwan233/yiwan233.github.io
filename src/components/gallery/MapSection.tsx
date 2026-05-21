@@ -5,7 +5,7 @@ import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import type { GalleryLocationGroup } from '@/types/page';
-import { getCountry, getCountryDisplay } from '@/lib/gallery';
+import { getCountry } from '@/lib/gallery';
 
 function createMarkerIcon(count: number): L.DivIcon {
   return L.divIcon({
@@ -86,8 +86,8 @@ export default function MapSection({
   const visible = activeCountry
     ? located.filter((g) => {
         const firstItem = g.items[0];
-        return firstItem?.country
-          ? getCountryDisplay(firstItem) === activeCountry
+        return firstItem?.countryDisplay
+          ? firstItem.countryDisplay === activeCountry
           : getCountry(g.locationName) === activeCountry;
       })
     : located;

@@ -15,6 +15,7 @@ import {
 
 import { Metadata } from 'next';
 import { getRuntimeI18nConfig } from '@/lib/i18n/config';
+import { decorateItems } from '@/lib/gallery-server';
 
 function loadDynamicPageData(slug: string, locale?: string): DynamicPageLocaleData | null {
   const pageConfig = getPageConfig(slug, locale) as BasePageConfig | null;
@@ -68,9 +69,13 @@ function loadDynamicPageData(slug: string, locale?: string): DynamicPageLocaleDa
   }
 
   if (pageConfig.type === 'gallery') {
+    const galleryConfig = pageConfig as GalleryPageConfig;
     return {
       type: 'gallery',
-      config: pageConfig as GalleryPageConfig,
+      config: {
+        ...galleryConfig,
+        items: decorateItems(galleryConfig.items),
+      },
     };
   }
 

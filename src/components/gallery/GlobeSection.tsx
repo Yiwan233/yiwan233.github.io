@@ -5,7 +5,7 @@ import { Canvas, useLoader } from '@react-three/fiber';
 import { OrbitControls, Sphere, Html } from '@react-three/drei';
 import * as THREE from 'three';
 import type { GalleryLocationGroup } from '@/types/page';
-import { getCountry, getCountryDisplay } from '@/lib/gallery';
+import { getCountry } from '@/lib/gallery';
 
 const EARTH_RADIUS = 2;
 const ATMOSPHERE_RADIUS = 2.1;
@@ -33,7 +33,7 @@ function buildCountryAggs(groups: GalleryLocationGroup[]): CountryAgg[] {
   for (const g of groups) {
     if (g.lat === 0 && g.lng === 0) continue;
     const firstItem = g.items[0];
-    const name = firstItem?.country ? getCountryDisplay(firstItem) : getCountry(g.locationName);
+    const name = firstItem?.countryDisplay || getCountry(g.locationName);
     if (!name) continue;
     if (!map.has(name)) {
       map.set(name, { name, lat: 0, lng: 0, totalItems: 0, groups: [] });
