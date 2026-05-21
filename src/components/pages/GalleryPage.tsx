@@ -1,97 +1,42 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
 import dynamic from 'next/dynamic';
-import type { GalleryPageConfig, GalleryItem, GalleryLocationGroup } from '@/types/page';
-import { groupPhotosByLocation, getCountriesFromGroups, getCountry } from '@/lib/gallery';
+import type { GalleryPageConfig } from '@/types/page';
+import { groupPhotosByLocation, groupPhotosByCountry, groupPhotosByCity } from '@/lib/gallery';
+import CityAccordion, { toGroupId } from '@/components/gallery/CityAccordion';
 
 const GlobeSection = dynamic(() => import('@/components/gallery/GlobeSection'), { ssr: false });
 const MapSection = dynamic(() => import('@/components/gallery/MapSection'), { ssr: false });
 
-function toGroupId(name: string): string {
-  return `gallery-group-${name.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9一-鿿-]/g, '')}`;
-}
-
-function PhotoCard({ item, index }: { item: GalleryItem; index: number }) {
-  return (
-    <motion.div
-      key={item.slug}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: 0.05 * index }}
-    >
-      <Link
-        href={`/gallery/${item.slug}`}
-        className="group block bg-white dark:bg-neutral-900 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-800 overflow-hidden hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
-      >
-        <div className="aspect-[4/3] bg-neutral-100 dark:bg-neutral-800 overflow-hidden">
-          <img
-            src={item.image}
-            alt={item.title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 polaroid-develop"
-            style={{ animationDelay: `${0.08 * index}s` }}
-            loading="lazy"
-          />
-        </div>
-        <div className="p-4">
-          <h3 className="text-lg font-semibold text-primary mb-1 group-hover:text-accent transition-colors">
-            {item.title}
-          </h3>
-          <div className="flex items-center gap-2 text-sm text-neutral-500 mb-2">
-            {item.location && <span>{item.location}</span>}
-            {item.date && (
-              <>
-                <span className="text-neutral-300 dark:text-neutral-600">·</span>
-                <span>{item.date}</span>
-              </>
-            )}
-          </div>
-          {item.content && (
-            <p className="text-sm text-neutral-600 dark:text-neutral-500 line-clamp-2">
-              {item.content}
-            </p>
-          )}
-        </div>
-      </Link>
-    </motion.div>
-  );
-}
-
-function LocationGroupSection({ group }: { group: GalleryLocationGroup }) {
-  return (
-    <section id={toGroupId(group.locationName)}>
-      {group.locationName && (
-        <h2 className="text-2xl font-serif font-semibold text-primary mb-6 pb-2 border-b border-neutral-200 dark:border-neutral-800">
-          {group.locationName}
-        </h2>
-      )}
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {group.items.map((item, index) => (
-          <PhotoCard key={item.slug} item={item} index={index} />
-        ))}
-      </div>
-    </section>
-  );
-}
-
 export default function GalleryPage({ config }: { config: GalleryPageConfig }) {
-  const groups = groupPhotosByLocation(config.items);
-  const countries = getCountriesFromGroups(groups);
+  const items = config.items;
   const [activeCountry, setActiveCountry] = useState<string | null>(null);
 
-  const filteredGroups = activeCountry
-    ? groups.filter((g) => getCountry(g.locationName) === activeCountry || g.locationName === 'Other')
-    : groups;
+  const locationGroups = useMemo(() => groupPhotosByLocation(items), [items]);
+  const countryGroups = useMemo(() => groupPhotosByCountry(items), [items]);
+  const allCountries = [...countryGroups.keys()];
 
-  const handleScrollToGroup = (name: string) => {
-    const el = document.getElementById(toGroupId(name));
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const filteredCountries = activeCountry
+    ? new Map([...countryGroups.entries()].filter(([k]) => k === activeCountry))
+    : countryGroups;
+
+  const handleMapScrollToGroup = useCallback((groupName: string) => {
+    for (const [country, countryItems] of countryGroups.entries()) {
+      const cities = groupPhotosByCity(countryItems);
+      for (const [city, cityItems] of cities.entries()) {
+        const group = locationGroups.find(g => g.locationName === groupName);
+        if (group && group.items.some(gi => cityItems.some(ci => ci.slug === gi.slug))) {
+          const el = document.getElementById(toGroupId(city, country));
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+          return;
+        }
+      }
     }
-  };
+  }, [countryGroups, locationGroups]);
 
   return (
     <motion.div
@@ -108,7 +53,7 @@ export default function GalleryPage({ config }: { config: GalleryPageConfig }) {
         )}
       </div>
 
-      {countries.length > 1 && (
+      {allCountries.length > 1 && (
         <div className="flex flex-wrap gap-2 mb-6">
           <button
             onClick={() => setActiveCountry(null)}
@@ -120,7 +65,7 @@ export default function GalleryPage({ config }: { config: GalleryPageConfig }) {
           >
             全部
           </button>
-          {countries.map((country) => (
+          {allCountries.map((country) => (
             <button
               key={country}
               onClick={() => setActiveCountry(activeCountry === country ? null : country)}
@@ -146,7 +91,7 @@ export default function GalleryPage({ config }: { config: GalleryPageConfig }) {
             transition={{ duration: 0.4, ease: 'easeInOut' }}
           >
             <GlobeSection
-              groups={groups}
+              groups={locationGroups}
               onCountryClick={(country) => setActiveCountry(country)}
             />
           </motion.div>
@@ -167,19 +112,41 @@ export default function GalleryPage({ config }: { config: GalleryPageConfig }) {
               </button>
             </div>
             <MapSection
-              groups={groups}
+              groups={locationGroups}
               activeCountry={activeCountry}
-              onScrollToGroup={handleScrollToGroup}
+              onScrollToGroup={handleMapScrollToGroup}
             />
           </motion.div>
         )}
       </AnimatePresence>
 
-      <div className="space-y-12">
-        {filteredGroups.map((group) => (
-          <LocationGroupSection key={group.locationName || `${group.lat},${group.lng}`} group={group} />
-        ))}
+      <div className="mt-10 space-y-1">
+        {[...filteredCountries.entries()].map(([country, countryItems]) => {
+          const cities = groupPhotosByCity(countryItems);
+          return (
+            <div key={country} className="mb-8">
+              <h2 className="text-2xl font-serif font-semibold text-primary mb-4 pb-2 border-b border-neutral-200 dark:border-neutral-800">
+                {country}
+              </h2>
+              {[...cities.entries()].map(([city, cityItems]) => (
+                <CityAccordion
+                  key={`${country}-${city}`}
+                  cityName={city}
+                  countryName={country}
+                  items={cityItems}
+                  groupId={toGroupId(city, country)}
+                />
+              ))}
+            </div>
+          );
+        })}
       </div>
+
+      {items.length === 0 && (
+        <div className="text-center py-20 text-neutral-500">
+          <p className="text-lg">暂无照片</p>
+        </div>
+      )}
     </motion.div>
   );
 }
