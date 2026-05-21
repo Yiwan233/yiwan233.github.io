@@ -52,6 +52,7 @@ export interface GalleryItem {
     title: string;
     slug: string;
     date?: string;
+    country?: string;
     location?: string;
     lat?: number;
     lng?: number;

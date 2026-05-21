@@ -188,6 +188,7 @@ export interface GalleryPhotoMeta {
   slug: string;
   title: string;
   date: string;
+  country?: string;
   location: string;
   lat?: number;
   lng?: number;
