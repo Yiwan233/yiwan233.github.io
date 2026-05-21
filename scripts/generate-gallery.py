@@ -309,6 +309,9 @@ def generate_gallery(photos_dir: Path = None):
         elif lat is not None and lng is not None:
             location = f"{lat:.5f}, {lng:.5f}"
 
+        # ---- Country ISO code (IPTC Country) ----
+        country = iptc_country.strip() if iptc_country else ""
+
         # ---- Date ----
         date = parse_date(exif)
 
@@ -336,6 +339,7 @@ def generate_gallery(photos_dir: Path = None):
             "title": title,
             "slug": slug,
             "date": date or datetime.now().strftime("%Y-%m"),
+            "country": country,
             "lat": lat,
             "lng": lng,
             "location": location,
@@ -368,6 +372,8 @@ def generate_gallery(photos_dir: Path = None):
             lines.append("[[items]]")
             for key in ("title", "slug", "date"):
                 lines.append(f'{key} = "{item[key]}"')
+            if item.get("country"):
+                lines.append(f'country = "{item["country"]}"')
             if item.get("lat") is not None:
                 lines.append(f'lat = {item["lat"]}')
             if item.get("lng") is not None:
@@ -401,6 +407,7 @@ def generate_gallery(photos_dir: Path = None):
 title: "{item['title']}"
 date: "{item['date']}"
 slug: "{item['slug']}"
+country: "{item['country']}"
 lat: "{item['lat'] if item.get('lat') is not None else ''}"
 lng: "{item['lng'] if item.get('lng') is not None else ''}"
 location: "{item['location']}"

@@ -2,6 +2,7 @@
 title: "Georgetown Heritage"
 date: "2026-05"
 slug: "georgetown-heritage"
+country: "MY"
 lat: ""
 lng: ""
 location: ""

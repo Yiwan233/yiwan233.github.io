@@ -2,6 +2,7 @@
 title: "Campus Dawn"
 date: "2026-05"
 slug: "campus-dawn"
+country: "MY"
 lat: ""
 lng: ""
 location: ""

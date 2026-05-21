@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "gallery:sync": "node scripts/generate-gallery.mjs"
+    "gallery:sync": "python scripts/generate-gallery.py"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.4",

@@ -2,6 +2,7 @@
 title: "City Lights"
 date: "2026-05"
 slug: "city-lights"
+country: "MY"
 lat: ""
 lng: ""
 location: ""
