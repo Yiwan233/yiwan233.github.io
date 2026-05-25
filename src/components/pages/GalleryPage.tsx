@@ -103,10 +103,15 @@ export default function GalleryPage({ config }: { config: GalleryPageConfig }) {
         {activeCountry === null ? (
           <motion.div
             key="globe"
-            initial={{ opacity: 0, scale: 0.97 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.97 }}
-            transition={{ duration: 0.4, ease: 'easeInOut' }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{
+              opacity: 0,
+              scale: 1.35,
+              filter: 'blur(3px) brightness(2)',
+              transition: { duration: 0.3, ease: 'easeIn' },
+            }}
+            transition={{ duration: 0.35 }}
           >
             <GlobeSection
               groups={locationGroups}
@@ -116,10 +121,10 @@ export default function GalleryPage({ config }: { config: GalleryPageConfig }) {
         ) : (
           <motion.div
             key="map"
-            initial={{ opacity: 0, scale: 0.97 }}
+            initial={{ opacity: 0, scale: 1.06 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.97 }}
-            transition={{ duration: 0.4, ease: 'easeInOut' }}
+            transition={{ duration: 0.45, ease: 'easeOut' }}
           >
             <div className="mb-3">
               <button

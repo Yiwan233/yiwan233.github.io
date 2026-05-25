@@ -1,7 +1,7 @@
 'use client';
 
-import { useMemo, useState, Suspense } from 'react';
-import { Canvas, useLoader } from '@react-three/fiber';
+import { useMemo, useState, Suspense, useCallback, useRef } from 'react';
+import { Canvas, useLoader, useFrame } from '@react-three/fiber';
 import { OrbitControls, Sphere, Html } from '@react-three/drei';
 import * as THREE from 'three';
 import type { GalleryLocationGroup } from '@/types/page';
@@ -137,6 +137,37 @@ function Scene({
   const located = groups.filter((g) => g.lat !== 0 && g.lng !== 0);
   const countries = useMemo(() => buildCountryAggs(located), [located]);
 
+  const controlsRef = useRef<any>(null);
+  const zoomRef = useRef<{ target: THREE.Vector3; country: string } | null>(null);
+
+  const handleCountryExpand = useCallback(
+    (country: string) => {
+      if (zoomRef.current) return;
+      const agg = countries.find((c) => c.name === country);
+      if (!agg) {
+        onCountryClick(country);
+        return;
+      }
+      const pos = latLngToVec3(agg.lat, agg.lng);
+      if (controlsRef.current) {
+        controlsRef.current.autoRotate = false;
+      }
+      zoomRef.current = { target: pos.clone(), country };
+    },
+    [countries, onCountryClick],
+  );
+
+  useFrame(() => {
+    if (!zoomRef.current || !controlsRef.current) return;
+    const ctrl = controlsRef.current;
+    ctrl.target.lerp(zoomRef.current.target, 0.06);
+    if (ctrl.target.distanceTo(zoomRef.current.target) < 0.03) {
+      const { country } = zoomRef.current;
+      zoomRef.current = null;
+      setTimeout(() => onCountryClick(country), 200);
+    }
+  });
+
   return (
     <>
       <ambientLight intensity={0.65} />
@@ -145,9 +176,10 @@ function Scene({
       <Earth />
       <Atmosphere />
 
-      <CountryMarkers countries={countries} onExpand={onCountryClick} />
+      <CountryMarkers countries={countries} onExpand={handleCountryExpand} />
 
       <OrbitControls
+        ref={controlsRef}
         enableDamping
         dampingFactor={0.08}
         autoRotate
