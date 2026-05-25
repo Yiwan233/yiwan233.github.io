@@ -6,6 +6,7 @@ import { OrbitControls, Sphere, Html } from '@react-three/drei';
 import * as THREE from 'three';
 import type { GalleryLocationGroup } from '@/types/page';
 import { getCountry } from '@/lib/gallery';
+import type { OrbitControls as OrbitControlsImpl } from 'three-stdlib';
 
 const EARTH_RADIUS = 2;
 const ATMOSPHERE_RADIUS = 2.1;
@@ -137,7 +138,7 @@ function Scene({
   const located = groups.filter((g) => g.lat !== 0 && g.lng !== 0);
   const countries = useMemo(() => buildCountryAggs(located), [located]);
 
-  const controlsRef = useRef<any>(null);
+  const controlsRef = useRef<OrbitControlsImpl | null>(null);
   const zoomRef = useRef<{ target: THREE.Vector3; country: string } | null>(null);
 
   const handleCountryExpand = useCallback(
