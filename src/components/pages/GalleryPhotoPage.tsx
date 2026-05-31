@@ -75,15 +75,6 @@ export default function GalleryPhotoPage({ photo }: GalleryPhotoPageProps) {
                     )}
                     {photo.date && <span>{photo.date}</span>}
                 </div>
-                {(photo.lens || photo.aperture || photo.shutter || photo.iso || photo.focal_length) && (
-                    <div className="flex flex-wrap items-center gap-3 text-sm text-neutral-500 mt-2">
-                        {photo.lens && <span>{photo.lens}</span>}
-                        {photo.focal_length && <span>{photo.focal_length}</span>}
-                        {photo.aperture && <span>{photo.aperture}</span>}
-                        {photo.shutter && <span>{photo.shutter}</span>}
-                        {photo.iso && <span>ISO {photo.iso}</span>}
-                    </div>
-                )}
             </div>
 
             <div className="rounded-xl overflow-hidden mb-8 shadow-lg polaroid-frame">

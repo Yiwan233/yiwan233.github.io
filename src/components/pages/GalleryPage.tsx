@@ -14,6 +14,7 @@ export default function GalleryPage({ config }: { config: GalleryPageConfig }) {
   const items = config.items;
   const [activeCountry, setActiveCountry] = useState<string | null>(null);
   const [expandedAccordionId, setExpandedAccordionId] = useState<string | null>(null);
+  const [viewMode, setViewMode] = useState<'map' | 'globe'>('map');
 
   const locationGroups = useMemo(() => groupPhotosByLocation(items), [items]);
   const countryGroups = useMemo(() => groupPhotosByCountry(items), [items]);
@@ -99,41 +100,52 @@ export default function GalleryPage({ config }: { config: GalleryPageConfig }) {
         </div>
       )}
 
+      <div className="mb-3 flex items-center justify-between">
+        <div>
+          {activeCountry && (
+            <button
+              onClick={() => setActiveCountry(null)}
+              className="text-xs px-3 py-1.5 rounded-full bg-white/90 dark:bg-neutral-900/90 backdrop-blur-sm shadow-md border border-neutral-200 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 hover:bg-white dark:hover:bg-neutral-800 transition-colors"
+            >
+              ← 返回全球
+            </button>
+          )}
+        </div>
+        {!activeCountry && (
+          <button
+            onClick={() => setViewMode(viewMode === 'map' ? 'globe' : 'map')}
+            className="text-xs px-3 py-1.5 rounded-full bg-white/90 dark:bg-neutral-900/90 backdrop-blur-sm shadow-md border border-neutral-200 dark:border-neutral-700 text-neutral-500 hover:text-accent hover:border-accent/30 transition-all"
+          >
+            {viewMode === 'map' ? '🌍 3D Globe' : '🗺️ Map'}
+          </button>
+        )}
+      </div>
+
       <AnimatePresence mode="wait">
-        {activeCountry === null ? (
+        {viewMode === 'globe' ? (
           <motion.div
             key="globe"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{
-              opacity: 0,
-              scale: 1.35,
-              filter: 'blur(3px) brightness(2)',
-              transition: { duration: 0.3, ease: 'easeIn' },
-            }}
-            transition={{ duration: 0.35 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
           >
             <GlobeSection
               groups={locationGroups}
-              onCountryClick={(country) => setActiveCountry(country)}
+              onCountryClick={(country) => {
+                setActiveCountry(country);
+                setViewMode('map');
+              }}
             />
           </motion.div>
         ) : (
           <motion.div
             key="map"
-            initial={{ opacity: 0, scale: 1.06 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.97 }}
-            transition={{ duration: 0.45, ease: 'easeOut' }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
           >
-            <div className="mb-3">
-              <button
-                onClick={() => setActiveCountry(null)}
-                className="text-xs px-3 py-1.5 rounded-full bg-white/90 dark:bg-neutral-900/90 backdrop-blur-sm shadow-md border border-neutral-200 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 hover:bg-white dark:hover:bg-neutral-800 transition-colors"
-              >
-                ← 返回全球
-              </button>
-            </div>
             <MapSection
               groups={locationGroups}
               activeCountry={activeCountry}
