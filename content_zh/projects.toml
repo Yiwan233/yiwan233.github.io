@@ -10,10 +10,10 @@ content = "面向自主超声扫描，引入速度伴随变换与硬件时间戳
 tags = ["机器人学", "传感器融合", "控制理论", "计算机视觉"]
 
 [[items]]
-title = "粗糙波动率下的深度对冲"
-subtitle = "共同第一作者兼通讯作者，AIMS Mathematics（已接收）"
+title = "毕业设计：粗糙波动率下的对冲"
+subtitle = "获评 A，指导教师刘杰教授"
 date = "2025 - 2026"
-content = "面向粗糙波动率（非马尔可夫、长记忆）下深度对冲的分数核嵌入架构。利用 Malliavin 微积分固定奇异核，让网络只学习正则部分；在给定逼近误差假设下得到 O(N^{-2H}) 的条件收敛结果。已被 *AIMS Mathematics* 接收；相关毕业设计获评 A。"
+content = "面向粗糙波动率（非马尔可夫、长记忆）下深度对冲的分数核嵌入架构。利用 Malliavin 微积分固定奇异核，让网络只学习正则部分；在给定逼近误差假设下得到 O(N^{-2H}) 的条件收敛结果。这条研究线最终形成了我的毕业设计 *Malliavin Calculus for Variance-Optimal Hedging under Rough Volatility*，获评 A。"
 tags = ["数学金融", "随机分析", "Malliavin 微积分", "深度学习"]
 
 [[items]]

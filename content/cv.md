@@ -16,8 +16,8 @@
 
 ## Research Experience
 
-**Deep Hedging under Rough Volatility: A Fractional Kernel Embedding Approach**
-*Co-first & Corresponding Author* | *Accepted at AIMS Mathematics*
+**Final-Year Thesis: Malliavin Calculus for Variance-Optimal Hedging under Rough Volatility**
+*Grade A* | *Supervisor: [Prof. Liu Jie](https://www.xmu.edu.my/index.php/staff/liu-jie)*
 - Addressed the non-Markovian long-memory characteristics of rough volatility models (H in (0, 1/2)), revealing the "structural operator mismatch" in generic deep learning architectures.
 - Used Malliavin calculus (Clark-Ocone representation) to decompose the hedge, fixing the singular fractional kernel so that the network only approximates the regular part.
 - Designed an architecture with a fractional-kernel inductive bias via fixed fractional attention layers.

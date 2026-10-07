@@ -27,6 +27,14 @@ const OrcidIcon = ({ className }: { className?: string }) => (
     </svg>
 );
 
+// Xiaohongshu (RED) wordmark-style icon
+const XiaohongshuIcon = ({ className }: { className?: string }) => (
+    <svg viewBox="0 0 24 24" className={className} xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="4" width="22" height="16" rx="4" fill="currentColor" />
+        <text x="12" y="15.5" textAnchor="middle" fontSize="8" fontWeight="700" fill="white" fontFamily="sans-serif">RED</text>
+    </svg>
+);
+
 interface ProfileProps {
     author: SiteConfig['author'];
     social: SiteConfig['social'];
@@ -101,6 +109,11 @@ export default function Profile({ author, social, features, researchInterests }:
             name: 'LinkedIn',
             href: social.linkedin,
             icon: Linkedin,
+        }] : []),
+        ...(social.xiaohongshu ? [{
+            name: `${messages.profile.xiaohongshu}: ${social.xiaohongshu}`,
+            href: `https://www.xiaohongshu.com/search_result?keyword=${encodeURIComponent(social.xiaohongshu)}`,
+            icon: XiaohongshuIcon,
         }] : []),
     ];
 
@@ -296,6 +309,7 @@ export default function Profile({ author, social, features, researchInterests }:
                             rel="noopener noreferrer"
                             className="p-2 sm:p-2 text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors duration-200"
                             aria-label={link.name}
+                            title={link.name}
                         >
                             <IconComponent className="h-5 w-5" />
                         </a>

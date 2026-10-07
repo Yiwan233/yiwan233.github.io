@@ -10,10 +10,10 @@ content = "Achieved cross-modal sensor alignment for autonomous ultrasound scann
 tags = ["Robotics", "Sensor Fusion", "Control Theory", "Computer Vision"]
 
 [[items]]
-title = "Deep Hedging under Rough Volatility"
-subtitle = "Co-first & Corresponding Author, AIMS Mathematics (Accepted)"
+title = "Final-Year Thesis: Hedging under Rough Volatility"
+subtitle = "Graded A, supervised by Prof. Liu Jie"
 date = "2025 - 2026"
-content = "A fractional kernel embedding architecture for deep hedging under rough volatility models, which are non-Markovian with long memory. Malliavin calculus is used to fix the singular kernel so that the network only learns the regular part, and the paper derives a conditional O(N^{-2H}) convergence result under a stated approximation-error assumption. Accepted at *AIMS Mathematics*; the related final-year thesis was graded A."
+content = "A fractional kernel embedding architecture for deep hedging under rough volatility models, which are non-Markovian with long memory. Malliavin calculus is used to fix the singular kernel so that the network only learns the regular part, and a conditional O(N^{-2H}) convergence result is derived under a stated approximation-error assumption. This line of work became my final-year thesis, *Malliavin Calculus for Variance-Optimal Hedging under Rough Volatility*, graded A."
 tags = ["Mathematical Finance", "Stochastic Analysis", "Malliavin Calculus", "Deep Learning"]
 
 [[items]]

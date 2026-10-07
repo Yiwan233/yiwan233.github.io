@@ -23,6 +23,7 @@ google_scholar = ""
 orcid = ""
 github = "https://github.com/Yiwan233"
 linkedin = "https://www.linkedin.com/in/fan-yi-21b9302a6"
+xiaohongshu = "yif52613"
 
 [features]
 enable_likes = true

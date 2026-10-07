@@ -16,8 +16,8 @@
 
 ## 研究经历
 
-**粗糙波动率下的深度对冲：分数核嵌入方法**
-*共同第一作者兼通讯作者* | *已被 AIMS Mathematics 接收*
+**毕业设计：Malliavin Calculus for Variance-Optimal Hedging under Rough Volatility**
+*成绩 A* | *指导教师：[刘杰教授](https://www.xmu.edu.my/index.php/staff/liu-jie)*
 - 针对粗糙波动率模型 (H ∈ (0, 1/2)) 的非马尔可夫长记忆特性，揭示了通用深度学习架构中的"结构算子失配"问题。
 - 利用 Malliavin 微积分（Clark-Ocone 表示）分解对冲策略：固定奇异分数核，让网络只逼近其中的正则部分。
 - 通过固定分数注意力层，设计了带分数核归纳偏置的网络架构。
