@@ -112,7 +112,7 @@ export default function Profile({ author, social, features, researchInterests }:
         }] : []),
         ...(social.xiaohongshu ? [{
             name: `${messages.profile.xiaohongshu}: ${social.xiaohongshu}`,
-            href: `https://www.xiaohongshu.com/search_result?keyword=${encodeURIComponent(social.xiaohongshu)}`,
+            href: social.xiaohongshu_url || `https://www.xiaohongshu.com/search_result?keyword=${encodeURIComponent(social.xiaohongshu)}`,
             icon: XiaohongshuIcon,
         }] : []),
     ];

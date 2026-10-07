@@ -24,6 +24,7 @@ orcid = ""
 github = "https://github.com/Yiwan233"
 linkedin = "https://www.linkedin.com/in/fan-yi-21b9302a6"
 xiaohongshu = "yif52613"
+xiaohongshu_url = "https://www.xiaohongshu.com/user/profile/63c0c00100000000260107c5"
 
 [features]
 enable_likes = true

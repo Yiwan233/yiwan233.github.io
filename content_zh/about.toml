@@ -16,6 +16,18 @@ source = "bio.md"
 title = "关于我"
 
 [[sections]]
+id = "credo"
+type = "markdown"
+source = "credo.md"
+title = "信条"
+
+[[sections]]
+id = "aspiration"
+type = "markdown"
+source = "aspiration.md"
+title = "理想"
+
+[[sections]]
 id = "mentors"
 type = "markdown"
 source = "mentors.md"

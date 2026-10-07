@@ -16,6 +16,18 @@ source = "bio.md"
 title = "About"
 
 [[sections]]
+id = "credo"
+type = "markdown"
+source = "credo.md"
+title = "Credo"
+
+[[sections]]
+id = "aspiration"
+type = "markdown"
+source = "aspiration.md"
+title = "Aspiration"
+
+[[sections]]
 id = "mentors"
 type = "markdown"
 source = "mentors.md"

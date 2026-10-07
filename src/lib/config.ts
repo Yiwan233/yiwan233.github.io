@@ -26,6 +26,7 @@ export interface SiteConfig {
     github?: string;
     linkedin?: string;
     xiaohongshu?: string;
+    xiaohongshu_url?: string;
     [key: string]: string | string[] | undefined;
   };
   features: {
