@@ -3,10 +3,10 @@ title = "关于我"
 
 [profile]
 research_interests = [
-  "随机分析",
-  "数学建模",
-  "机器学习与优化",
-  "跨学科应用"
+  "随机过程与长记忆建模",
+  "不确定性量化与贝叶斯方法",
+  "安全关键控制与强化学习",
+  "低空、交通与金融风险应用"
 ]
 
 [[sections]]
@@ -14,6 +14,12 @@ id = "about"
 type = "markdown"
 source = "bio.md"
 title = "关于我"
+
+[[sections]]
+id = "mentors"
+type = "markdown"
+source = "mentors.md"
+title = "导师与致谢"
 
 [[sections]]
 id = "featured_publications"

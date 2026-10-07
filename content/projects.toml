@@ -3,25 +3,18 @@ title = "Projects"
 description = "Where curiosity takes shape — things I've built, problems I've chased."
 
 [[items]]
-title = "ThERA Lab: Surgical Robotics Research"
+title = "ThERA Lab: Autonomous Ultrasound Scanning"
 subtitle = "Research Intern, Great Bay University"
-date = "2026 - Present"
-content = "Achieved cross-modal sensor alignment for robotic surgery by introducing velocity adjoint transformations and hardware timestamp synchronization across heterogeneous sensor streams (500Hz force/kinematics vs. 60Hz imaging). Built a first-order affine model under continuum mechanics assumptions for 4D physical feature extraction, with Savitzky-Golay filtering and confidence masking to suppress speckle noise. Proposed a Control-Evaluation dual-track Jacobian decoupling architecture with Lyapunov stability analysis and Smith Predictor latency compensation (33ms). Targeting *IROS / MICCAI*."
+date = "Feb - Mar 2026"
+content = "Achieved cross-modal sensor alignment for autonomous ultrasound scanning by introducing velocity adjoint transformations and hardware timestamp synchronization across heterogeneous sensor streams (500Hz force/kinematics vs. 60Hz imaging). Built a first-order affine model under continuum mechanics assumptions for 4D physical feature extraction, with Savitzky-Golay filtering and confidence masking to suppress speckle noise. As exploratory work outside the published paper, tried a Control-Evaluation dual-track Jacobian decoupling design with Lyapunov stability analysis and Smith Predictor latency compensation (33ms). Third author of the resulting paper accepted at *IROS 2026*, responsible for data processing, statistical analysis and visualization."
 tags = ["Robotics", "Sensor Fusion", "Control Theory", "Computer Vision"]
 
 [[items]]
 title = "Deep Hedging under Rough Volatility"
-subtitle = "First & Corresponding Author"
-date = "2025 - Present"
-content = "Proposed a novel fractional kernel embedding architecture for deep hedging under rough volatility models. Addressed non-Markovian long-memory characteristics using Malliavin Calculus. Proved minimax optimal convergence rate. Submitted Mar 2026; **Major Revision** received May 2026 at *AIMS Mathematics*."
+subtitle = "Co-first & Corresponding Author, AIMS Mathematics (Accepted)"
+date = "2025 - 2026"
+content = "A fractional kernel embedding architecture for deep hedging under rough volatility models, which are non-Markovian with long memory. Malliavin calculus is used to fix the singular kernel so that the network only learns the regular part, and the paper derives a conditional O(N^{-2H}) convergence result under a stated approximation-error assumption. Accepted at *AIMS Mathematics*; the related final-year thesis was graded A."
 tags = ["Mathematical Finance", "Stochastic Analysis", "Malliavin Calculus", "Deep Learning"]
-
-[[items]]
-title = "MFA Round Table (模法师圆桌)"
-subtitle = "Founder & Lead"
-date = "2025 - Present"
-content = "Founded and lead a community with 420+ cumulative participations dedicated to mathematical modeling knowledge sharing across multiple universities. Organize structured workshops covering topics from introductory modeling to advanced techniques (optimization, machine learning, statistical analysis), maintain shared resource libraries of competition papers and code templates, and facilitate cross-university team formation for major competitions including CUMCM and MCM/ICM."
-tags = ["Community", "Mathematical Modeling", "Education", "Leadership"]
 
 [[items]]
 title = "2025 CUMCM: NIPT Dynamic Optimal Strategy (C Problem)"
@@ -43,7 +36,7 @@ title = "EY-Gorton ESG Challenge"
 subtitle = "Core Lead, Environment Module — National Top 4 & NE China Champion"
 date = "2024"
 image = "/awards/ey-esg-award.jpg"
-content = "Architected a 'Lithium Innovation & Precision Agriculture' synergy plan bridging battery technology and sustainable farming. Built a physics-based droplet drift inhibition model using computational fluid dynamics to optimize nozzle parameters, increasing pesticide coverage from 10% to 50% while reducing chemical runoff. Quantified the ecological value of Direct Lithium Extraction (DLE) versus traditional brine mining through comparative life-cycle modeling, projecting 85.5% reduction in water consumption and significant carbon footprint improvement."
+content = "Led the Environment Module of a 'Lithium Innovation & Precision Agriculture' synergy plan bridging battery technology and sustainable farming. Researched and compared precision-agriculture spraying technologies, such as loaded-droplet formulations and centrifugal atomization. Using published industry data, compared Direct Lithium Extraction (DLE) with evaporation-based extraction: about 85.5% less water and 70% lower carbon footprint than solar evaporation."
 tags = ["ESG", "Sustainability", "Mathematical Modeling"]
 
 [[items]]
@@ -59,3 +52,10 @@ subtitle = "Algorithm & Operations Specialist"
 date = "2024"
 content = "Developed a Weight Lock-Monitor-Trigger model for HX711 hardware sensors using C++, implementing real-time weight-locking logic that detects unauthorized pickup through dynamic threshold comparison. Reduced delivery theft rates from double digits to 4.1% in pilot deployment. For the Lightseeker Solar project, facilitated cross-border industrial collaboration (MOUs) and orchestrated operational scaling for a 1000m² smart greenhouse pilot in Malaysia integrating IoT environmental monitoring."
 tags = ["C++", "IoT", "Hardware", "Operations"]
+
+[[items]]
+title = "MFA Round Table (模法师圆桌)"
+subtitle = "Founder"
+date = "2025 - Present"
+content = "A student community for sharing mathematical modeling experience. Organized an introductory mathematical modeling lecture with 170+ attendees."
+tags = ["Community", "Mathematical Modeling"]

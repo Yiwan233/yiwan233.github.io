@@ -6,7 +6,8 @@
 - **LinkedIn:** [linkedin.com/in/fan-yi-21b9302a6](https://www.linkedin.com/in/fan-yi-21b9302a6)
 - **Honors:** XMUM Excellence Scholarship (2023-2024 & 2024-2025)
 - **Target Programs (Fall 2027):** MPhil/PhD in Financial Engineering, Statistics, Robotics — targeting HKUST(GZ) and CUHK(SZ)
-- **Core Courses:** Mathematical Analysis, Real Analysis, Calculus, ODE, Linear Algebra, Probability Theory, Stochastic Processes, Statistics, Regression Analysis, C++ Programming, Data Structures (All A/A-)
+- **Core Courses:** Real Analysis, Mathematical Analysis I & II, Stochastic Processes, Probability Theory, ODE, Numerical Analysis, Linear Algebra, Differential Geometry, Time Series, Regression Analysis, Mechanics, C++ Programming, Data Structures (All A/A-)
+- **Final-Year Thesis:** *Malliavin Calculus for Variance-Optimal Hedging under Rough Volatility* (Grade A), supervised by [Prof. Liu Jie](https://www.xmu.edu.my/index.php/staff/liu-jie)
 
 ## Core Skills
 
@@ -16,21 +17,20 @@
 ## Research Experience
 
 **Deep Hedging under Rough Volatility: A Fractional Kernel Embedding Approach**
-*First & Corresponding Author* | *Nov 2025 - Present*
+*Co-first & Corresponding Author* | *Accepted at AIMS Mathematics*
 - Addressed the non-Markovian long-memory characteristics of rough volatility models (H in (0, 1/2)), revealing the "structural operator mismatch" in generic deep learning architectures.
-- Decomposed the optimal strategy into smooth state functions and fractional integral regularization terms using Malliavin Calculus, resolving the numerical ill-posedness of hyper-singular kernels.
-- Proposed a novel architecture embedding fractional kernel inductive biases, transforming ill-posed singular operator learning into well-posed smooth process approximation via fixed fractional attention layers.
-- Rigorously proved the minimax optimal convergence rate of O(N^{-2H}) under N rebalancing dates, perfectly matching the theoretical lower bound of Volterra-type models. (Submitted Mar 2026; **Major Revision** received May 2026 at *AIMS Mathematics*)
+- Used Malliavin calculus (Clark-Ocone representation) to decompose the hedge, fixing the singular fractional kernel so that the network only approximates the regular part.
+- Designed an architecture with a fractional-kernel inductive bias via fixed fractional attention layers.
+- Derived a conditional O(N^{-2H}) convergence result over N rebalancing dates (given a controlled network approximation error), consistent with the known strong-approximation order barrier for Volterra-type models.
 
 ## Internship Experience
 
-**Great Bay University (ThERA Lab)**, Research Intern | *Feb 2026 - Present*
+**Great Bay University (ThERA Lab)**, Research Intern | *Feb 2026 - Mar 2026*
+*Supervisor: [Prof. Li Liu](https://scholar.google.com/citations?user=vqfBC6MAAAAJ&hl=en)*
 - Introduced velocity adjoint transformations and hardware timestamp synchronization to align heterogeneous sensor data streams (500Hz/60Hz), achieving cross-modal physical alignment of force, kinematics, and image features.
 - Constructed a first-order affine model based on continuum mechanics assumptions to extract 4D core physical features. Mitigated speckle noise via Savitzky-Golay filtering and confidence masking, enabling interactive risk quantification through online statistical hypothesis testing.
-- Proposed a "Control-Evaluation" dual-track Jacobian decoupling architecture, establishing a rigorous robustness baseline via Lyapunov stability analysis; compensated for 33ms system latency using an improved Smith Predictor. (Manuscript targeting *IROS / MICCAI*)
-
-**Dreamview Digital Technology Co., Ltd.**, AI Application Development Intern | *Aug 2025 - Sep 2025*
-- Fine-tuned and deployed the Paraformer ASR model (achieving 90%+ accuracy) and engineered automated Python pipelines for heterogeneous data cleansing and downstream system integration.
+- Exploratory work (not part of the published paper): a "Control-Evaluation" dual-track Jacobian decoupling design with Lyapunov stability analysis, and an improved Smith Predictor for 33ms system latency.
+- Third author of *Force Safety by Geometry: Equivalent Displacement Manifolds for Autonomous Ultrasound Scanning*, accepted at **IROS 2026**; responsible for experimental data processing, statistical analysis and visualization.
 
 ## Selected Projects & Competitions
 
@@ -46,8 +46,8 @@
 
 **EY-Gorton ESG Challenge** (National Top 4 & NE China Champion)
 *Core Lead, Environment Module* | *Apr 2024 - Jun 2024*
-- Architected a "Lithium Innovation & Precision Agriculture" synergy plan, modeling droplet drift inhibition to increase pesticide coverage from 10% to 50%.
-- Quantified the ecological value of Direct Lithium Extraction via comparative modeling, projecting an 85.5% reduction in water consumption.
+- Researched precision-agriculture spraying technologies and proposed a "Lithium Innovation & Precision Agriculture" synergy plan; led all content of the Environment Module.
+- Compared Direct Lithium Extraction with evaporation-based methods using published industry data (about 85.5% less water than solar evaporation).
 
 **Huashu Cup: Foreign Tourist Attractiveness in China**
 *Team Lead* | *Aug 2024*
@@ -60,9 +60,9 @@
 - Facilitated cross-border industrial collaboration (MOUs) and orchestrated operational scaling for a 1000m² smart greenhouse pilot in Malaysia.
 
 **MFA Round Table (模法师圆桌)**
-*Founder & Lead* | *Sep 2025 - Present*
-- Founded and lead a community of 420+ active participants dedicated to mathematical modeling knowledge sharing.
-- Organize workshops, tutorials, and collaborative problem-solving sessions for students across universities.
+*Founder* | *Sep 2025 - Present*
+- Started a student community for sharing mathematical modeling experience.
+- Organized an introductory mathematical modeling lecture with 170+ attendees.
 
 ## Honors and Awards
 

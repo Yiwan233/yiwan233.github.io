@@ -46,6 +46,7 @@ export interface BlogPageConfig extends BasePageConfig {
 export interface ContactPageConfig extends BasePageConfig {
     type: 'contact';
     form_endpoint?: string;
+    email?: string;
 }
 
 export interface GalleryItem {

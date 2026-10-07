@@ -1,4 +1,5 @@
 type = "contact"
 title = "联系我"
-description = "期待你的来信——无论是学术讨论、合作，还是一段有趣的对话。"
-form_endpoint = ""
+description = "欢迎科研合作与论文合作。也期待你的来信——无论是学术讨论，还是一段有趣的对话。"
+form_endpoint = "https://formsubmit.co/ajax/yif52613@gmail.com"
+email = "yif52613@gmail.com"

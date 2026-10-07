@@ -1,0 +1,3 @@
+- **[刘杰教授](https://www.xmu.edu.my/index.php/staff/liu-jie)**（厦门大学马来西亚分校）指导了我的毕业设计 *Malliavin Calculus for Variance-Optimal Hedging under Rough Volatility*。感谢他的建议、指导和极大的耐心，尤其是在鞅表示定理理论方面的关键建议。在这个项目之前，我常常只从成绩和 GPA 规则去看待数学。刘老师始终强调严谨、耐心和踏实，教我避免空洞的修辞和缺乏依据的论断。对我来说，严谨而又忠于问题本身，正是成为一名数学人的浪漫之处。
+- **[刘立教授](https://scholar.google.com/citations?user=vqfBC6MAAAAJ&hl=en)**（大湾区大学 ThERA 实验室）指导了我在自主超声扫描方向的研究实习，相关论文已被 IROS 2026 接收。
+- **[Goh Sim Kuan 博士](https://www.xmu.edu.my/staff/assistant-prof-dr-goh-sim-kuan)**（厦门大学马来西亚分校）。我有幸参加他的 multi-agent 读书会，在那里学习 AI 与多智能体相关知识；我们也针对毕业论文的一部分进行了有力的讨论。他是一位非常热心、全力支持学生成长的老师。

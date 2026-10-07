@@ -3,10 +3,10 @@ title = "About"
 
 [profile]
 research_interests = [
-  "Stochastic Analysis",
-  "Mathematical Modeling",
-  "Machine Learning & Optimization",
-  "Interdisciplinary Applications"
+  "Stochastic Processes & Long-Memory Modeling",
+  "Uncertainty Quantification & Bayesian Methods",
+  "Safety-Critical Control & Reinforcement Learning",
+  "Low-Altitude, Transport & Financial Risk Applications"
 ]
 
 [[sections]]
@@ -14,6 +14,12 @@ id = "about"
 type = "markdown"
 source = "bio.md"
 title = "About"
+
+[[sections]]
+id = "mentors"
+type = "markdown"
+source = "mentors.md"
+title = "Mentors & Acknowledgements"
 
 [[sections]]
 id = "featured_publications"

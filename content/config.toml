@@ -1,17 +1,17 @@
 [site]
-title = "Fan Yi"
+title = "Yi Fan"
 description = "Undergraduate in Mathematics and Applied Mathematics at Xiamen University Malaysia."
 favicon = "/favicon.svg"
-last_updated = "May 20, 2026"
+last_updated = "October 7, 2026"
 
 [author]
-name = "Fan Yi"
+name = "Yi Fan"
 title = "Undergraduate Student"
 institution = "Xiamen University Malaysia"
-avatar = "/bio.jpg"
+avatar = "/bio-graduation.jpg"
 
 [social]
-email = "MAT2309456@xmu.edu.my"
+email = "yif52613@gmail.com"
 location = "Sepang, Malaysia"
 location_url = "https://maps.google.com/?q=Xiamen+University+Malaysia"
 location_details = [

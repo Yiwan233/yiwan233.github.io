@@ -62,6 +62,8 @@ export default function ContactPage({ config }: ContactPageProps) {
 
             {config.form_endpoint ? (
                 <form onSubmit={handleSubmit} className="space-y-6 max-w-2xl">
+                    <input type="text" name="_honey" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
+                    <input type="hidden" name="_template" value="table" />
                     <div>
                         <label htmlFor="name" className="block text-sm font-medium text-primary mb-2">
                             {messages.contact.name}
@@ -127,9 +129,13 @@ export default function ContactPage({ config }: ContactPageProps) {
                     )}
                 </form>
             ) : (
-                <div className="text-neutral-500">
-                    <p>Please configure a form endpoint to enable the contact form.</p>
-                </div>
+                config.email && (
+                    <p className="text-lg text-neutral-600 dark:text-neutral-500">
+                        <a href={`mailto:${config.email}`} className="text-accent hover:underline">
+                            {config.email}
+                        </a>
+                    </p>
+                )
             )}
         </motion.div>
     );

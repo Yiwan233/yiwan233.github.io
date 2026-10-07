@@ -1,4 +1,5 @@
 type = "contact"
 title = "Contact"
-description = "I'd love to hear from you — about math, collaboration, or just a good conversation."
-form_endpoint = ""
+description = "I welcome research collaboration and co-authored papers. I'd also love to hear from you about math, or just a good conversation."
+form_endpoint = "https://formsubmit.co/ajax/yif52613@gmail.com"
+email = "yif52613@gmail.com"
