@@ -16,15 +16,23 @@ source = "bio.md"
 title = "About"
 
 [[sections]]
+id = "explorations"
+type = "blocks"
+source = "explorations.toml"
+title = "Beyond Research"
+description = "During my undergraduate years I also tried bringing modeling into business and product problems. If you have a related project or competition in mind, I would be glad to talk."
+
+[[sections]]
 id = "credo"
-type = "markdown"
-source = "credo.md"
+type = "blocks"
+source = "credo.toml"
 title = "Credo"
 
 [[sections]]
 id = "aspiration"
-type = "markdown"
-source = "aspiration.md"
+type = "blocks"
+layout = "quote"
+source = "aspiration.toml"
 title = "Aspiration"
 
 [[sections]]

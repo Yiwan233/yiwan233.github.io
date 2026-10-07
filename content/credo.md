@@ -1,3 +1,0 @@
-- **Be rigorous, and stay faithful to the problem.** No empty rhetoric; every claim I write down should hold up when pushed one layer deeper.
-- **Be self-driven within the system's boundaries.** Rather than wait for a path to be laid out, I go looking for opportunities, fill in what I lack, and build something with the resources at hand.
-- **Live with uncertainty.** Uncertainty is not noise to be eliminated; it is part of any real system.

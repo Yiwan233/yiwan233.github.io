@@ -16,15 +16,23 @@ source = "bio.md"
 title = "关于我"
 
 [[sections]]
+id = "explorations"
+type = "blocks"
+source = "explorations.toml"
+title = "跨界尝试"
+description = "本科期间，我也试着把建模带进商业与产品问题里。如果你有相关的项目或比赛，欢迎来聊。"
+
+[[sections]]
 id = "credo"
-type = "markdown"
-source = "credo.md"
+type = "blocks"
+source = "credo.toml"
 title = "信条"
 
 [[sections]]
 id = "aspiration"
-type = "markdown"
-source = "aspiration.md"
+type = "blocks"
+layout = "quote"
+source = "aspiration.toml"
 title = "理想"
 
 [[sections]]

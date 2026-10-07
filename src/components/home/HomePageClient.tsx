@@ -4,6 +4,7 @@ import Profile from '@/components/home/Profile';
 import About from '@/components/home/About';
 import SelectedPublications from '@/components/home/SelectedPublications';
 import News, { NewsItem } from '@/components/home/News';
+import Blocks, { BlockItem } from '@/components/home/Blocks';
 import PublicationsList from '@/components/publications/PublicationsList';
 import TextPage from '@/components/pages/TextPage';
 import CardPage from '@/components/pages/CardPage';
@@ -14,7 +15,7 @@ import { useLocaleStore } from '@/lib/stores/localeStore';
 
 interface SectionConfig {
   id: string;
-  type: 'markdown' | 'publications' | 'list';
+  type: 'markdown' | 'publications' | 'list' | 'blocks';
   title?: string;
   source?: string;
   filter?: string;
@@ -22,6 +23,9 @@ interface SectionConfig {
   content?: string;
   publications?: Publication[];
   items?: NewsItem[];
+  blocks?: BlockItem[];
+  layout?: 'grid' | 'quote';
+  description?: string;
 }
 
 type PageData =
@@ -93,6 +97,16 @@ export default function HomePageClient({ dataByLocale, defaultLocale }: HomePage
                         key={section.id}
                         items={section.items || []}
                         title={section.title}
+                      />
+                    );
+                  case 'blocks':
+                    return (
+                      <Blocks
+                        key={section.id}
+                        items={section.blocks || []}
+                        title={section.title}
+                        description={section.description}
+                        layout={section.layout}
                       />
                     );
                   default:
