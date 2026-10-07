@@ -8,4 +8,4 @@ I hold myself to two things. Be rigorous and faithful to the problem, so that ev
 
 I am preparing for graduate study and research starting in 2027. **Research collaborations, co-authored papers, and interesting cross-disciplinary projects or competitions are all welcome**; you can reach me through the Contact page.
 
-Outside research, I started MFA Round Table (模法师圆桌), a student community for sharing mathematical modeling experience, and organized an introductory modeling lecture for 170+ people. I'm an ENFP and a Sagittarius who loves reading, photography, wandering through cities, swimming and travel; my photos are in the Gallery.
+Outside research, I started MFA Round Table (模法师圆桌), a student community for sharing mathematical modeling experience, and organized an introductory modeling lecture for 170+ people. I'm an ENFP and a Sagittarius who loves reading, photography, wandering through cities, swimming and travel. You can find my photos in the Gallery, updated from time to time.
