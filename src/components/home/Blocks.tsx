@@ -2,11 +2,28 @@
 
 import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
+import { Compass, Plane, Route, ScanSearch, ShieldCheck, Waves, type LucideIcon } from 'lucide-react';
+
+const icons: Record<string, LucideIcon> = {
+    'compass': Compass,
+    'plane': Plane,
+    'route': Route,
+    'scan-search': ScanSearch,
+    'shield-check': ShieldCheck,
+    'waves': Waves,
+};
+
+export interface BlockHighlight {
+    icon?: string;
+    title: string;
+}
 
 export interface BlockItem {
+    icon?: string;
     title?: string;
     tag?: string;
     content: string;
+    highlights?: BlockHighlight[];
 }
 
 interface BlocksProps {
@@ -45,12 +62,30 @@ export default function Blocks({ title, description, layout = 'grid', items }: B
                             <p className="pl-4 font-serif text-lg leading-relaxed text-neutral-700 dark:text-neutral-600">
                                 <ReactMarkdown components={inline}>{item.content}</ReactMarkdown>
                             </p>
+                            {item.highlights && item.highlights.length > 0 && (
+                                <div className="mt-4 pl-4 flex flex-wrap gap-2">
+                                    {item.highlights.map((highlight) => {
+                                        const Icon = highlight.icon ? icons[highlight.icon] : undefined;
+                                        return (
+                                            <span
+                                                key={highlight.title}
+                                                className="inline-flex items-center gap-1.5 rounded-full border border-accent/30 bg-white/60 dark:bg-neutral-800/60 px-3 py-1 text-sm text-primary"
+                                            >
+                                                {Icon && <Icon className="h-4 w-4 text-accent" aria-hidden />}
+                                                {highlight.title}
+                                            </span>
+                                        );
+                                    })}
+                                </div>
+                            )}
                         </div>
                     ))}
                 </div>
             ) : (
                 <div className={`grid grid-cols-1 gap-4 ${items.length % 3 === 0 ? 'md:grid-cols-3' : 'md:grid-cols-2'}`}>
-                    {items.map((item, index) => (
+                    {items.map((item, index) => {
+                        const Icon = item.icon ? icons[item.icon] : undefined;
+                        return (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
@@ -58,6 +93,11 @@ export default function Blocks({ title, description, layout = 'grid', items }: B
                             transition={{ duration: 0.4, delay: 0.1 * index }}
                             className="bg-neutral-50 dark:bg-neutral-800 p-4 rounded-lg shadow-sm border border-neutral-200 dark:border-[rgba(148,163,184,0.24)] hover:shadow-lg transition-all duration-200"
                         >
+                            {Icon && (
+                                <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-accent">
+                                    <Icon className="h-5 w-5" aria-hidden />
+                                </div>
+                            )}
                             {item.tag && (
                                 <p className="text-xs font-medium uppercase tracking-wide text-accent mb-1">{item.tag}</p>
                             )}
@@ -68,7 +108,8 @@ export default function Blocks({ title, description, layout = 'grid', items }: B
                                 <ReactMarkdown components={inline}>{item.content}</ReactMarkdown>
                             </p>
                         </motion.div>
-                    ))}
+                        );
+                    })}
                 </div>
             )}
         </motion.section>

@@ -22,9 +22,11 @@ interface SectionConfig {
 }
 
 interface BlockItem {
+  icon?: string;
   title?: string;
   tag?: string;
   content: string;
+  highlights?: { icon?: string; title: string }[];
 }
 
 interface NewsItem {

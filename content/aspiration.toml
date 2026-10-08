@@ -1,2 +1,14 @@
 [[items]]
-content = "To build on mathematics and quantitative methods so that stochastic analysis and uncertainty modeling do real work in real systems (intelligent transportation, the low-altitude economy, risk management), producing models that can be explained and trusted."
+content = "To build on mathematics and quantitative methods so that stochastic analysis and uncertainty modeling do real work in real systems, producing models that can be explained and trusted."
+
+[[items.highlights]]
+icon = "route"
+title = "Intelligent Transportation"
+
+[[items.highlights]]
+icon = "plane"
+title = "Low-Altitude Economy"
+
+[[items.highlights]]
+icon = "shield-check"
+title = "Risk Management"

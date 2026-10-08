@@ -1,11 +1,14 @@
 [[items]]
+icon = "scan-search"
 title = "严谨，并且忠于问题本身"
 content = "不写空话；写下的每一个断言，都要经得起再追问一层。"
 
 [[items]]
+icon = "compass"
 title = "在系统的边界内自我驱动"
 content = "不等别人把路铺好，主动寻找机会、补齐能力，在有限资源里做出东西。"
 
 [[items]]
+icon = "waves"
 title = "与不确定性共处"
 content = "不确定性不是要被消灭的噪声，而是真实系统必须与之共处的一部分。"
