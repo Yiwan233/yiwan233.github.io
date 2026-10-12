@@ -16,12 +16,16 @@
 
 ## Research Experience
 
-**Final-Year Thesis: Malliavin Calculus for Variance-Optimal Hedging under Rough Volatility**
+**Paper: *Deep Hedging under Rough Volatility: A Fractional Kernel Embedding Approach***
+*AIMS Mathematics, accepted (May 2026)* | *Co-first & corresponding author, with Xujiang Tang and Runsen Guan*
+- Extended the final-year thesis below into a fractional kernel embedding approach for deep hedging under rough volatility.
+- With co-authors, designed an architecture with a fractional-kernel inductive bias via fixed fractional attention layers, so that the network only approximates the regular part of the hedge.
+- Derived a conditional O(N^{-2H}) convergence result over N rebalancing dates (given a controlled network approximation error), consistent with the known strong-approximation order barrier for Volterra-type models.
+
+**Final-Year Thesis: *Malliavin Calculus for Variance-Optimal Hedging under Rough Volatility***
 *Grade A* | *Supervisor: [Prof. Liu Jie](https://www.xmu.edu.my/index.php/staff/liu-jie)*
 - Addressed the non-Markovian long-memory characteristics of rough volatility models (H in (0, 1/2)), revealing the "structural operator mismatch" in generic deep learning architectures.
-- Used Malliavin calculus (Clark-Ocone representation) to decompose the hedge, fixing the singular fractional kernel so that the network only approximates the regular part.
-- Designed an architecture with a fractional-kernel inductive bias via fixed fractional attention layers.
-- Derived a conditional O(N^{-2H}) convergence result over N rebalancing dates (given a controlled network approximation error), consistent with the known strong-approximation order barrier for Volterra-type models.
+- Used Malliavin calculus (Clark-Ocone representation) to decompose the hedge, separating the singular fractional kernel from the regular part.
 
 ## Internship Experience
 

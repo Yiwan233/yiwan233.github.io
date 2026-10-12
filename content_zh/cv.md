@@ -16,12 +16,16 @@
 
 ## 研究经历
 
-**毕业设计：Malliavin Calculus for Variance-Optimal Hedging under Rough Volatility**
+**论文：*Deep Hedging under Rough Volatility: A Fractional Kernel Embedding Approach***
+*AIMS Mathematics，已接收（2026年5月）* | *共同第一作者兼通讯作者，合作者：Xujiang Tang、Runsen Guan*
+- 在下方毕业设计的基础上，延展为粗糙波动率下深度对冲的分数核嵌入方法。
+- 与合作者一起，通过固定分数注意力层设计了带分数核归纳偏置的网络架构，让网络只逼近对冲策略的正则部分。
+- 在网络逼近误差受控的前提下，得到 N 个再平衡日期下 O(N^{-2H}) 的条件收敛结果，与 Volterra 型模型已知的强逼近阶数障碍一致。
+
+**毕业设计：*Malliavin Calculus for Variance-Optimal Hedging under Rough Volatility***
 *成绩 A* | *指导教师：[刘杰教授](https://www.xmu.edu.my/index.php/staff/liu-jie)*
 - 针对粗糙波动率模型 (H ∈ (0, 1/2)) 的非马尔可夫长记忆特性，揭示了通用深度学习架构中的"结构算子失配"问题。
-- 利用 Malliavin 微积分（Clark-Ocone 表示）分解对冲策略：固定奇异分数核，让网络只逼近其中的正则部分。
-- 通过固定分数注意力层，设计了带分数核归纳偏置的网络架构。
-- 在网络逼近误差受控的前提下，得到 N 个再平衡日期下 O(N^{-2H}) 的条件收敛结果，与 Volterra 型模型已知的强逼近阶数障碍一致。
+- 利用 Malliavin 微积分（Clark-Ocone 表示）分解对冲策略，把奇异分数核与正则部分分开。
 
 ## 实习经历
 
