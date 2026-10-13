@@ -3,10 +3,9 @@ title = "About"
 
 [profile]
 research_interests = [
-  "Stochastic Processes & Long-Memory Modeling",
-  "Uncertainty Quantification & Bayesian Methods",
-  "Safety-Critical Control & Reinforcement Learning",
-  "Low-Altitude, Transport & Financial Risk Applications"
+  "Core: Stochastic modeling & uncertainty quantification — building known structure into models",
+  "Applied in: rough-volatility hedging; force & motion data in robotics",
+  "Looking toward: safety-critical systems (transport, low-altitude)"
 ]
 
 [[sections]]

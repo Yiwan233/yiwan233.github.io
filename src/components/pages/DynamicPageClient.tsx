@@ -15,6 +15,7 @@ import {
   ContactPageConfig,
   GalleryPageConfig,
 } from '@/types/page';
+import type { SiteConfig } from '@/lib/config';
 import { useLocaleStore } from '@/lib/stores/localeStore';
 import type { BlogPostMeta } from '@/lib/content';
 
@@ -23,7 +24,7 @@ export type DynamicPageLocaleData =
   | { type: 'text'; config: TextPageConfig; content: string }
   | { type: 'card'; config: CardPageConfig }
   | { type: 'blog'; config: BlogPageConfig; posts: BlogPostMeta[] }
-  | { type: 'contact'; config: ContactPageConfig }
+  | { type: 'contact'; config: ContactPageConfig; social?: SiteConfig['social'] }
   | { type: 'gallery'; config: GalleryPageConfig };
 
 interface DynamicPageClientProps {
@@ -55,7 +56,7 @@ export default function DynamicPageClient({ dataByLocale, defaultLocale }: Dynam
         <BlogList config={pageData.config} posts={pageData.posts} />
       )}
       {pageData.type === 'contact' && (
-        <ContactPage config={pageData.config} />
+        <ContactPage config={pageData.config} social={pageData.social} />
       )}
       {pageData.type === 'gallery' && (
         <GalleryPage config={pageData.config} />

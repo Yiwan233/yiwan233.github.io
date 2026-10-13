@@ -61,6 +61,7 @@ export interface LocaleMessages {
     sending: string;
     success: string;
     error: string;
+    elsewhere: string;
   };
 }
 
@@ -127,6 +128,7 @@ const en: LocaleMessages = {
     sending: 'Sending...',
     success: 'Message sent successfully!',
     error: 'Failed to send message. Please try again.',
+    elsewhere: 'Elsewhere',
   },
 };
 
@@ -193,6 +195,7 @@ const zh: LocaleMessages = {
     sending: '发送中...',
     success: '留言发送成功！',
     error: '发送失败，请重试。',
+    elsewhere: '其他平台',
   },
 };
 

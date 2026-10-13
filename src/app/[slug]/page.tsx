@@ -65,6 +65,7 @@ function loadDynamicPageData(slug: string, locale?: string): DynamicPageLocaleDa
     return {
       type: 'contact',
       config: pageConfig as ContactPageConfig,
+      social: getConfig(locale).social,
     };
   }
 

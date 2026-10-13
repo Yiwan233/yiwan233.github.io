@@ -2,15 +2,36 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Github, Linkedin } from 'lucide-react';
 import { ContactPageConfig } from '@/types/page';
+import type { SiteConfig } from '@/lib/config';
 import { useMessages } from '@/lib/i18n/useMessages';
+
+// Xiaohongshu (RED) wordmark-style icon
+const XiaohongshuIcon = ({ className }: { className?: string }) => (
+    <svg viewBox="0 0 24 24" className={className} xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="4" width="22" height="16" rx="4" fill="currentColor" />
+        <text x="12" y="15.5" textAnchor="middle" fontSize="8" fontWeight="700" fill="white" fontFamily="sans-serif">RED</text>
+    </svg>
+);
 
 interface ContactPageProps {
     config: ContactPageConfig;
+    social?: SiteConfig['social'];
 }
 
-export default function ContactPage({ config }: ContactPageProps) {
+export default function ContactPage({ config, social }: ContactPageProps) {
     const messages = useMessages();
+
+    const elsewhereLinks = [
+        ...(social?.github ? [{ label: 'GitHub', href: social.github, icon: Github }] : []),
+        ...(social?.linkedin ? [{ label: 'LinkedIn', href: social.linkedin, icon: Linkedin }] : []),
+        ...(social?.xiaohongshu ? [{
+            label: `${messages.profile.xiaohongshu}: ${social.xiaohongshu}`,
+            href: social.xiaohongshu_url || `https://www.xiaohongshu.com/search_result?keyword=${encodeURIComponent(social.xiaohongshu)}`,
+            icon: XiaohongshuIcon,
+        }] : []),
+    ];
     const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -59,6 +80,29 @@ export default function ContactPage({ config }: ContactPageProps) {
                     </p>
                 )}
             </div>
+
+            {elsewhereLinks.length > 0 && (
+                <div className="mb-8 max-w-2xl">
+                    <h2 className="text-sm font-medium text-primary mb-3">{messages.contact.elsewhere}</h2>
+                    <div className="flex flex-wrap gap-x-6 gap-y-2">
+                        {elsewhereLinks.map((link) => {
+                            const IconComponent = link.icon;
+                            return (
+                                <a
+                                    key={link.href}
+                                    href={link.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center space-x-2 text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors duration-200"
+                                >
+                                    <IconComponent className="h-5 w-5" />
+                                    <span>{link.label}</span>
+                                </a>
+                            );
+                        })}
+                    </div>
+                </div>
+            )}
 
             {config.form_endpoint ? (
                 <form onSubmit={handleSubmit} className="space-y-6 max-w-2xl">
