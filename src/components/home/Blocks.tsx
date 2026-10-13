@@ -2,14 +2,16 @@
 
 import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
-import { Compass, Plane, Route, ScanSearch, ShieldCheck, Waves, type LucideIcon } from 'lucide-react';
+import { Compass, Dices, Plane, Route, ScanSearch, ShieldCheck, Sigma, Waves, type LucideIcon } from 'lucide-react';
 
 const icons: Record<string, LucideIcon> = {
     'compass': Compass,
+    'dices': Dices,
     'plane': Plane,
     'route': Route,
     'scan-search': ScanSearch,
     'shield-check': ShieldCheck,
+    'sigma': Sigma,
     'waves': Waves,
 };
 

@@ -2,13 +2,13 @@
 content = "以数学和定量方法为基础，让随机分析与不确定性建模在真实系统中发挥作用，做出能被解释、也能被信任的模型。"
 
 [[items.highlights]]
-icon = "route"
-title = "智能交通"
+icon = "sigma"
+title = "随机建模"
 
 [[items.highlights]]
-icon = "plane"
-title = "低空经济"
+icon = "dices"
+title = "不确定性量化"
 
 [[items.highlights]]
 icon = "shield-check"
-title = "风险管理"
+title = "可解释、可信任的模型"

@@ -50,12 +50,6 @@ target = "awards"
 href = "/awards"
 
 [[navigation]]
-title = "简历"
-type = "page"
-target = "cv"
-href = "/cv"
-
-[[navigation]]
 title = "摄影"
 type = "page"
 target = "gallery"

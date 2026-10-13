@@ -11,7 +11,7 @@ import {
 } from '@heroicons/react/24/outline';
 import { MapPinIcon as MapPinSolidIcon, EnvelopeIcon as EnvelopeSolidIcon } from '@heroicons/react/24/solid';
 import { HeartIcon as HeartSolidIcon } from '@heroicons/react/24/solid';
-import { Github, Linkedin, Pin } from 'lucide-react';
+import { FileText, Github, Linkedin, Pin } from 'lucide-react';
 import type { SiteConfig } from '@/lib/config';
 import { useMessages } from '@/lib/i18n/useMessages';
 
@@ -303,6 +303,21 @@ export default function Profile({ author, social, features, researchInterests }:
                     );
                 })}
             </div>
+
+            {/* CV Download */}
+            {social.cv && (
+                <div className="flex justify-center mb-6">
+                    <a
+                        href={social.cv}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium bg-accent hover:bg-accent-dark text-white transition-colors duration-200"
+                    >
+                        <FileText className="h-4 w-4" />
+                        <span>{messages.profile.downloadCV}</span>
+                    </a>
+                </div>
+            )}
 
             {/* Research Interests */}
             {researchInterests && researchInterests.length > 0 && (

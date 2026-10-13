@@ -74,12 +74,6 @@ target = "awards"
 href = "/awards"
 
 [[navigation]]
-title = "CV"
-type = "page"
-target = "cv"
-href = "/cv"
-
-[[navigation]]
 title = "Gallery"
 type = "page"
 target = "gallery"

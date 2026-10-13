@@ -3,9 +3,9 @@ title = "About"
 
 [profile]
 research_interests = [
-  "Core: Stochastic modeling & uncertainty quantification — building known structure into models",
-  "Applied in: rough-volatility hedging; force & motion data in robotics",
-  "Looking toward: safety-critical systems (transport, low-altitude)"
+  "Stochastic Modeling & Uncertainty Quantification",
+  "Structure-Informed Machine Learning",
+  "Long-Memory & Non-Markovian Stochastic Processes"
 ]
 
 [[sections]]

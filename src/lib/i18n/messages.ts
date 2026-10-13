@@ -23,6 +23,7 @@ export interface LocaleMessages {
     send: string;
     sendEmail: string;
     researchInterests: string;
+    downloadCV: string;
     like: string;
     liked: string;
     thanks: string;
@@ -90,6 +91,7 @@ const en: LocaleMessages = {
     send: 'Send',
     sendEmail: 'Send Email',
     researchInterests: 'Research Interests',
+    downloadCV: 'Download CV (PDF)',
     like: 'Like',
     liked: 'Liked',
     thanks: 'Thanks!',
@@ -157,6 +159,7 @@ const zh: LocaleMessages = {
     send: '发送',
     sendEmail: '发送邮件',
     researchInterests: '研究兴趣',
+    downloadCV: '下载简历（PDF）',
     like: '点赞',
     liked: '已点赞',
     thanks: '感谢支持！',
