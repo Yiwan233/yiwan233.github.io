@@ -50,7 +50,7 @@ focal_length = "50mm"
 image = "/gallery/dsc-0117.jpg"
 
 [[items]]
-title = "街景"
+title = "楼缝里的巴士"
 slug = "dsc-0159"
 date = "2026-03"
 lat = 22.196147
@@ -63,6 +63,7 @@ shutter = "1/500s"
 iso = "400"
 focal_length = "50mm"
 image = "/gallery/dsc-0159.jpg"
+content = """隔着树丛望下去，两排旧楼夹出一条街，一辆黄色巴士正好驶进画面。"""
 
 [[items]]
 title = "澳门一酒店旋转门"
@@ -78,7 +79,7 @@ shutter = "1/500s"
 iso = "320"
 focal_length = "50mm"
 image = "/gallery/dsc-0225.jpg"
-content = """构图跟配色个人认为极好的一个作品。"""
+content = """我最喜欢的一张：构图和配色都刚好。"""
 
 [[items]]
 title = "奔腾"
@@ -97,7 +98,7 @@ image = "/gallery/dsc-0226.jpg"
 content = """给美高梅拍宣传照来了"""
 
 [[items]]
-title = "街景"
+title = "新濠天地前"
 slug = "dsc-0230"
 date = "2026-03"
 lat = 22.14783565997049
@@ -110,6 +111,7 @@ shutter = "1/500s"
 iso = "320"
 focal_length = "50mm"
 image = "/gallery/dsc-0230.jpg"
+content = """巨幅广告牌下，一辆开往美狮美高梅的巴士刚好入画。"""
 
 [[items]]
 title = "三人行"
@@ -125,7 +127,7 @@ shutter = "1/500s"
 iso = "400"
 focal_length = "50mm"
 image = "/gallery/dsc-0312.jpg"
-content = """中环偶然拍摄的照片，构图尚可。"""
+content = """中环街头偶遇的一瞬。"""
 
 [[items]]
 title = "铜锣湾街景"
@@ -141,7 +143,7 @@ shutter = "1/500s"
 iso = "400"
 focal_length = "50mm"
 image = "/gallery/dsc-0362.jpg"
-content = """如果没有右下角那两个路人成片效果应该会更好。"""
+content = """铜锣湾街头，人来人往。"""
 
 [[items]]
 title = "南岛的叮叮车"
@@ -173,7 +175,7 @@ shutter = "1/250s"
 iso = "800"
 focal_length = "50mm"
 image = "/gallery/dsc-0416.jpg"
-content = """在HK做巴士过江时偶然拍得，构图挺好。"""
+content = """坐巴士过江时，从车窗里抓到的一帧。"""
 
 [[items]]
 title = "车水马龙的HK"
@@ -189,7 +191,7 @@ shutter = "1/250s"
 iso = "800"
 focal_length = "50mm"
 image = "/gallery/dsc-0420.jpg"
-content = """在旺角附近的天桥拍的，只是随手一拍，修完才发现还怪有感觉的。"""
+content = """旺角天桥上随手按下快门，修完才发现很有味道。"""
 
 [[items]]
 title = "油麻地一街景"
