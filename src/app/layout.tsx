@@ -12,11 +12,16 @@ export async function generateMetadata(): Promise<Metadata> {
   const config = getConfig();
   const runtimeI18n = getRuntimeI18nConfig(config.i18n);
   const openGraphLocale = runtimeI18n.defaultLocale === 'zh' ? 'zh_CN' : 'en_US';
+  // Tab title shows both names, e.g. "易帆 Yi Fan"
+  const localizedTitle = getConfig(runtimeI18n.defaultLocale).site.title;
+  const siteTitle = localizedTitle && localizedTitle !== config.site.title
+    ? `${localizedTitle} ${config.site.title}`
+    : config.site.title;
 
   return {
     title: {
-      default: config.site.title,
-      template: `%s | ${config.site.title}`,
+      default: siteTitle,
+      template: `%s | ${siteTitle}`,
     },
     description: config.site.description,
     keywords: [config.author.name, 'Applied Mathematics', 'Stochastic Modeling', 'Uncertainty Quantification', 'Research Assistant', config.author.institution],
@@ -25,11 +30,12 @@ export async function generateMetadata(): Promise<Metadata> {
     publisher: config.author.name,
     icons: {
       icon: config.site.favicon,
+      apple: '/apple-touch-icon.png',
     },
     openGraph: {
       type: 'website',
       locale: openGraphLocale,
-      title: config.site.title,
+      title: siteTitle,
       description: config.site.description,
       siteName: `${config.author.name}'s Personal Website`,
     },
@@ -131,7 +137,7 @@ export default function RootLayout({
   return (
     <html lang={runtimeI18n.defaultLocale} className="scroll-smooth" suppressHydrationWarning>
       <head>
-        <link rel="icon" href={config.site.favicon} type="image/svg+xml" />
+        <link rel="icon" href={config.site.favicon} />
         <link rel="dns-prefetch" href="https://jialeliu.com" />
         <link rel="preconnect" href="https://jialeliu.com" crossOrigin="" />
         <link

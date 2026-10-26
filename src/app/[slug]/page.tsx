@@ -100,8 +100,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return {};
   }
 
+  // Tab title follows the default locale (e.g. "摄影" rather than "Gallery")
+  const defaultLocale = getRuntimeI18nConfig(getConfig().i18n).defaultLocale;
+  const localizedPage = getPageConfig(slug, defaultLocale) as BasePageConfig | null;
+
   return {
-    title: pageConfig.title,
+    title: localizedPage?.title || pageConfig.title,
     description: pageConfig.description,
   };
 }
