@@ -4,8 +4,8 @@ title = "关于我"
 [profile]
 research_interests = [
   "随机建模与不确定性量化",
-  "结构嵌入的机器学习：把已知结构写进模型",
-  "长记忆与非马尔可夫随机过程"
+  "学习型系统的风险评估与安全",
+  "结构嵌入的机器学习：把已知结构写进模型"
 ]
 
 [[sections]]
@@ -13,6 +13,25 @@ id = "about"
 type = "markdown"
 source = "bio.md"
 title = "关于我"
+
+[[sections]]
+id = "featured_publications"
+type = "publications"
+title = "精选论文"
+filter = "selected"
+limit = 5
+
+[[sections]]
+id = "news"
+type = "list"
+title = "动态"
+source = "news.toml"
+
+[[sections]]
+id = "story"
+type = "markdown"
+source = "story.md"
+title = "我的故事"
 
 [[sections]]
 id = "credo"
@@ -32,16 +51,3 @@ id = "mentors"
 type = "markdown"
 source = "mentors.md"
 title = "导师与致谢"
-
-[[sections]]
-id = "featured_publications"
-type = "publications"
-title = "精选论文"
-filter = "selected"
-limit = 5
-
-[[sections]]
-id = "news"
-type = "list"
-title = "动态"
-source = "news.toml"

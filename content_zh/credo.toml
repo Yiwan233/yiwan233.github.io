@@ -1,14 +1,19 @@
 [[items]]
 icon = "scan-search"
-title = "严谨，并且忠于问题本身"
+title = "对问题诚实"
 content = "不写空话；写下的每一个断言，都要经得起再追问一层。"
 
 [[items]]
+icon = "messages-square"
+title = "对他人坦荡"
+content = "不闭门造车，不卑不亢地交流、求教；每做完一件事，都认真复盘。"
+
+[[items]]
 icon = "compass"
-title = "在系统的边界内自我驱动"
-content = "不等别人把路铺好，主动寻找机会、补齐能力，在有限资源里做出东西。"
+title = "对学习自觉"
+content = "不等别人把路铺好，主动补齐能力；无论结果如何都继续学——没有永远的“上岸”，学习本身就是一个自驱的良性循环。"
 
 [[items]]
 icon = "waves"
-title = "与不确定性共处"
+title = "对未知从容"
 content = "不确定性不是要被消灭的噪声，而是真实系统必须与之共处的一部分。"

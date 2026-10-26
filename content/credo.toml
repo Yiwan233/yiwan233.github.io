@@ -4,9 +4,14 @@ title = "Be rigorous, and stay faithful to the problem"
 content = "No empty rhetoric; every claim I write down should hold up when pushed one layer deeper."
 
 [[items]]
+icon = "messages-square"
+title = "Engage openly, as an equal"
+content = "I don't work behind closed doors: I reach out, ask questions without hesitation, and meet every conversation neither humbly nor arrogantly. After each piece of work, I review it in depth and carry the lessons forward."
+
+[[items]]
 icon = "compass"
-title = "Be self-driven within the system's boundaries"
-content = "Rather than wait for a path to be laid out, I go looking for opportunities, fill in what I lack, and build something with the resources at hand."
+title = "Stay self-driven, keep learning"
+content = "Rather than wait for a path to be laid out, I go looking for opportunities and fill in what I lack. Whatever the outcome, I keep learning: there is no final finish line, only a self-sustaining cycle of growth."
 
 [[items]]
 icon = "waves"
