@@ -172,6 +172,12 @@ export default function RootLayout({
             __html: buildLocaleBootstrapScript(runtimeI18n),
           }}
         />
+        {/* GoatCounter visit analytics: dashboard at https://yiwan233.goatcounter.com */}
+        <script
+          data-goatcounter="https://yiwan233.goatcounter.com/count"
+          async
+          src="https://gc.zgo.at/count.js"
+        />
       </head>
       <body className="font-sans antialiased">
         <ThemeProvider>
